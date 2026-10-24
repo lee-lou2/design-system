@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inkstone — 1:1 썸네일</title>
+  <link rel="stylesheet" href="../assets/ds.css">
+  <link rel="stylesheet" href="../assets/stage.css">
+  <script src="../assets/icons.js" defer></script>
+  <script src="../assets/stage.js" defer></script>
+</head>
+<body class="stage" style="--cols: 2">
+  <header class="stage__head">
+    <div>
+      <h1 class="stage__title">1:1 썸네일 · 1080×1080</h1>
+      <p class="stage__desc">글 하나를 한 장으로 설명하는 레이아웃 8종. 예시 문구·수치·화면은 모두 가상이에요.</p>
+    </div>
+    <nav class="stage__nav">
+      <a href="../preview.html">시스템</a>
+      <a href="thumbnail.html" aria-current="page">1:1 썸네일</a>
+      <a href="video.html">16:9 영상</a>
+      <a href="shorts.html">9:16 숏폼</a>
+      <a href="cases.html">실전 사례</a>
+    </nav>
+  </header>
+
+  <main class="board">
+
+    <!-- T1 벤토: 개념 하나를 흐름 + 숫자 + 단계 + 코드로 요약 (강의·튜토리얼) -->
+    <figure class="cell">
+      <figcaption class="cell__label">T1 벤토 <span>개념·튜토리얼 요약</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="t1-bento" style="--gap: 20px">
+          <div class="meta">
+            <span class="kicker">개발 강의</span>
+            <span class="t-mono">EP.12</span>
+          </div>
+          <h2 class="t-h1" style="margin-top: 28px">Claude Code에<br><span class="hl">MCP 서버</span> 연결하기</h2>
+
+          <div class="grid push" style="grid-template-columns: 1fr 1fr 1.32fr; grid-template-rows: auto 1fr; height: 612px">
+            <div class="card span-3" style="padding: 28px 32px">
+              <div class="card__head"><span class="t-mono">How it works</span><span class="t-caption">한 번 등록하면 끝</span></div>
+              <div class="flow">
+                <div class="node node--sm"><i data-logo="claude" style="font-size: 36px"></i>Claude Code</div>
+                <span class="link"></span>
+                <div class="node node--sm node--focus"><span class="icon-tile icon-tile--accent" style="--size: 44px"><i data-icon="plug"></i></span>MCP 서버</div>
+                <span class="link"></span>
+                <div class="node node--sm" style="gap: 18px">
+                  <i data-logo="github" style="font-size: 36px"></i>
+                  <i data-logo="notion" style="font-size: 36px"></i>
+                  <i data-logo="figma" style="font-size: 36px"></i>
+                </div>
+              </div>
+              <p class="t-caption c-2" style="margin-top: 18px">Claude Code가 MCP 서버를 거쳐 도구를 직접 다뤄요</p>
+            </div>
+
+            <div class="card stack" style="--gap: 0">
+              <span class="t-mono c-3">Setup</span>
+              <div class="stat stat--md push">
+                <span class="stat__value">5<span class="stat__unit">분</span></span>
+                <span class="stat__label">설정 시간</span>
+              </div>
+            </div>
+
+            <div class="card stack" style="--gap: 0">
+              <span class="t-mono c-3">Steps</span>
+              <ol class="stack push" style="--gap: 14px">
+                <li class="row" style="--gap: 14px"><span class="num num--sm">1</span><span class="t-label">설치</span></li>
+                <li class="row" style="--gap: 14px"><span class="num num--sm">2</span><span class="t-label">서버 등록</span></li>
+                <li class="row" style="--gap: 14px"><span class="num num--sm">3</span><span class="t-label">말로 호출</span></li>
+              </ol>
+            </div>
+
+            <div class="card card--inverse stack" style="--gap: 0">
+              <span class="t-mono" style="color: var(--on-inverse-2)">Terminal</span>
+              <p class="t-code" style="margin-top: 18px; font-size: 22px; line-height: 1.6; white-space: pre"><span style="color: var(--code-keyword)">$</span> claude mcp add \
+    --transport http \
+    github $MCP_URL</p>
+              <span class="chip chip--sm push" style="align-self: flex-start; background: rgba(166, 211, 184, 0.16); color: var(--code-string)"><i data-icon="check"></i>Added github</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- T2 비교: 두 선택지를 작동 방식 + 체크 목록으로 -->
+    <figure class="cell">
+      <figcaption class="cell__label">T2 비교 <span>A vs B · 선택 가이드</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="t2-versus">
+          <div class="meta">
+            <span class="kicker">AI 강의</span>
+            <span class="t-mono">Guide</span>
+          </div>
+          <h2 class="t-h1" style="margin-top: 28px"><span class="hl">RAG</span> vs 파인튜닝<br>언제 뭘 쓸까?</h2>
+
+          <div class="compare push" style="height: 496px">
+            <div class="card stack" style="--gap: 28px">
+              <div class="row" style="--gap: 18px">
+                <span class="icon-tile"><i data-icon="file-search"></i></span>
+                <div><p class="t-h3">RAG</p><p class="t-caption c-3">찾아서 답하기</p></div>
+              </div>
+              <div class="flow">
+                <span class="chip chip--sm chip--outline">문서</span><span class="link"></span>
+                <span class="chip chip--sm chip--outline">검색</span><span class="link"></span>
+                <span class="chip chip--sm chip--inverse">답변</span>
+              </div>
+              <ul class="checks push" style="gap: 12px">
+                <li><i data-icon="check"></i>최신 문서 반영</li>
+                <li><i data-icon="check"></i>출처를 보여 줌</li>
+                <li><i data-icon="check"></i>근거 문서만 바꾸면 끝</li>
+                <li class="is-no"><i data-icon="x"></i>말투는 그대로</li>
+              </ul>
+            </div>
+            <span class="compare__vs">VS</span>
+            <div class="card stack" style="--gap: 28px">
+              <div class="row" style="--gap: 18px">
+                <span class="icon-tile"><i data-icon="brain-circuit"></i></span>
+                <div><p class="t-h3">파인튜닝</p><p class="t-caption c-3">익혀서 답하기</p></div>
+              </div>
+              <div class="flow">
+                <span class="chip chip--sm chip--outline">예시</span><span class="link"></span>
+                <span class="chip chip--sm chip--outline">학습</span><span class="link"></span>
+                <span class="chip chip--sm chip--inverse">모델</span>
+              </div>
+              <ul class="checks push" style="gap: 12px">
+                <li><i data-icon="check"></i>말투·형식 학습</li>
+                <li><i data-icon="check"></i>짧은 프롬프트</li>
+                <li><i data-icon="check"></i>답이 짧고 빨라요</li>
+                <li class="is-no"><i data-icon="x"></i>새 정보는 재학습</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row card card--focus" style="margin-top: 20px; padding: 20px 28px; --gap: 16px; border-radius: 24px">
+            <i data-icon="lightbulb" class="c-accent" style="font-size: 36px"></i>
+            <p class="t-label" style="color: var(--accent-strong)">지식은 RAG, 말투·형식은 파인튜닝</p>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- T3 흐름: 단계 + 되돌아가는 화살표 + 입력·결과 (작동 원리) -->
+    <figure class="cell">
+      <figcaption class="cell__label">T3 흐름 <span>작동 원리·프로세스</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="t3-flow">
+          <div class="meta">
+            <span class="kicker">AI 강의</span>
+            <span class="t-mono">Agent 101</span>
+          </div>
+          <h2 class="t-h1" style="margin-top: 28px"><span class="hl">AI 에이전트</span>가<br>일하는 4단계</h2>
+
+          <div class="card push stack" style="height: 612px; --gap: 0; padding: 32px">
+            <div class="msg msg--user">
+              <div class="bubble" style="font-size: 30px; padding: 18px 28px">다음 주 도쿄 항공권 최저가 찾아줘</div>
+            </div>
+
+            <div class="rel" style="margin-top: 36px">
+              <div class="flow">
+                <div class="node node--col" style="width: 176px"><span class="icon-tile icon-tile--line"><i data-icon="list-checks"></i></span><span class="t-label">계획<span class="node__sub">할 일 나누기</span></span></div>
+                <span class="link"></span>
+                <div class="node node--col" style="width: 176px"><span class="icon-tile icon-tile--line"><i data-icon="wrench"></i></span><span class="t-label">도구 호출<span class="node__sub">검색·API</span></span></div>
+                <span class="link"></span>
+                <div class="node node--col" style="width: 176px"><span class="icon-tile icon-tile--line"><i data-icon="scan-eye"></i></span><span class="t-label">결과 확인<span class="node__sub">충분한가?</span></span></div>
+                <span class="link link--accent"></span>
+                <div class="node node--col node--focus" style="width: 176px"><span class="icon-tile icon-tile--accent"><i data-icon="message-square"></i></span><span class="t-label">답변<span class="node__sub">정리해 전달</span></span></div>
+              </div>
+              <svg width="872" height="64" viewBox="0 0 872 64" style="position: absolute; left: 0; top: 100%" aria-hidden="true">
+                <path class="wire wire--dashed" d="M552 0 V30 Q552 44 538 44 H102 Q88 44 88 30 V8"/>
+                <path class="wire-head" d="M78 18 L88 8 L98 18"/>
+              </svg>
+              <span class="t-caption c-3" style="position: absolute; left: 320px; top: calc(100% + 26px); transform: translateX(-50%); padding: 0 14px; background: var(--surface); font-weight: 600">부족하면 다시</span>
+            </div>
+
+            <div class="row push" style="--gap: 12px">
+              <span class="t-label c-3" style="margin-right: 4px">결과</span>
+              <span class="chip chip--outline"><i data-icon="check"></i>최저가 3건 비교표</span>
+              <span class="chip chip--outline">예약 링크</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- T4 화면 소개: 창 + 강조 테두리 + 번호 표식 + 주석 (신규 서비스·기능) -->
+    <figure class="cell">
+      <figcaption class="cell__label">T4 화면 소개 <span>신규 서비스·기능 캡처</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="t4-screen">
+          <div class="meta">
+            <span class="kicker">신규 서비스</span>
+            <span class="t-mono">2026.10</span>
+          </div>
+          <h2 class="t-h1" style="margin-top: 28px">대화를 폴더로,<br><span class="hl">‘프로젝트’</span> 기능</h2>
+
+          <!-- 실제 캡처는 .window__body 안에 <img src="..."> 한 장으로 넣는다. 아래는 HTML로 그린 예시 화면 -->
+          <div class="row" data-annotation style="--gap: 28px; margin-top: 32px">
+            <span class="row t-label" style="--gap: 12px"><span class="num num--sm num--accent">1</span>대화를 폴더별로</span>
+            <span class="row t-label" style="--gap: 12px"><span class="num num--sm num--accent">2</span>폴더마다 지침·파일</span>
+          </div>
+          <div class="window" data-bleed style="position: absolute; left: 72px; right: 72px; top: 480px; height: 720px">
+            <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="lock"></i>chat.example.ai</span></div>
+            <div class="window__body" style="display: grid; grid-template-columns: 300px 1fr">
+              <aside style="background: var(--surface-muted); padding: 24px 20px; display: flex; flex-direction: column; gap: 10px">
+                <div class="row t-caption" style="--gap: 10px; height: 52px; padding: 0 16px; border-radius: 14px; background: var(--surface); font-weight: 600"><i data-icon="plus"></i>새 대화</div>
+                <div class="rel" style="margin-top: 14px; padding: 14px 12px 12px; display: flex; flex-direction: column; gap: 6px">
+                  <span class="t-caption c-3" style="font-weight: 600; padding: 0 4px 4px">프로젝트</span>
+                  <div class="row t-caption" style="--gap: 10px; height: 46px; padding: 0 12px; border-radius: 12px; background: var(--surface); font-weight: 600"><i data-icon="folder-open"></i>블로그 글쓰기</div>
+                  <div class="row t-caption c-2" style="--gap: 10px; height: 46px; padding: 0 12px"><i data-icon="folder"></i>사이드 프로젝트</div>
+                  <div class="row t-caption c-2" style="--gap: 10px; height: 46px; padding: 0 12px"><i data-icon="folder"></i>영어 공부</div>
+                  <span class="hl-ring" style="inset: 0"></span>
+                  <span class="marker" style="right: -24px; top: -24px">1</span>
+                </div>
+              </aside>
+              <div style="padding: 32px 36px; display: flex; flex-direction: column; gap: 20px">
+                <div class="row" style="--gap: 14px"><span class="icon-tile icon-tile--sm"><i data-icon="folder-open"></i></span><span class="t-h3" style="font-size: 36px">블로그 글쓰기</span></div>
+                <div class="rel card card--sm" style="padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+                  <div class="row row--between" style="padding-right: 40px"><span class="t-caption" style="font-weight: 650">지침</span><span class="t-caption c-3">파일 3</span></div>
+                  <i style="display: block; height: 14px; width: 92%; border-radius: 99px; background: var(--line)"></i>
+                  <i style="display: block; height: 14px; width: 74%; border-radius: 99px; background: var(--line)"></i>
+                  <span class="marker" style="right: -22px; top: -22px">2</span>
+                </div>
+                <div class="chat" style="gap: 14px; margin-top: 6px">
+                  <div class="msg msg--user"><div class="bubble" style="font-size: 24px; padding: 14px 22px">이 초안 다듬어 줘</div></div>
+                  <div class="msg msg--ai" style="gap: 12px">
+                    <span class="avatar avatar--muted" style="width: 44px; height: 44px; font-size: 22px"><i data-icon="sparkles"></i></span>
+                    <div class="bubble" style="width: 70%; padding: 18px 22px; display: flex; flex-direction: column; gap: 10px">
+                      <i style="display: block; height: 12px; width: 92%; border-radius: 99px; background: var(--line)"></i>
+                      <i style="display: block; height: 12px; width: 64%; border-radius: 99px; background: var(--line)"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- T5 숫자 + 그래프: 두 선이 좁혀지는 변화 + 격차 표시 (뉴스·데이터) -->
+    <figure class="cell">
+      <figcaption class="cell__label">T5 숫자 + 그래프 <span>뉴스·벤치마크·추세</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="t5-chart">
+          <div class="meta">
+            <span class="kicker">AI 뉴스</span>
+            <span class="t-mono">2026.10.24</span>
+          </div>
+          <h2 class="t-h1" style="margin-top: 28px">오픈 모델 격차,<br>3년 새 <span class="hl">18→3%p</span></h2>
+
+          <div class="card push" style="height: 600px; padding: 32px 32px 28px">
+            <div class="card__head" style="margin-bottom: 8px"><span class="t-mono">Benchmark score</span><span class="t-caption">예시 데이터</span></div>
+            <svg width="872" height="400" viewBox="0 0 872 400" aria-label="최고 모델과 오픈 모델 점수 추이" role="img">
+              <line class="lc-grid" x1="40" y1="100" x2="800" y2="100"/>
+              <line class="lc-grid" x1="40" y1="200" x2="800" y2="200"/>
+              <line class="lc-axis" x1="40" y1="300" x2="800" y2="300"/>
+              <path class="lc-line" d="M80 174 L300 118 L520 69 L740 34"/>
+              <path class="lc-area" d="M80 300 L300 195 L520 111 L740 55 L740 300 Z"/>
+              <path class="lc-line is-focus" d="M80 300 L300 195 L520 111 L740 55"/>
+              <!-- 격차: 두 끝 모두 같은 점선 -->
+              <line x1="80" y1="186" x2="80" y2="288" stroke="var(--line-strong)" stroke-width="3" stroke-dasharray="6 6"/>
+              <text class="lc-text" x="96" y="244">18%p</text>
+              <line x1="770" y1="34" x2="770" y2="55" stroke="var(--accent)" stroke-width="3" stroke-dasharray="4 4"/>
+              <text x="786" y="54" style="font: 700 34px var(--font-sans); fill: var(--accent); letter-spacing: -0.03em">3%p</text>
+              <circle cx="740" cy="34" r="7" fill="var(--line-strong)"/>
+              <circle class="lc-dot" cx="740" cy="55" r="8"/>
+              <text class="lc-text" x="110" y="138">최고 모델</text>
+              <text class="lc-text is-focus" x="560" y="146" style="font-size: 26px">오픈 모델</text>
+              <text class="lc-text" x="80" y="342" text-anchor="middle" style="font-family: var(--font-mono); font-size: 22px">2023</text>
+              <text class="lc-text" x="300" y="342" text-anchor="middle" style="font-family: var(--font-mono); font-size: 22px">2024</text>
+              <text class="lc-text" x="520" y="342" text-anchor="middle" style="font-family: var(--font-mono); font-size: 22px">2025</text>
+              <text class="lc-text is-focus" x="740" y="342" text-anchor="middle" style="font-family: var(--font-mono); font-size: 22px">2026</text>
+            </svg>
+            <div class="row" style="--gap: 12px; margin-top: 4px">
+              <span class="chip chip--soft"><i data-icon="trending-down"></i>격차 −15%p</span>
+              <span class="chip chip--outline">비용은 1/10</span>
+              <span class="source" style="margin-left: auto">출처 자리 · 2026.10</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- T6 허브: 가운데 개념 + 위 소비자 + 양옆 연결 대상 (생태계·지도) -->
+    <figure class="cell">
+      <figcaption class="cell__label">T6 허브 <span>생태계·연결 구조</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1 frame--grid" data-frame="t6-hub">
+          <div class="meta">
+            <span class="kicker">개발 강의</span>
+            <span class="t-mono">Map</span>
+          </div>
+          <h2 class="t-h1" style="margin-top: 28px"><span class="hl">MCP</span> 하나로<br>연결되는 도구들</h2>
+
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="rel" style="height: 650px">
+            <svg width="936" height="650" viewBox="0 0 936 650" style="position: absolute; inset: 0" aria-hidden="true">
+              <path class="wire wire--accent" d="M468 118 V226"/>
+              <path class="wire" d="M244 150 H276 Q292 150 292 166 V324 Q292 340 308 340 H348"/>
+              <path class="wire" d="M244 340 H348"/>
+              <path class="wire" d="M244 530 H276 Q292 530 292 514 V356 Q292 340 308 340 H348"/>
+              <path class="wire" d="M692 150 H660 Q644 150 644 166 V324 Q644 340 628 340 H588"/>
+              <path class="wire" d="M692 340 H588"/>
+              <path class="wire" d="M692 530 H660 Q644 530 644 514 V356 Q644 340 628 340 H588"/>
+              <circle cx="244" cy="150" r="7" fill="var(--line-strong)"/><circle cx="244" cy="340" r="7" fill="var(--line-strong)"/><circle cx="244" cy="530" r="7" fill="var(--line-strong)"/>
+              <circle cx="692" cy="150" r="7" fill="var(--line-strong)"/><circle cx="692" cy="340" r="7" fill="var(--line-strong)"/><circle cx="692" cy="530" r="7" fill="var(--line-strong)"/>
+            </svg>
+            <div class="node node--sm" style="position: absolute; left: 318px; top: 40px; width: 300px; justify-content: center; gap: 22px">
+              <i data-logo="claude" style="font-size: 36px"></i><i data-logo="cursor" style="font-size: 36px"></i><i data-logo="googlegemini" style="font-size: 36px"></i>
+              <span class="t-caption c-3" style="font-weight: 600">AI 앱</span>
+            </div>
+            <div class="node node--inverse node--col" style="position: absolute; left: 348px; top: 226px; width: 240px; height: 228px; border-radius: 28px">
+              <span class="icon-tile icon-tile--accent icon-tile--lg"><i data-icon="plug-zap"></i></span>
+              <span class="t-h3" style="font-size: 40px; line-height: 1">MCP</span>
+            </div>
+            <div class="node node--sm" style="position: absolute; left: 0; top: 112px; width: 244px"><i data-logo="github" style="font-size: 36px"></i>GitHub</div>
+            <div class="node node--sm" style="position: absolute; left: 0; top: 302px; width: 244px"><i data-logo="notion" style="font-size: 36px"></i>Notion</div>
+            <div class="node node--sm" style="position: absolute; left: 0; top: 492px; width: 244px"><i data-logo="figma" style="font-size: 36px"></i>Figma</div>
+            <div class="node node--sm" style="position: absolute; right: 0; top: 112px; width: 244px"><i data-logo="supabase" style="font-size: 36px"></i>Supabase</div>
+            <div class="node node--sm" style="position: absolute; right: 0; top: 302px; width: 244px"><i data-logo="linear" style="font-size: 36px"></i>Linear</div>
+            <div class="node node--sm" style="position: absolute; right: 0; top: 492px; width: 244px"><i data-logo="postgresql" style="font-size: 36px"></i>Postgres</div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- T7 터미널: 명령어 창 + 숫자 + 꼬리표 (개발 튜토리얼) -->
+    <figure class="cell">
+      <figcaption class="cell__label">T7 터미널 <span>개발 튜토리얼·명령어</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="t7-terminal">
+          <div class="meta">
+            <span class="kicker">개발 강의</span>
+            <span class="row t-mono" style="--gap: 10px"><i data-logo="python" style="font-size: 28px; color: var(--ink-2)"></i>Python</span>
+          </div>
+          <h2 class="t-h1" style="margin-top: 28px"><span class="hl">uv</span>로 파이썬 세팅<br>1분 만에 끝내기</h2>
+
+          <div class="grid push" style="grid-template-columns: minmax(0, 1fr) 280px; height: 600px; --gap: 20px">
+            <div class="code">
+              <div class="code__bar"><span class="window__dots"><i></i><i></i><i></i></span>zsh — ~/dev</div>
+<pre style="--code-fs: 26px"><span class="line"><span class="p">$</span> uv init blog-api</span><span class="line o">Initialized project</span><span class="line"><span class="p">$</span> cd blog-api</span><span class="line"> </span><span class="line"><span class="p">$</span> uv add "fastapi[standard]"</span><span class="line o">Resolved 38 packages</span><span class="line"> </span><span class="line is-focus"><span class="p">$</span> uv run fastapi dev</span><span class="line s">✓ Serving at :8000</span></pre>
+            </div>
+            <div class="card stack" style="--gap: 0">
+              <span class="t-mono c-3">vs pip</span>
+              <div class="stat stat--sm" style="margin-top: 20px">
+                <span class="stat__value c-accent">100<span class="stat__unit">×</span></span>
+                <span class="stat__label">설치 속도<br><span class="c-3" style="font-weight: 500">pip 대비 최대</span></span>
+              </div>
+              <hr class="divider" style="margin: 28px 0 24px">
+              <span class="t-mono c-3">Replaces</span>
+              <div class="row wrap push" style="--gap: 10px; margin-top: 16px">
+                <span class="chip chip--sm chip--outline">pip</span>
+                <span class="chip chip--sm chip--outline">venv</span>
+                <span class="chip chip--sm chip--outline">pyenv</span>
+                <span class="chip chip--sm chip--outline">poetry</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- T8 목록: 번호 + 아이콘 + 한 줄 + 분류 (주간 정리·리스트형 글) -->
+    <figure class="cell">
+      <figcaption class="cell__label">T8 목록 <span>주간 정리·TOP N</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="t8-list">
+          <div class="meta">
+            <span class="kicker">AI 뉴스</span>
+            <span class="t-mono">Week 43</span>
+          </div>
+          <h2 class="t-h1" style="margin-top: 28px">이번 주 AI 뉴스<br><span class="hl">5가지</span> 핵심 정리</h2>
+
+          <ol class="card push" style="padding: 12px 32px; display: flex; flex-direction: column">
+            <li class="row" style="--gap: 22px; height: 114px; border-bottom: 2px solid var(--line)">
+              <span class="num num--accent">1</span><span class="icon-tile icon-tile--soft icon-tile--sm"><i data-icon="brain"></i></span>
+              <span class="t-body grow" style="font-weight: 650">추론 모델 새 버전 공개</span><span class="chip chip--sm">모델</span>
+            </li>
+            <li class="row" style="--gap: 22px; height: 114px; border-bottom: 2px solid var(--line)">
+              <span class="num">2</span><span class="icon-tile icon-tile--sm"><i data-icon="code-xml"></i></span>
+              <span class="t-body grow" style="font-weight: 650">코딩 에이전트 정식 출시</span><span class="chip chip--sm">도구</span>
+            </li>
+            <li class="row" style="--gap: 22px; height: 114px; border-bottom: 2px solid var(--line)">
+              <span class="num">3</span><span class="icon-tile icon-tile--sm"><i data-icon="audio-lines"></i></span>
+              <span class="t-body grow" style="font-weight: 650">오픈소스 음성 모델 등장</span><span class="chip chip--sm">오픈소스</span>
+            </li>
+            <li class="row" style="--gap: 22px; height: 114px; border-bottom: 2px solid var(--line)">
+              <span class="num">4</span><span class="icon-tile icon-tile--sm"><i data-icon="coins"></i></span>
+              <span class="t-body grow" style="font-weight: 650">이미지 API 가격 절반으로</span><span class="chip chip--sm">가격</span>
+            </li>
+            <li class="row" style="--gap: 22px; height: 114px">
+              <span class="num">5</span><span class="icon-tile icon-tile--sm"><i data-icon="scale"></i></span>
+              <span class="t-body grow" style="font-weight: 650">AI 기본법 시행령 발표</span><span class="chip chip--sm">정책</span>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </figure>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "c1-basics",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 4,
+    "skipped": [
+      "accent"
+    ]
+  },
+  {
+    "id": "c2-charts",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 4,
+    "skipped": [
+      "accent"
+    ]
+  },
+  {
+    "id": "c3-diagrams",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 5,
+    "skipped": [
+      "accent"
+    ]
+  },
+  {
+    "id": "c4-screens",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "c5-overlays",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 0,
+    "skipped": [
+      "empty-band"
+    ]
+  },
+  {
+    "id": "c6-motion",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  }
+]

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inkstone — 9:16 숏폼</title>
+  <link rel="stylesheet" href="../assets/ds.css">
+  <link rel="stylesheet" href="../assets/stage.css">
+  <script src="../assets/icons.js" defer></script>
+  <script src="../assets/stage.js" defer></script>
+</head>
+<body class="stage" style="--cols: 5">
+  <header class="stage__head">
+    <div>
+      <h1 class="stage__title">9:16 숏폼 · 1080×1920</h1>
+      <p class="stage__desc">릴스·쇼츠용 장면 5종. 위 220·아래 680(자막 포함)·오른쪽 140px은 비워 둬요. 첫 장면에 안전 영역을 점선으로 표시했어요.</p>
+    </div>
+    <nav class="stage__nav">
+      <a href="../preview.html">시스템</a>
+      <a href="thumbnail.html">1:1 썸네일</a>
+      <a href="video.html">16:9 영상</a>
+      <a href="shorts.html" aria-current="page">9:16 숏폼</a>
+      <a href="cases.html">실전 사례</a>
+    </nav>
+  </header>
+
+  <main class="board">
+
+    <!-- S1 훅: 질문형 제목 + 한눈 구조 -->
+    <figure class="cell">
+      <figcaption class="cell__label">S1 훅 <span>첫 2초</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--9x16 frame--sub show-safe" data-frame="s1-hook" data-duration="4200">
+          <span class="kicker" data-m="rise" style="font-size: 32px">AI 뉴스 1분 요약</span>
+          <h2 class="t-display" style="margin-top: 24px; font-size: 104px">
+            <span data-m="rise" style="--d: 100ms; display: block"><span class="hl">MCP</span>, 왜 다들</span>
+            <span data-m="rise" style="--d: 220ms; display: block">쓰는 걸까?</span>
+          </h2>
+          <div class="rel push" style="height: 640px">
+            <svg width="868" height="640" viewBox="0 0 868 640" style="position: absolute; inset: 0" aria-hidden="true">
+              <path class="wire wire--accent" pathLength="1" data-m="draw" style="--d: 900ms" d="M434 100 V220"/>
+              <path class="wire" pathLength="1" data-m="draw" style="--d: 1400ms" d="M434 440 V480 M144 520 V512 Q144 480 176 480 H692 Q724 480 724 512 V520 M434 480 V520"/>
+            </svg>
+            <div class="node" data-m="pop" style="--d: 600ms; position: absolute; left: 234px; top: 24px; width: 400px; justify-content: center; gap: 24px; font-size: var(--fs-label)">
+              <i data-logo="claude" style="font-size: 40px"></i><i data-logo="cursor" style="font-size: 40px"></i><i data-logo="googlegemini" style="font-size: 40px"></i><span class="c-3">AI 앱</span>
+            </div>
+            <div class="node node--inverse node--col" data-m="pop" style="--d: 1150ms; position: absolute; left: 294px; top: 220px; width: 280px; height: 220px; border-radius: 32px">
+              <span class="icon-tile icon-tile--accent icon-tile--lg"><i data-icon="plug-zap"></i></span>
+              <span class="t-h3" style="line-height: 1">MCP</span>
+            </div>
+            <span class="icon-tile icon-tile--logo icon-tile--lg" data-m="pop" style="--d: 1650ms; position: absolute; left: 96px; top: 520px"><i data-logo="github"></i></span>
+            <span class="icon-tile icon-tile--logo icon-tile--lg" data-m="pop" style="--d: 1730ms; position: absolute; left: 386px; top: 520px"><i data-logo="notion"></i></span>
+            <span class="icon-tile icon-tile--logo icon-tile--lg" data-m="pop" style="--d: 1810ms; position: absolute; left: 676px; top: 520px"><i data-logo="figma"></i></span>
+          </div>
+          <p class="subtitle" data-m="fade" style="--d: 1200ms">AI가 도구를 <em>직접</em><br>쓰게 해 주는 표준이에요</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- S2 세로 흐름도 -->
+    <figure class="cell">
+      <figcaption class="cell__label">S2 흐름 <span>세로 단계</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--9x16 frame--sub frame--grid" data-frame="s2-flow" data-duration="5200">
+          <span class="kicker" data-m="rise" style="font-size: 32px">동작 원리</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">요청 한 번,<br><span class="hl">4단계</span>로 끝나요</h2>
+          <div class="spacer" style="--min: 48px"></div>
+          <div class="flow flow--v" style="--node-pad: 18px">
+            <div class="node" data-m="pop" style="padding: 16px 26px; --d: 400ms"><span class="icon-tile"><i data-icon="message-square"></i></span><span>질문<span class="node__sub">“PR 정리해 줘”</span></span></div>
+            <span class="link link--v" data-m="grow-y" style="min-height: 32px; --d: 650ms; --dur: 280ms"></span>
+            <div class="node" data-m="pop" style="padding: 16px 26px; --d: 850ms"><span class="icon-tile icon-tile--logo"><i data-logo="claude"></i></span><span>도구 고르기<span class="node__sub">AI 앱이 판단</span></span></div>
+            <span class="link link--v link--accent" data-m="grow-y" style="min-height: 32px; --d: 1100ms; --dur: 280ms"><span class="link__label link__label--mono">JSON-RPC</span></span>
+            <div class="node node--focus" data-m="pop" style="padding: 16px 26px; --d: 1300ms"><span class="icon-tile icon-tile--accent"><i data-icon="server"></i></span><span>MCP 서버 실행<span class="node__sub">GitHub 조회</span></span></div>
+            <span class="link link--v" data-m="grow-y" style="min-height: 32px; --d: 1550ms; --dur: 280ms"></span>
+            <div class="node" data-m="pop" style="padding: 16px 26px; --d: 1750ms"><span class="icon-tile"><i data-icon="list-checks"></i></span><span>결과 정리<span class="node__sub">열린 PR 3건</span></span></div>
+          </div>
+          <p class="subtitle" data-m="fade" style="--d: 1900ms">AI가 <em>알아서</em> 도구를 골라 실행해요</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- S3 숫자 + 가로 막대 -->
+    <figure class="cell">
+      <figcaption class="cell__label">S3 숫자 <span>데이터 한 장</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--9x16 frame--sub" data-frame="s3-stat" data-duration="4800">
+          <span class="kicker" data-m="rise" style="font-size: 32px">AI 뉴스</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">AI 코딩 도구,<br>개발자 <span class="hl">10명 중 8명</span></h2>
+          <div class="card push stack" data-m="fade" style="--d: 200ms; --gap: 0; padding: 48px">
+            <div class="stat stat--accent" style="--fs-stat: 200px">
+              <span class="stat__value"><span class="count" data-m="count" style="--n: 84; --d: 400ms"></span><span class="stat__unit">%</span></span>
+              <span class="stat__label">2026년 사용률 · 예시 데이터</span>
+            </div>
+            <div class="bars" style="margin-top: 56px; --bar-h: 44px; row-gap: 22px">
+              <div class="bar"><span class="bar__label t-num">2023</span><span class="bar__track"><span class="bar__fill" data-m="grow-x" style="--v: 0.30; --d: 500ms"></span></span><span class="bar__value">30</span></div>
+              <div class="bar"><span class="bar__label t-num">2024</span><span class="bar__track"><span class="bar__fill" data-m="grow-x" style="--v: 0.44; --d: 620ms"></span></span><span class="bar__value">44</span></div>
+              <div class="bar"><span class="bar__label t-num">2025</span><span class="bar__track"><span class="bar__fill" data-m="grow-x" style="--v: 0.63; --d: 740ms"></span></span><span class="bar__value">63</span></div>
+              <div class="bar is-focus"><span class="bar__label t-num">2026</span><span class="bar__track"><span class="bar__fill" data-m="grow-x" style="--v: 0.84; --d: 860ms"></span></span><span class="bar__value">84</span></div>
+            </div>
+          </div>
+          <p class="subtitle" data-m="fade" style="--d: 1600ms">1년 만에 <em>21%p</em> 늘었어요</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- S4 따라 하기: 단계 + 화면 조각 -->
+    <figure class="cell">
+      <figcaption class="cell__label">S4 따라 하기 <span>단계 + 화면</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--9x16 frame--sub" data-frame="s4-steps" data-duration="5200">
+          <span class="kicker" data-m="rise" style="font-size: 32px">따라 하기</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">설정은<br><span class="hl">3단계</span>면 끝</h2>
+          <ol class="steps" style="margin-top: 48px; --step-gap: 32px">
+            <li class="step" data-m="rise" style="--d: 300ms"><span class="num">1</span><div><p class="step__title">설정 → 커넥터</p><p class="step__desc">AI 앱의 설정을 열어요</p></div></li>
+            <li class="step" data-m="rise" style="--d: 420ms"><span class="num">2</span><div><p class="step__title">서버 주소 붙여 넣기</p><p class="step__desc">한 줄이면 돼요</p></div></li>
+            <li class="step" data-m="rise" style="--d: 540ms"><span class="num">3</span><div><p class="step__title">말로 시키기</p><p class="step__desc">“이번 주 PR 정리해 줘”</p></div></li>
+          </ol>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="window" data-m="rise" style="--d: 800ms; flex: none; overflow: visible">
+            <span class="marker" data-m="pop" style="--d: 1000ms; left: -16px; top: -20px; width: 48px; height: 48px; font-size: 24px">2</span>
+            <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__title">MCP 서버 추가</span><span style="width: 66px"></span></div>
+            <div class="row" style="padding: 28px; --gap: 14px">
+              <div class="rel grow">
+                <div class="input input--focus"><span class="t-code" data-m="type" style="--d: 1300ms; --steps: 24; --dur: 900ms">mcp.example.com/github</span></div>
+                <span class="hl-ring" data-m="ring" style="--d: 2400ms; inset: -12px; border-radius: 22px"></span>
+              </div>
+              <span class="btn btn--accent" data-m="press" style="--d: 2900ms; height: 64px">추가</span>
+            </div>
+          </div>
+          <p class="subtitle" data-m="fade" style="--d: 1800ms">주소 <em>한 줄</em>이면 연결 끝</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- S5 마무리: 요약 + 다음 행동 -->
+    <figure class="cell">
+      <figcaption class="cell__label">S5 마무리 <span>요약·다음 편</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--9x16" data-frame="s5-outro" data-duration="4400">
+          <span class="kicker" data-m="rise" style="font-size: 32px">정리</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">MCP,<br>이것만 기억해요</h2>
+          <ul class="card stack" style="margin-top: 72px; --gap: 0; padding: 16px 44px">
+            <li class="row" data-m="rise" style="--d: 300ms; --gap: 24px; padding: 48px 0; border-bottom: 2px solid var(--line)"><span class="icon-tile icon-tile--soft icon-tile--lg"><i data-icon="plug"></i></span><span class="t-body-lg" style="font-weight: 650">AI용 표준 연결 규격</span></li>
+            <li class="row" data-m="rise" style="--d: 420ms; --gap: 24px; padding: 48px 0; border-bottom: 2px solid var(--line)"><span class="icon-tile icon-tile--lg"><i data-icon="repeat"></i></span><span class="t-body-lg" style="font-weight: 650">한 번 만들면 어디서나</span></li>
+            <li class="row" data-m="rise" style="--d: 540ms; --gap: 24px; padding: 48px 0"><span class="icon-tile icon-tile--lg"><i data-icon="message-square"></i></span><span class="t-body-lg" style="font-weight: 650">말로 시키면 실행</span></li>
+          </ul>
+          <div class="card card--inverse row" data-m="rise" style="--d: 800ms; --gap: 24px; padding: 40px 44px; margin-top: 32px">
+            <span class="icon-tile icon-tile--accent"><i data-icon="play"></i></span>
+            <div class="grow"><p class="t-h3">다음 편: 직접 만들기</p><p class="t-label" style="color: var(--on-inverse-2); margin-top: 4px">매주 AI·개발 1분 정리</p></div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+  </main>
+</body>
+</html>

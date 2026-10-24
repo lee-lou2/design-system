@@ -1,0 +1,37 @@
+[
+  {
+    "id": "s1-hook",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "s2-flow",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "s3-stat",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "s4-steps",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "s5-outro",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  }
+]

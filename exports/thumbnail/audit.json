@@ -1,0 +1,58 @@
+[
+  {
+    "id": "t1-bento",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "t2-versus",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "t3-flow",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "t4-screen",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "t5-chart",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "t6-hub",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "t7-terminal",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "t8-list",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  }
+]

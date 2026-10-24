@@ -1,0 +1,27 @@
+{
+  "name": "inkstone-design-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Inkstone — 썸네일·영상·숏폼용 차분한 인포그래픽 디자인 시스템",
+  "type": "module",
+  "scripts": {
+    "icons": "node scripts/build-icons.mjs",
+    "check": "node scripts/check-tokens.mjs && npx -y @google/design.md@latest lint DESIGN.md",
+    "audit": "for f in templates/thumbnail.html templates/video.html templates/shorts.html templates/cases.html preview.html; do node scripts/render.mjs $f --audit-only || exit 1; done",
+    "render": "node scripts/render.mjs",
+    "render:thumbs": "node scripts/render.mjs templates/thumbnail.html --audit",
+    "render:video": "node scripts/render.mjs templates/video.html --video --audit && node scripts/render.mjs templates/video.html --only y1-youtube,y2-youtube --width 1280",
+    "render:shorts": "node scripts/render.mjs templates/shorts.html --video --audit",
+    "render:cases": "node scripts/render.mjs templates/cases.html --video --audit",
+    "render:preview": "node scripts/render.mjs preview.html --audit",
+    "render:all": "npm run render:thumbs && npm run render:video && npm run render:shorts && npm run render:cases && npm run render:preview"
+  },
+  "devDependencies": {
+    "lucide-static": "1.61.0",
+    "playwright-core": "^1.58.0",
+    "simple-icons": "16.35.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

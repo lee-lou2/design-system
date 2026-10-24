@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inkstone — 실전 사례</title>
+  <link rel="stylesheet" href="../assets/ds.css">
+  <link rel="stylesheet" href="../assets/stage.css">
+  <script src="../assets/icons.js" defer></script>
+  <script src="../assets/stage.js" defer></script>
+</head>
+<body class="stage" style="--cols: 3">
+  <header class="stage__head">
+    <div>
+      <h1 class="stage__title">실전 사례 · 검증용</h1>
+      <p class="stage__desc">개발 강의·최신 뉴스·사용 가이드·서비스 소개·극한 테스트. 시스템이 여러 내용에서 무너지지 않는지 확인하는 페이지예요. 문구·수치·제품은 모두 가상이에요.</p>
+    </div>
+    <nav class="stage__nav">
+      <a href="../preview.html">시스템</a>
+      <a href="thumbnail.html">1:1 썸네일</a>
+      <a href="video.html">16:9 영상</a>
+      <a href="shorts.html">9:16 숏폼</a>
+      <a href="cases.html" aria-current="page">실전 사례</a>
+    </nav>
+  </header>
+
+  <main class="board">
+
+    <!-- ───────── 개발 강의 ───────── -->
+
+    <!-- D1 Git 브랜치 그래프 -->
+    <figure class="cell">
+      <figcaption class="cell__label">D1 개발 강의 <span>브랜치 그래프 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="d1-git-branch">
+          <div class="meta"><span class="kicker">개발 강의</span><span class="t-mono">Git 101</span></div>
+          <h2 class="t-h1" style="margin-top: 28px">Git 브랜치 전략,<br><span class="hl">한 장</span>으로 정리</h2>
+          <div class="spacer"></div>
+          <div class="card" style="padding: 28px 32px 32px">
+            <div class="card__head"><span class="t-mono">Branch flow</span><span class="t-caption">Git Flow 간단판</span></div>
+            <svg width="872" height="292" viewBox="0 0 872 292" role="img" aria-label="main, develop, feature 브랜치 흐름">
+              <g style="font-family: var(--font-mono); font-size: 22px; font-weight: 500; fill: var(--ink-2)">
+                <text x="0" y="58">main</text><text x="0" y="158">develop</text><text x="0" y="258" style="fill: var(--accent)">feature</text>
+              </g>
+              <line x1="200" y1="50" x2="864" y2="50" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+              <line x1="200" y1="150" x2="864" y2="150" stroke="var(--line-strong)" stroke-width="4" stroke-linecap="round"/>
+              <path d="M420 150 V226 Q420 250 444 250 H576 Q600 250 600 226 V150" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round"/>
+              <path d="M760 150 V74 Q760 50 784 50 H800" fill="none" stroke="var(--line-strong)" stroke-width="4" stroke-linecap="round" stroke-dasharray="10 8"/>
+              <g fill="var(--surface)" stroke-width="4">
+                <circle cx="230" cy="50" r="11" stroke="var(--ink)"/><circle cx="800" cy="50" r="11" stroke="var(--ink)"/>
+                <circle cx="280" cy="150" r="11" stroke="var(--ink-3)"/><circle cx="360" cy="150" r="11" stroke="var(--ink-3)"/><circle cx="680" cy="150" r="11" stroke="var(--ink-3)"/><circle cx="760" cy="150" r="11" stroke="var(--ink-3)"/>
+                <circle cx="480" cy="250" r="11" stroke="var(--accent)"/><circle cx="540" cy="250" r="11" stroke="var(--accent)"/>
+              </g>
+              <circle cx="600" cy="150" r="13" fill="var(--accent)"/>
+              <g style="font-family: var(--font-mono); font-size: 22px; font-weight: 600">
+                <rect x="196" y="2" width="68" height="32" rx="8" fill="var(--inverse)"/><text x="230" y="25" text-anchor="middle" fill="var(--on-inverse)">v1.0</text>
+                <rect x="766" y="2" width="68" height="32" rx="8" fill="var(--inverse)"/><text x="800" y="25" text-anchor="middle" fill="var(--on-inverse)">v1.1</text>
+              </g>
+              <text x="616" y="192" style="font: 600 24px var(--font-sans); fill: var(--accent)">merge</text>
+            </svg>
+          </div>
+          <div class="grid cols-3" style="--gap: 16px; margin-top: 16px">
+            <div class="card card--sm stack" style="--gap: 8px"><span class="row t-code" style="--gap: 10px; font-size: 24px; font-weight: 600"><span style="width: 14px; height: 14px; border-radius: 50%; background: var(--ink); flex: none"></span>main</span><span class="t-caption c-2">배포된 코드만</span></div>
+            <div class="card card--sm stack" style="--gap: 8px"><span class="row t-code" style="--gap: 10px; font-size: 24px; font-weight: 600"><span style="width: 14px; height: 14px; border-radius: 50%; background: var(--line-strong); flex: none"></span>develop</span><span class="t-caption c-2">다음 배포 모음</span></div>
+            <div class="card card--sm card--focus stack" style="--gap: 8px"><span class="row t-code" style="--gap: 10px; font-size: 24px; font-weight: 600; color: var(--accent-strong)"><span style="width: 14px; height: 14px; border-radius: 50%; background: var(--accent); flex: none"></span>feature</span><span class="t-caption" style="color: var(--accent-strong)">기능 하나씩 작업</span></div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- D2 결정표 -->
+    <figure class="cell">
+      <figcaption class="cell__label">D2 개발 강의 <span>결정표 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="d2-react-state">
+          <div class="meta"><span class="kicker">개발 강의</span><span class="row t-mono" style="--gap: 10px"><i data-logo="react" style="font-size: 28px; color: var(--ink-2)"></i>React</span></div>
+          <h2 class="t-h1" style="margin-top: 28px">React 상태,<br><span class="hl">어디에</span> 둘까?</h2>
+          <div class="spacer"></div>
+          <div class="card" style="padding: 24px 32px 16px">
+            <table class="table table--inset" style="--cell-y: 22px">
+              <thead><tr><th style="width: 40%">상태가 쓰이는 곳</th><th style="width: 34%">도구</th><th>예시</th></tr></thead>
+              <tbody>
+                <tr><td><span class="row" style="--gap: 14px"><span class="icon-tile icon-tile--sm"><i data-icon="box"></i></span>컴포넌트 하나</span></td><td><span class="chip chip--sm chip--outline t-code">useState</span></td><td class="c-2">입력창 값</td></tr>
+                <tr><td><span class="row" style="--gap: 14px"><span class="icon-tile icon-tile--sm"><i data-icon="git-fork"></i></span>몇 단계 아래</span></td><td><span class="chip chip--sm chip--outline t-code">Context</span></td><td class="c-2">테마·로그인</td></tr>
+                <tr><td><span class="row" style="--gap: 14px"><span class="icon-tile icon-tile--sm"><i data-icon="layout-grid"></i></span>앱 전체</span></td><td><span class="chip chip--sm chip--outline t-code">Zustand</span></td><td class="c-2">장바구니</td></tr>
+                <tr class="is-focus"><td><span class="row" style="--gap: 14px"><span class="icon-tile icon-tile--sm icon-tile--accent"><i data-icon="cloud"></i></span>서버 데이터</span></td><td><span class="chip chip--sm chip--accent t-code">TanStack Query</span></td><td>목록·캐시</td></tr>
+              </tbody>
+            </table>
+            <p class="row t-caption c-3" style="--gap: 10px; margin: 14px 16px 6px; font-weight: 600"><i data-icon="arrow-down"></i>아래로 갈수록 함께 쓰는 범위가 넓어져요</p>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- D3 요청 흐름 + 구간 막대 -->
+    <figure class="cell">
+      <figcaption class="cell__label">D3 개발 강의 <span>흐름 + 구간 막대 · 16:9</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9 frame--grid" data-frame="d3-http" data-duration="5600">
+          <div class="row row--between" style="align-items: flex-end">
+            <div class="stack" style="--gap: 16px">
+              <span class="kicker" data-m="rise">개발 강의 · 네트워크</span>
+              <h2 class="t-h1" data-m="rise" style="--d: 100ms">주소창에 URL을 치면 생기는 일</h2>
+            </div>
+            <div class="stat stat--sm" data-m="rise" style="--d: 200ms; align-items: flex-end"><span class="stat__value">320<span class="stat__unit">ms</span></span><span class="stat__label">첫 화면까지 · 예시</span></div>
+          </div>
+          <div class="spacer" style="--min: 56px"></div>
+          <div class="flow">
+            <div class="node node--col" data-m="pop" style="--d: 400ms; width: 268px; padding: 32px 24px"><span class="icon-tile"><i data-icon="globe"></i></span><span>DNS 조회<span class="node__sub">이름 → IP</span></span></div>
+            <span class="link" data-m="grow-x" style="--d: 600ms; --dur: 280ms"></span>
+            <div class="node node--col" data-m="pop" style="--d: 750ms; width: 268px; padding: 32px 24px"><span class="icon-tile"><i data-icon="lock"></i></span><span>TCP·TLS 연결<span class="node__sub">암호화 약속</span></span></div>
+            <span class="link" data-m="grow-x" style="--d: 950ms; --dur: 280ms"></span>
+            <div class="node node--col" data-m="pop" style="--d: 1100ms; width: 268px; padding: 32px 24px"><span class="icon-tile"><i data-icon="send"></i></span><span>HTTP 요청<span class="node__sub">GET /</span></span></div>
+            <span class="link link--accent" data-m="grow-x" style="--d: 1300ms; --dur: 280ms"></span>
+            <div class="node node--col node--focus" data-m="pop" style="--d: 1450ms; width: 268px; padding: 32px 24px"><span class="icon-tile icon-tile--accent"><i data-icon="server"></i></span><span>서버 처리<span class="node__sub">가장 오래 걸려요</span></span></div>
+            <span class="link" data-m="grow-x" style="--d: 1650ms; --dur: 280ms"></span>
+            <div class="node node--col" data-m="pop" style="--d: 1800ms; width: 268px; padding: 32px 24px"><span class="icon-tile"><i data-icon="monitor"></i></span><span>화면 그리기<span class="node__sub">HTML·CSS·JS</span></span></div>
+          </div>
+          <div class="spacer" style="--min: 48px"></div>
+          <div class="card" data-m="rise" style="--d: 2100ms; padding: 32px 40px">
+            <div class="card__head"><span class="t-mono">Time breakdown</span><span class="t-caption">단위 ms · 예시</span></div>
+            <div class="segbar">
+              <div class="seg" style="--v: 20"><span class="seg__bar" data-m="grow-x" style="--d: 2300ms"></span><span class="seg__label">DNS<span class="seg__value">20</span></span></div>
+              <div class="seg" style="--v: 60"><span class="seg__bar" data-m="grow-x" style="--d: 2380ms"></span><span class="seg__label">연결<span class="seg__value">60</span></span></div>
+              <div class="seg" style="--v: 30"><span class="seg__bar" data-m="grow-x" style="--d: 2460ms"></span><span class="seg__label">요청<span class="seg__value">30</span></span></div>
+              <div class="seg is-focus" style="--v: 120"><span class="seg__bar" data-m="grow-x" style="--d: 2540ms"></span><span class="seg__label">서버 처리<span class="seg__value">120</span></span></div>
+              <div class="seg" style="--v: 90"><span class="seg__bar" data-m="grow-x" style="--d: 2620ms"></span><span class="seg__label">그리기<span class="seg__value">90</span></span></div>
+            </div>
+            <p class="row t-label" style="--gap: 12px; margin-top: 24px; padding-top: 20px; border-top: 2px solid var(--line)"><i data-icon="lightbulb" class="c-accent"></i><span>느리다면 <span class="hl">서버 처리</span>부터 들여다보세요</span></p>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- D4 층 쌓기 비교 -->
+    <figure class="cell">
+      <figcaption class="cell__label">D4 개발 강의 <span>층 쌓기 비교 · 16:9</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="d4-container" data-duration="5200">
+          <span class="kicker" data-m="rise">개발 강의 · 인프라</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 16px">컨테이너는 왜 <span class="hl">가벼울까?</span></h2>
+          <div class="spacer" style="--min: 48px"></div>
+          <div class="compare" style="--gap: 32px; --layer-h: 72px">
+            <div class="card card--muted stack" data-m="fade" style="--d: 300ms; --gap: 24px; padding: 36px 40px">
+              <div class="row row--between"><span class="row t-h3" style="--gap: 16px"><span class="icon-tile icon-tile--line"><i data-icon="hard-drive"></i></span>가상 머신</span><span class="row" style="--gap: 10px"><span class="chip chip--sm chip--outline">GB</span><span class="chip chip--sm chip--outline">부팅 수십 초</span></span></div>
+              <div class="layers">
+                <div class="layers__row"><span class="layer">앱 A</span><span class="layer">앱 B</span></div>
+                <div class="layers__row"><span class="layer">라이브러리</span><span class="layer">라이브러리</span></div>
+                <div class="layers__row"><span class="layer layer--inverse">게스트 OS</span><span class="layer layer--inverse">게스트 OS</span></div>
+                <span class="layer layer--muted" style="box-shadow: inset 0 0 0 2px var(--line-strong)">하이퍼바이저</span>
+                <span class="layer layer--muted" style="box-shadow: inset 0 0 0 2px var(--line-strong)">호스트 OS · 하드웨어</span>
+              </div>
+            </div>
+            <span class="compare__vs">VS</span>
+            <div class="card stack" data-m="fade" style="--d: 900ms; --gap: 24px; padding: 36px 40px; border-color: var(--accent)">
+              <div class="row row--between"><span class="row t-h3" style="--gap: 16px"><span class="icon-tile icon-tile--soft"><i data-icon="container"></i></span>컨테이너</span><span class="row" style="--gap: 10px"><span class="chip chip--sm chip--soft">MB</span><span class="chip chip--sm chip--soft">부팅 몇 초</span></span></div>
+              <div class="layers" style="flex: 1; justify-content: flex-end">
+                <div class="layers__row"><span class="layer">앱 A</span><span class="layer">앱 B</span><span class="layer">앱 C</span></div>
+                <div class="layers__row"><span class="layer">라이브러리</span><span class="layer">라이브러리</span><span class="layer">라이브러리</span></div>
+                <span class="layer layer--focus">컨테이너 엔진</span>
+                <span class="layer layer--muted" style="box-shadow: inset 0 0 0 2px var(--line-strong)">호스트 OS · 하드웨어</span>
+              </div>
+            </div>
+          </div>
+          <div class="row" data-m="rise" style="--d: 1400ms; --gap: 16px; margin-top: 28px">
+            <span class="icon-tile icon-tile--sm"><i data-icon="lightbulb"></i></span>
+            <p class="t-body-lg" style="font-weight: 650">게스트 OS 없이 호스트 OS를 나눠 써서 가볍고 빨라요</p>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- D5 9:16 명령어 목록 -->
+    <figure class="cell">
+      <figcaption class="cell__label">D5 개발 강의 <span>명령어 목록 · 9:16</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--9x16 frame--sub" data-frame="d5-git-cmds" data-duration="4600">
+          <span class="kicker" data-m="rise" style="font-size: 32px">개발 강의 1분</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">매일 쓰는<br>Git 명령 <span class="hl">5개</span></h2>
+          <div class="spacer" style="--min: 56px"></div>
+          <ol class="card stack" style="--gap: 0; padding: 28px 36px 8px">
+            <li class="card__head" style="margin-bottom: 4px"><span class="t-mono" style="font-size: 26px">Daily flow</span><span class="t-label">위에서 아래로</span></li>
+            <li class="row" data-m="rise" style="--d: 300ms; --gap: 20px; padding: 22px 0; border-bottom: 2px solid var(--line)"><span class="num">1</span><span class="chip chip--lg chip--inverse t-code" style="font-size: 32px">git status</span><span class="t-body c-2 grow" style="text-align: right; font-weight: 600">지금 상태</span></li>
+            <li class="row" data-m="rise" style="--d: 400ms; --gap: 20px; padding: 22px 0; border-bottom: 2px solid var(--line)"><span class="num">2</span><span class="chip chip--lg chip--inverse t-code" style="font-size: 32px">git add .</span><span class="t-body c-2 grow" style="text-align: right; font-weight: 600">바뀐 파일 담기</span></li>
+            <li class="row" data-m="rise" style="--d: 500ms; --gap: 20px; padding: 22px 0; border-bottom: 2px solid var(--line)"><span class="num">3</span><span class="chip chip--lg chip--inverse t-code" style="font-size: 32px">git commit</span><span class="t-body c-2 grow" style="text-align: right; font-weight: 600">저장점 만들기</span></li>
+            <li class="row" data-m="rise" style="--d: 600ms; --gap: 20px; padding: 22px 0; border-bottom: 2px solid var(--line)"><span class="num">4</span><span class="chip chip--lg chip--inverse t-code" style="font-size: 32px">git pull</span><span class="t-body c-2 grow" style="text-align: right; font-weight: 600">최신 받기</span></li>
+            <li class="row" data-m="rise" style="--d: 700ms; --gap: 20px; padding: 22px 0"><span class="num">5</span><span class="chip chip--lg chip--inverse t-code" style="font-size: 32px">git push</span><span class="t-body c-2 grow" style="text-align: right; font-weight: 600">올리기</span></li>
+          </ol>
+          <p class="subtitle" data-m="fade" style="--d: 1100ms">이 다섯 개면 <em>하루</em>가 굴러가요</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- ───────── 최신 뉴스 ───────── -->
+
+    <!-- N1 출시 소식 벤토 -->
+    <figure class="cell">
+      <figcaption class="cell__label">N1 최신 뉴스 <span>출시 핵심 3가지 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="n1-launch">
+          <div class="meta"><span class="kicker">AI 뉴스</span><span class="t-mono">2026.10.20</span></div>
+          <h2 class="t-h1" style="margin-top: 28px">Nova 2 출시,<br>핵심만 <span class="hl">3가지</span></h2>
+          <div class="spacer" style="--min: 36px"></div>
+          <div class="grid" style="grid-template-columns: 1.1fr 1fr; --gap: 20px">
+            <div class="card card--inverse stack" style="--gap: 0">
+              <span class="t-mono" style="color: var(--on-inverse-2)">Example AI</span>
+              <p class="t-h2 push" style="margin-top: 40px">Nova 2</p>
+              <div class="row wrap" style="--gap: 10px; margin-top: 16px">
+                <span class="chip chip--sm" style="background: rgba(243, 242, 238, 0.12); color: var(--on-inverse)">추론</span>
+                <span class="chip chip--sm" style="background: rgba(243, 242, 238, 0.12); color: var(--on-inverse)">이미지 이해</span>
+              </div>
+            </div>
+            <div class="card stack" style="--gap: 0">
+              <div class="card__head"><span class="row t-label c-ink" style="--gap: 12px"><span class="num num--sm">1</span>긴 문맥</span></div>
+              <div class="stat stat--sm push"><span class="stat__value">1M<span class="stat__unit">토큰</span></span><span class="stat__label">한 번에 읽는 양</span></div>
+            </div>
+            <div class="card stack" style="--gap: 0">
+              <div class="card__head"><span class="row t-label c-ink" style="--gap: 12px"><span class="num num--sm num--accent">2</span>성능</span><span class="t-caption">점수 · 예시</span></div>
+              <div class="bars push" style="--bar-h: 26px; row-gap: 14px">
+                <div class="bar is-focus"><span class="bar__label">Nova 2</span><span class="bar__track"><span class="bar__fill" style="--v: 0.88"></span></span><span class="bar__value">88</span></div>
+                <div class="bar"><span class="bar__label">경쟁 모델</span><span class="bar__track"><span class="bar__fill" style="--v: 0.82"></span></span><span class="bar__value">82</span></div>
+                <div class="bar"><span class="bar__label">이전 버전</span><span class="bar__track"><span class="bar__fill" style="--v: 0.74"></span></span><span class="bar__value">74</span></div>
+              </div>
+            </div>
+            <div class="card stack" style="--gap: 0">
+              <div class="card__head"><span class="row t-label c-ink" style="--gap: 12px"><span class="num num--sm">3</span>가격</span></div>
+              <div class="stat stat--sm push"><span class="stat__value">$2<span class="stat__unit">/ 1M</span></span><span class="row stat__label" style="--gap: 10px"><span>입력 토큰당</span><span class="chip chip--sm chip--soft">−40%</span></span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- N2 4:5 주간 목록(두 줄 항목) -->
+    <figure class="cell">
+      <figcaption class="cell__label">N2 최신 뉴스 <span>주간 목록 · 4:5</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--4x5" data-frame="n2-weekly">
+          <div class="meta"><span class="kicker">AI 뉴스</span><span class="chip chip--sm chip--outline t-num">10.20 – 10.26</span></div>
+          <h2 class="t-h1" style="margin-top: 28px">이번 주 AI 뉴스,<br><span class="hl">5분</span>이면 따라잡아요</h2>
+          <div class="spacer"></div>
+          <ol class="card stack" style="--gap: 0; padding: 8px 36px">
+            <li class="row" style="--gap: 22px; padding: 30px 0; border-bottom: 2px solid var(--line)"><span class="num num--accent">1</span><div class="grow"><p class="t-body" style="font-weight: 700; line-height: 1.4">추론 모델 새 버전 공개</p><p class="t-caption c-3" style="margin-top: 4px">수학·코딩 점수가 크게 올랐어요</p></div><span class="chip chip--sm">모델</span></li>
+            <li class="row" style="--gap: 22px; padding: 30px 0; border-bottom: 2px solid var(--line)"><span class="num">2</span><div class="grow"><p class="t-body" style="font-weight: 700; line-height: 1.4">코딩 에이전트 정식 출시</p><p class="t-caption c-3" style="margin-top: 4px">터미널에서 PR까지 만들어요</p></div><span class="chip chip--sm">도구</span></li>
+            <li class="row" style="--gap: 22px; padding: 30px 0; border-bottom: 2px solid var(--line)"><span class="num">3</span><div class="grow"><p class="t-body" style="font-weight: 700; line-height: 1.4">오픈소스 음성 모델 등장</p><p class="t-caption c-3" style="margin-top: 4px">한국어 발음이 자연스러워요</p></div><span class="chip chip--sm">오픈소스</span></li>
+            <li class="row" style="--gap: 22px; padding: 30px 0; border-bottom: 2px solid var(--line)"><span class="num">4</span><div class="grow"><p class="t-body" style="font-weight: 700; line-height: 1.4">이미지 API 가격 절반으로</p><p class="t-caption c-3" style="margin-top: 4px">장당 비용이 낮아졌어요</p></div><span class="chip chip--sm">가격</span></li>
+            <li class="row" style="--gap: 22px; padding: 30px 0"><span class="num">5</span><div class="grow"><p class="t-body" style="font-weight: 700; line-height: 1.4">AI 기본법 시행령 발표</p><p class="t-caption c-3" style="margin-top: 4px">고영향 AI 기준이 정해졌어요</p></div><span class="chip chip--sm">정책</span></li>
+          </ol>
+          <p class="source" style="margin-top: 20px">출처 자리 · 각 사 발표 · 예시</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- N3 발표 정리(인용 + 숫자) -->
+    <figure class="cell">
+      <figcaption class="cell__label">N3 최신 뉴스 <span>발표 인용 + 숫자 · 16:9</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="n3-keynote" data-duration="5200">
+          <div class="row row--stretch grow" style="--gap: 64px">
+            <div class="stack grow" style="--gap: 0">
+              <span class="kicker" data-m="rise">AI 뉴스 · 발표 정리</span>
+              <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">에이전트가 <span class="hl">앱을 쓰는</span> 시대</h2>
+              <div class="card grow" data-m="rise" style="--d: 300ms; margin-top: 48px; padding: 56px 64px; display: flex; align-items: center">
+                <div class="quote" style="width: 100%"><p class="quote__text" style="font-size: 54px">“앞으로 사람은 목표만 말하고,<br>실행은 에이전트가 맡게 될 겁니다.”</p>
+                  <div class="row" style="--gap: 18px; margin-top: 40px; padding-top: 32px; border-top: 2px solid var(--line)"><span class="avatar avatar--muted">가</span><div><p class="t-label">가상의 회사 대표</p><p class="t-caption c-3">2026 개발자 행사 · 기조연설</p></div></div></div>
+              </div>
+              <p class="source" data-m="fade" style="--d: 900ms; margin-top: 24px">출처 자리 · 발표 영상 12:40 · 예시</p>
+            </div>
+            <div class="stack" style="width: 520px; flex: none; --gap: 20px">
+              <div class="card row" data-m="right" style="--d: 500ms; --gap: 24px; flex: 1"><span class="icon-tile icon-tile--lg"><i data-icon="users"></i></span><div class="stat stat--sm"><span class="stat__value">1억<span class="stat__unit">명</span></span><span class="stat__label">주간 사용자</span></div></div>
+              <div class="card card--focus row" data-m="right" style="--d: 620ms; --gap: 24px; flex: 1"><span class="icon-tile icon-tile--lg icon-tile--accent"><i data-icon="trending-down"></i></span><div class="stat stat--sm"><span class="stat__value c-accent">−50<span class="stat__unit">%</span></span><span class="stat__label" style="color: var(--accent-strong)">API 가격</span></div></div>
+              <div class="card row" data-m="right" style="--d: 740ms; --gap: 24px; flex: 1"><span class="icon-tile icon-tile--lg"><i data-icon="blocks"></i></span><div class="stat stat--sm"><span class="stat__value">3<span class="stat__unit">개</span></span><span class="stat__label">새 에이전트 도구</span></div></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- N4 9:16 뉴스 3줄 -->
+    <figure class="cell">
+      <figcaption class="cell__label">N4 최신 뉴스 <span>3줄 요약 · 9:16</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--9x16 frame--sub" data-frame="n4-three" data-duration="4600">
+          <div class="row row--between" data-m="rise"><span class="kicker" style="font-size: 32px">AI 뉴스 1분</span><span class="chip chip--outline t-num">10.24</span></div>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">오늘 알아야 할<br>AI 뉴스 <span class="hl">3줄</span></h2>
+          <div class="spacer" style="--min: 48px"></div>
+          <div class="stack" style="--gap: 24px">
+            <div class="card row" data-m="rise" style="--d: 300ms; --gap: 24px; padding: 44px"><span class="icon-tile icon-tile--lg icon-tile--soft"><i data-icon="brain"></i></span><div class="grow"><p class="t-h3" style="font-size: 44px">추론 모델 새 버전</p><p class="t-label c-3" style="font-weight: 500; margin-top: 4px">수학·코딩 점수 상승</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 420ms; --gap: 24px; padding: 44px"><span class="icon-tile icon-tile--lg"><i data-icon="code-xml"></i></span><div class="grow"><p class="t-h3" style="font-size: 44px">코딩 에이전트 출시</p><p class="t-label c-3" style="font-weight: 500; margin-top: 4px">터미널에서 PR까지</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 540ms; --gap: 24px; padding: 44px"><span class="icon-tile icon-tile--lg"><i data-icon="coins"></i></span><div class="grow"><p class="t-h3" style="font-size: 44px">이미지 API 반값</p><p class="t-label c-3" style="font-weight: 500; margin-top: 4px">장당 비용 절반</p></div></div>
+          </div>
+          <p class="subtitle" data-m="fade" style="--d: 900ms">하나씩 <em>짧게</em> 볼게요</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- ───────── 사용 가이드 ───────── -->
+
+    <!-- G1 키 발급: 가로 단계 + 화면 -->
+    <figure class="cell">
+      <figcaption class="cell__label">G1 사용 가이드 <span>가로 단계 + 화면 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="g1-api-key">
+          <div class="meta"><span class="kicker">사용 가이드</span><span class="t-mono">API</span></div>
+          <h2 class="t-h1" style="margin-top: 28px">API 키 발급,<br><span class="hl">3단계</span>면 끝</h2>
+          <div class="spacer" style="--min: 48px"></div>
+          <ol class="steps-h">
+            <li class="step-h"><span class="num">1</span><span class="step-h__title">콘솔 로그인</span></li>
+            <li class="step-h"><span class="num">2</span><span class="step-h__title">새 키 만들기</span></li>
+            <li class="step-h"><span class="num num--line">3</span><span class="step-h__title c-3">안전하게 저장</span></li>
+          </ol>
+          <div class="spacer" style="--min: 36px"></div>
+          <div class="window">
+            <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="lock"></i>console.example.ai/keys</span></div>
+            <div style="padding: 28px 32px; display: flex; flex-direction: column; gap: 18px">
+              <div class="row row--between"><span class="t-h3" style="font-size: 36px">API 키</span><span class="btn"><i data-icon="plus"></i>새 키</span></div>
+              <div class="rel">
+                <div class="row" style="--gap: 16px; padding: 18px 20px; border-radius: 16px; background: var(--surface-muted)"><span class="t-label">my-app</span><span class="t-code grow" style="font-size: 26px; color: var(--ink-2)">sk-•••••••••3f9a</span><span class="icon-tile icon-tile--line icon-tile--sm"><i data-icon="copy"></i></span></div>
+                <span class="hl-ring" style="inset: -10px; border-radius: 22px"></span>
+              </div>
+              <span class="chip chip--warning" style="align-self: flex-start"><i data-icon="triangle-alert"></i>키는 만들 때 한 번만 보여요</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- G2 전/후: 흩어진 메모 → 정리된 회의록 -->
+    <figure class="cell">
+      <figcaption class="cell__label">G2 사용 가이드 <span>전/후 변환 · 16:9</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="g2-meeting" data-duration="5600">
+          <span class="kicker" data-m="rise">사용 가이드 · AI 활용</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 16px">흩어진 회의 메모, <span class="hl">3분</span>이면 정리</h2>
+          <div class="grid grow" style="margin-top: 56px; grid-template-columns: 1fr 240px 1.15fr; --gap: 24px; align-items: stretch">
+            <div class="card card--muted stack" data-m="fade" style="--d: 300ms; --gap: 16px">
+              <div class="row row--between"><span class="t-label">회의 메모</span><span class="chip chip--sm chip--outline">원본</span></div>
+              <p class="t-label c-2" style="font-weight: 500">- 다음 주 배포? 금요일은 X</p>
+              <p class="t-label c-2" style="font-weight: 500">- 로그인 버그 → 민지 확인</p>
+              <span class="skeleton skeleton--strong" style="width: 76%"></span>
+              <p class="t-label c-2" style="font-weight: 500">- 디자인 리뷰 목요일?? 회의실</p>
+              <span class="skeleton skeleton--strong" style="width: 58%"></span>
+              <p class="t-label c-2" style="font-weight: 500">- 예산 얘기는 다음에</p>
+              <span class="skeleton skeleton--strong" style="width: 82%"></span>
+              <p class="t-label c-2" style="font-weight: 500">- 온보딩 문서 누가?</p>
+              <span class="skeleton skeleton--strong" style="width: 64%"></span>
+            </div>
+            <div class="stack" style="--gap: 20px; justify-content: center; align-items: center">
+              <span class="speech" data-m="pop" style="--d: 900ms; font-size: 26px; padding: 18px 24px">회의록 정리해 줘</span>
+              <span class="link" data-m="grow-x" style="--d: 1100ms; flex: none; width: 200px; margin: 12px 0"></span>
+              <span class="icon-tile icon-tile--accent icon-tile--lg" data-m="pop" style="--d: 1250ms"><i data-icon="sparkles"></i></span>
+            </div>
+            <div class="card stack" data-m="fade" style="--d: 1500ms; --gap: 20px; border-color: var(--accent)">
+              <div class="row row--between"><span class="t-label">정리된 회의록</span><span class="chip chip--sm chip--soft"><i data-icon="sparkles"></i>AI 정리</span></div>
+              <div class="stack" style="--gap: 12px">
+                <span class="t-caption c-3" style="font-weight: 600">결정</span>
+                <ul class="checks" style="gap: 10px"><li style="font-size: 28px"><i data-icon="check"></i>배포는 다음 주 목요일</li><li style="font-size: 28px"><i data-icon="check"></i>예산은 다음 회의에서</li></ul>
+              </div>
+              <div class="stack" style="--gap: 12px">
+                <span class="t-caption c-3" style="font-weight: 600">할 일</span>
+                <div class="row" style="--gap: 14px"><span class="avatar avatar--muted" style="width: 48px; height: 48px; font-size: 24px">민</span><span class="t-label grow" style="font-weight: 600">로그인 버그 확인</span><span class="chip chip--sm">금</span></div>
+                <div class="row" style="--gap: 14px"><span class="avatar avatar--muted" style="width: 48px; height: 48px; font-size: 24px">준</span><span class="t-label grow" style="font-weight: 600">디자인 리뷰 회의실 잡기</span><span class="chip chip--sm">목</span></div>
+                <div class="row" style="--gap: 14px"><span class="avatar avatar--muted" style="width: 48px; height: 48px; font-size: 24px">서</span><span class="t-label grow" style="font-weight: 600">온보딩 문서 초안</span><span class="chip chip--sm">다음 주</span></div>
+              </div>
+              <div class="row push" style="--gap: 10px; padding-top: 18px; border-top: 2px solid var(--line)"><span class="chip chip--sm chip--outline"><i data-icon="calendar"></i>다음 회의 10.31</span><span class="chip chip--sm chip--outline"><i data-icon="send"></i>참석자에게 공유</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- G3 단축키 격자 -->
+    <figure class="cell">
+      <figcaption class="cell__label">G3 사용 가이드 <span>단축키 격자 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="g3-shortcuts">
+          <div class="meta"><span class="kicker">사용 가이드</span><span class="row t-mono" style="--gap: 10px"><i data-icon="keyboard" style="font-size: 28px; color: var(--ink-2)"></i>VS Code · Mac</span></div>
+          <h2 class="t-h1" style="margin-top: 28px">손이 빨라지는<br>단축키 <span class="hl">6개</span></h2>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="grid cols-2" style="--gap: 24px">
+            <div class="card card--sm row" style="--gap: 18px; padding: 32px 24px"><span class="row" style="--gap: 8px"><span class="kbd">⌘</span><span class="kbd">P</span></span><div><p class="t-label">파일 찾기</p><p class="t-caption c-3">이름 일부만</p></div></div>
+            <div class="card card--sm card--focus row" style="--gap: 18px; padding: 32px 24px"><span class="row" style="--gap: 8px"><span class="kbd">⇧</span><span class="kbd">⌘</span><span class="kbd">P</span></span><div><p class="t-label" style="color: var(--accent-strong)">명령 팔레트</p><p class="t-caption" style="color: var(--accent-strong)">모든 기능</p></div></div>
+            <div class="card card--sm row" style="--gap: 18px; padding: 32px 24px"><span class="row" style="--gap: 8px"><span class="kbd">⌘</span><span class="kbd">D</span></span><div><p class="t-label">같은 단어 선택</p><p class="t-caption c-3">여러 곳 동시 수정</p></div></div>
+            <div class="card card--sm row" style="--gap: 18px; padding: 32px 24px"><span class="row" style="--gap: 8px"><span class="kbd">⌥</span><span class="kbd">↑</span></span><div><p class="t-label">줄 옮기기</p><p class="t-caption c-3">위·아래로</p></div></div>
+            <div class="card card--sm row" style="--gap: 18px; padding: 32px 24px"><span class="row" style="--gap: 8px"><span class="kbd">⌘</span><span class="kbd">/</span></span><div><p class="t-label">주석 토글</p><p class="t-caption c-3">선택한 줄 전체</p></div></div>
+            <div class="card card--sm row" style="--gap: 18px; padding: 32px 24px"><span class="row" style="--gap: 8px"><span class="kbd">⌘</span><span class="kbd">B</span></span><div><p class="t-label">사이드바</p><p class="t-caption c-3">열고 닫기</p></div></div>
+          </div>
+          <p class="row t-caption c-3" style="--gap: 24px; margin-top: 28px; font-weight: 600"><span class="row" style="--gap: 10px"><span class="kbd" style="min-width: 44px; height: 44px; font-size: 22px; padding: 0 10px">⌘</span>Command</span><span class="row" style="--gap: 10px"><span class="kbd" style="min-width: 44px; height: 44px; font-size: 22px; padding: 0 10px">⇧</span>Shift</span><span class="row" style="--gap: 10px"><span class="kbd" style="min-width: 44px; height: 44px; font-size: 22px; padding: 0 10px">⌥</span>Option</span></p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- G4 9:16 휴대폰 화면 + 단계 -->
+    <figure class="cell">
+      <figcaption class="cell__label">G4 사용 가이드 <span>휴대폰 화면 · 9:16</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--9x16 frame--sub" data-frame="g4-phone" data-duration="4800">
+          <span class="kicker" data-m="rise" style="font-size: 32px">사용 가이드 1분</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">앱 알림,<br><span class="hl">3번 탭</span>으로 끄기</h2>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="row row--top" style="--gap: 36px">
+            <div class="phone" data-m="rise" style="--d: 300ms; --phone-w: 316px">
+              <div style="padding: 64px 18px 18px; display: flex; flex-direction: column; gap: 10px; height: 100%; background: var(--surface)">
+                <p class="t-h3" style="font-size: 30px; padding: 0 6px 8px">설정</p>
+                <div class="rel"><div class="row" style="--gap: 14px; padding: 14px 12px; border-radius: 16px; background: var(--surface-muted)"><i data-icon="bell" style="font-size: 26px"></i><span class="grow" style="font-size: 24px; font-weight: 650">알림</span><span class="toggle is-on"></span></div><span class="hl-ring" data-m="ring" style="--d: 1200ms; inset: -8px; border-radius: 22px"></span><span class="marker" data-m="pop" style="--d: 1300ms; right: -20px; top: -24px; width: 48px; height: 48px; font-size: 24px">1</span></div>
+                <div class="row" style="--gap: 14px; padding: 14px 12px"><i data-icon="audio-lines" style="font-size: 26px"></i><span class="grow" style="font-size: 24px; font-weight: 600">소리</span><span class="toggle is-on"></span></div>
+                <div class="row" style="--gap: 14px; padding: 14px 12px"><i data-icon="moon" style="font-size: 26px"></i><span class="grow" style="font-size: 24px; font-weight: 600">방해 금지</span><span class="toggle"></span></div>
+                <div class="row" style="--gap: 14px; padding: 14px 12px"><i data-icon="lock" style="font-size: 26px"></i><span class="grow" style="font-size: 24px; font-weight: 600">개인정보</span><i data-icon="chevron-right" class="c-3" style="font-size: 26px"></i></div>
+              </div>
+            </div>
+            <ol class="steps grow" style="--step-gap: 40px; padding-top: 24px">
+              <li class="step" data-m="rise" style="--d: 500ms"><span class="num">1</span><div><p class="step__title">설정 열기</p><p class="step__desc">오른쪽 위 톱니</p></div></li>
+              <li class="step" data-m="rise" style="--d: 620ms"><span class="num">2</span><div><p class="step__title">알림 누르기</p><p class="step__desc">맨 위 줄</p></div></li>
+              <li class="step" data-m="rise" style="--d: 740ms"><span class="num num--line">3</span><div><p class="step__title c-3">스위치 끄기</p><p class="step__desc">회색이 되면 끝</p></div></li>
+            </ol>
+          </div>
+          <p class="subtitle" data-m="fade" style="--d: 1500ms">설정에서 <em>알림</em>만 끄면 돼요</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- ───────── 서비스 소개 ───────── -->
+
+    <!-- P1 서비스 소개: 기능 3개 + 제품 화면 -->
+    <figure class="cell">
+      <figcaption class="cell__label">P1 서비스 소개 <span>기능 + 제품 화면 · 16:9</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="p1-service" data-duration="5600">
+          <div class="row row--stretch grow" style="--gap: 72px">
+            <div class="stack" style="width: 660px; flex: none; --gap: 0">
+              <span class="kicker" data-m="rise">신규 서비스</span>
+              <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">Brieflow,<br><span class="hl">AI가 정리하는</span> 노트</h2>
+              <p class="t-body-lg c-2" data-m="rise" style="--d: 200ms; margin-top: 20px">회의·문서·할 일을 한 곳에서 요약해요</p>
+              <div class="spacer" style="--min: 40px"></div>
+              <ul class="stack" style="--gap: 32px">
+                <li class="row" data-m="rise" style="--d: 350ms; --gap: 20px"><span class="icon-tile icon-tile--soft"><i data-icon="mic"></i></span><div><p class="t-body" style="font-weight: 650; line-height: 1.4">회의 녹음 → 요약</p><p class="t-label c-3" style="font-weight: 500">말한 내용을 결정·할 일로</p></div></li>
+                <li class="row" data-m="rise" style="--d: 430ms; --gap: 20px"><span class="icon-tile"><i data-icon="file-text"></i></span><div><p class="t-body" style="font-weight: 650; line-height: 1.4">문서 질문하기</p><p class="t-label c-3" style="font-weight: 500">내 노트 안에서만 답해요</p></div></li>
+                <li class="row" data-m="rise" style="--d: 510ms; --gap: 20px"><span class="icon-tile"><i data-icon="list-checks"></i></span><div><p class="t-body" style="font-weight: 650; line-height: 1.4">할 일 자동 정리</p><p class="t-label c-3" style="font-weight: 500">담당·마감까지</p></div></li>
+              </ul>
+              <div class="row" data-m="rise" style="--d: 650ms; --gap: 12px; margin-top: 48px"><span class="chip chip--inverse">무료로 시작</span><span class="chip chip--outline">팀 월 8,000원 · 예시</span></div>
+            </div>
+            <div class="window grow" data-m="rise" style="--d: 300ms">
+              <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="lock"></i>brieflow.example</span></div>
+              <div class="window__body" style="display: grid; grid-template-columns: minmax(0, 1fr) 360px">
+                <div style="padding: 40px 44px; display: flex; flex-direction: column; gap: 16px">
+                  <span class="t-caption c-3">10월 24일 · 주간 회의</span>
+                  <p class="t-h3">출시 일정 회의</p>
+                  <span class="skeleton" style="width: 92%"></span><span class="skeleton" style="width: 80%"></span><span class="skeleton" style="width: 86%"></span>
+                  <span class="skeleton" style="width: 60%; margin-top: 12px"></span><span class="skeleton" style="width: 88%"></span><span class="skeleton" style="width: 72%"></span>
+                  <div class="card card--sm card--muted" style="margin-top: 20px; padding: 22px 24px">
+                    <p class="t-caption c-3" style="font-weight: 600">결정 사항</p>
+                    <ul class="checks" style="gap: 10px; margin-top: 10px"><li style="font-size: 26px"><i data-icon="check"></i>배포는 목요일 오전</li><li style="font-size: 26px"><i data-icon="check"></i>QA 범위는 결제·로그인</li></ul>
+                  </div>
+                  <div class="row push" style="--gap: 10px"><span class="avatar avatar--muted" style="width: 48px; height: 48px; font-size: 24px">민</span><span class="avatar avatar--muted" style="width: 48px; height: 48px; font-size: 24px">준</span><span class="avatar avatar--muted" style="width: 48px; height: 48px; font-size: 24px">서</span><span class="t-caption c-3">참석 3명 · 32분</span></div>
+                </div>
+                <aside data-m="right" style="--d: 900ms; border-left: 2px solid var(--line); background: var(--canvas); padding: 32px 28px; display: flex; flex-direction: column; gap: 16px">
+                  <span class="row t-label" style="--gap: 10px"><span class="icon-tile icon-tile--accent icon-tile--sm" style="--size: 40px"><i data-icon="sparkles"></i></span>AI 요약</span>
+                  <ul class="checks" style="gap: 12px"><li style="font-size: 26px"><i data-icon="check"></i>목요일 배포</li><li style="font-size: 26px"><i data-icon="check"></i>QA는 수요일까지</li><li style="font-size: 26px"><i data-icon="check"></i>공지는 마케팅팀</li></ul>
+                  <div class="card card--sm" style="margin-top: 8px; padding: 18px 20px"><p class="t-caption c-3">할 일 3개</p><p class="t-label" style="margin-top: 4px">담당자에게 보냈어요</p></div>
+                  <span class="chip chip--sm chip--outline push" style="align-self: flex-start"><i data-icon="calendar"></i>다음 회의 10.31</span>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- ───────── 극한 테스트 ───────── -->
+
+    <!-- X1 긴 용어 제목 + 긴 단계 이름 -->
+    <figure class="cell">
+      <figcaption class="cell__label">X1 극한 테스트 <span>긴 용어·긴 이름 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="x1-long-text">
+          <div class="meta"><span class="kicker">AI 강의</span><span class="t-mono">RAG</span></div>
+          <h2 class="t-h1" style="margin-top: 28px"><span class="hl">RAG</span>, 5단계로<br>끝까지 이해하기</h2>
+          <p class="t-code c-3" style="margin-top: 16px; font-size: 26px">Retrieval-Augmented Generation</p>
+          <div class="spacer"></div>
+          <ol class="card steps" style="--step-gap: 20px; padding: 36px 40px 0">
+            <li class="step"><span class="num">1</span><div><p class="step__title" style="font-size: 34px; padding-top: 6px">문서 쪼개기 <span class="t-code c-3" style="font-size: 24px">Chunking</span></p></div></li>
+            <li class="step"><span class="num">2</span><div><p class="step__title" style="font-size: 34px; padding-top: 6px">조각마다 임베딩 만들기 <span class="t-code c-3" style="font-size: 24px">Embedding</span></p></div></li>
+            <li class="step"><span class="num">3</span><div><p class="step__title" style="font-size: 34px; padding-top: 6px">벡터 데이터베이스에 저장 <span class="t-code c-3" style="font-size: 24px">Vector DB</span></p></div></li>
+            <li class="step"><span class="num num--accent">4</span><div><p class="step__title" style="font-size: 34px; padding-top: 6px">질문과 비슷한 조각 찾아오기 <span class="t-code" style="font-size: 24px; color: var(--accent)">Retrieval</span></p></div></li>
+            <li class="step"><span class="num">5</span><div><p class="step__title" style="font-size: 34px; padding-top: 6px">찾은 조각을 붙여 답변 만들기 <span class="t-code c-3" style="font-size: 24px">Generation</span></p></div></li>
+            <li class="row t-label" style="--gap: 12px; margin: 24px -40px 0; padding: 20px 40px; border-top: 2px solid var(--line); background: var(--canvas); border-radius: 0 0 30px 30px"><i data-icon="lightbulb" class="c-accent"></i><span>답의 품질은 <span class="hl">4단계 검색</span>이 정해요</span></li>
+          </ol>
+        </section>
+      </div>
+    </figure>
+
+    <!-- X2 최대 밀도: 작은 카드 8개 -->
+    <figure class="cell">
+      <figcaption class="cell__label">X2 극한 테스트 <span>작은 카드 8개 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1" data-frame="x2-dense">
+          <div class="meta"><span class="kicker">개발 강의</span><span class="row t-mono" style="--gap: 10px"><i data-logo="claude" style="font-size: 26px; color: var(--ink-2)"></i>Claude Code</span></div>
+          <h2 class="t-h1" style="margin-top: 28px">자주 쓰는<br>슬래시 명령 <span class="hl">8개</span></h2>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="grid cols-2" style="--gap: 16px">
+            <div class="card card--sm row" style="--gap: 16px; padding: 28px 24px"><span class="chip chip--inverse t-code" style="font-size: 24px">/init</span><span class="t-label">CLAUDE.md 만들기</span></div>
+            <div class="card card--sm row" style="--gap: 16px; padding: 28px 24px"><span class="chip chip--inverse t-code" style="font-size: 24px">/clear</span><span class="t-label">대화 비우기</span></div>
+            <div class="card card--sm card--focus row" style="--gap: 16px; padding: 28px 24px"><span class="chip chip--accent t-code" style="font-size: 24px">/compact</span><span class="t-label" style="color: var(--accent-strong)">대화 요약해 줄이기</span></div>
+            <div class="card card--sm row" style="--gap: 16px; padding: 28px 24px"><span class="chip chip--inverse t-code" style="font-size: 24px">/review</span><span class="t-label">PR 리뷰</span></div>
+            <div class="card card--sm row" style="--gap: 16px; padding: 28px 24px"><span class="chip chip--inverse t-code" style="font-size: 24px">/model</span><span class="t-label">모델 바꾸기</span></div>
+            <div class="card card--sm row" style="--gap: 16px; padding: 28px 24px"><span class="chip chip--inverse t-code" style="font-size: 24px">/mcp</span><span class="t-label">MCP 서버 관리</span></div>
+            <div class="card card--sm row" style="--gap: 16px; padding: 28px 24px"><span class="chip chip--inverse t-code" style="font-size: 24px">/cost</span><span class="t-label">쓴 토큰·비용</span></div>
+            <div class="card card--sm row" style="--gap: 16px; padding: 28px 24px"><span class="chip chip--inverse t-code" style="font-size: 24px">/help</span><span class="t-label">명령 전체 보기</span></div>
+          </div>
+          <p class="row t-caption c-3" style="--gap: 12px; margin-top: 24px; font-weight: 600"><span class="kbd" style="min-width: 44px; height: 44px; font-size: 22px; padding: 0 10px">/</span>를 누르면 전체 목록이 떠요</p>
+        </section>
+      </div>
+    </figure>
+
+  </main>
+</body>
+</html>

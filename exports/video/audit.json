@@ -1,0 +1,97 @@
+[
+  {
+    "id": "v1-title",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "v2-chapter",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": [
+      "empty-band"
+    ]
+  },
+  {
+    "id": "v3-concept",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "v4-flow",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "v5-chart",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "v6-table",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "v7-screen",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "v8-chat",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 0,
+    "skipped": []
+  },
+  {
+    "id": "v9-code",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "v10-summary",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "v11-overlay",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 0,
+    "skipped": [
+      "empty-band"
+    ]
+  },
+  {
+    "id": "y1-youtube",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "y2-youtube",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  }
+]

@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inkstone — 16:9 영상</title>
+  <link rel="stylesheet" href="../assets/ds.css">
+  <link rel="stylesheet" href="../assets/stage.css">
+  <script src="../assets/icons.js" defer></script>
+  <script src="../assets/stage.js" defer></script>
+</head>
+<body class="stage" style="--cols: 2">
+  <header class="stage__head">
+    <div>
+      <h1 class="stage__title">16:9 영상 · 1920×1080</h1>
+      <p class="stage__desc">강의·뉴스 영상의 장면 11종 + 유튜브 썸네일 2종. 장면을 누르면 모션을 다시 재생해요. 예시 문구·수치·화면은 가상이에요.</p>
+    </div>
+    <nav class="stage__nav">
+      <a href="../preview.html">시스템</a>
+      <a href="thumbnail.html">1:1 썸네일</a>
+      <a href="video.html" aria-current="page">16:9 영상</a>
+      <a href="shorts.html">9:16 숏폼</a>
+      <a href="cases.html">실전 사례</a>
+    </nav>
+  </header>
+
+  <main class="board">
+
+    <!-- V1 타이틀: 왼쪽 제목, 오른쪽 구조 그림 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V1 타이틀 <span>영상 첫 장면</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="v1-title" data-duration="5600">
+          <div class="row row--stretch" style="height: 100%; --gap: 96px">
+            <div class="stack grow" style="--gap: 0; justify-content: center">
+              <div class="row" data-m="fade" style="--gap: 16px">
+                <span class="brand"><span class="brand__mark"></span>Inkstone</span>
+                <span class="chip chip--sm chip--outline">EP.12</span>
+              </div>
+              <span class="kicker" data-m="rise" style="--d: 150ms; margin-top: 72px">개발 강의</span>
+              <h1 class="t-display" style="margin-top: 20px">
+                <span data-m="rise" style="--d: 250ms; display: block">Claude Code에</span>
+                <span data-m="rise" style="--d: 380ms; display: block"><span class="hl">MCP 서버</span> 연결하기</span>
+              </h1>
+              <p class="t-body-lg c-2" data-m="rise" style="--d: 600ms; margin-top: 32px">도구를 연결하면 AI가 직접 조회하고 실행해요</p>
+              <div class="row" style="--gap: 12px; margin-top: 48px">
+                <span class="chip" data-m="rise" style="--d: 760ms"><i data-icon="timer"></i>12분</span>
+                <span class="chip" data-m="rise" style="--d: 840ms"><i data-icon="graduation-cap"></i>입문</span>
+                <span class="chip chip--outline" data-m="rise" style="--d: 920ms"><i data-icon="terminal"></i>실습 포함</span>
+              </div>
+            </div>
+
+            <div class="card" data-m="fade" style="--d: 200ms; width: 700px; flex: none; padding: 40px 48px">
+              <div class="card__head"><span class="t-mono">Architecture</span><span class="t-caption">예시</span></div>
+              <div class="rel" style="width: 604px; height: 760px">
+                <svg width="604" height="760" viewBox="0 0 604 760" style="position: absolute; inset: 0" aria-hidden="true">
+                  <path class="wire wire--accent" pathLength="1" data-m="draw" style="--d: 800ms" d="M302 132 V232"/>
+                  <path class="wire" pathLength="1" data-m="draw" style="--d: 1250ms" d="M302 452 V508 M92 568 V524 Q92 508 108 508 H496 Q512 508 512 524 V568 M302 508 V568"/>
+                </svg>
+                <div class="node node--sm" data-m="pop" style="--d: 550ms; position: absolute; left: 152px; top: 56px; width: 300px; justify-content: center"><i data-logo="claude" style="font-size: 36px"></i>Claude Code</div>
+                <div class="node node--inverse node--col" data-m="pop" style="--d: 1000ms; position: absolute; left: 172px; top: 232px; width: 260px; height: 220px; border-radius: 28px">
+                  <span class="icon-tile icon-tile--accent icon-tile--lg"><i data-icon="plug-zap"></i></span>
+                  <span class="t-h3" style="line-height: 1">MCP 서버</span>
+                </div>
+                <div data-m="pop" style="--d: 1500ms; position: absolute; left: 28px; top: 568px; text-align: center"><span class="icon-tile icon-tile--logo icon-tile--xl"><i data-logo="github"></i></span><p class="t-label c-2" style="margin-top: 14px">GitHub</p></div>
+                <div data-m="pop" style="--d: 1580ms; position: absolute; left: 238px; top: 568px; text-align: center"><span class="icon-tile icon-tile--logo icon-tile--xl"><i data-logo="notion"></i></span><p class="t-label c-2" style="margin-top: 14px">Notion</p></div>
+                <div data-m="pop" style="--d: 1660ms; position: absolute; left: 448px; top: 568px; text-align: center"><span class="icon-tile icon-tile--logo icon-tile--xl"><i data-logo="figma"></i></span><p class="t-label c-2" style="margin-top: 14px">Figma</p></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- V2 챕터: 큰 번호 + 제목 + 이름 있는 진행 막대 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V2 챕터 <span>장 구분</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="v2-chapter" data-duration="4200" data-audit-skip="empty-band">
+          <div class="meta" data-m="fade">
+            <span class="brand"><span class="brand__mark"></span>Inkstone</span>
+            <span class="t-mono">EP.12 · Claude Code × MCP</span>
+          </div>
+          <div class="row" style="--gap: 64px; align-items: last baseline; margin-top: auto">
+            <span class="t-num" data-m="rise" style="font-size: 300px; font-weight: 700; letter-spacing: -0.06em; line-height: 0.78; color: var(--accent)">02</span>
+            <div class="stack" style="--gap: 18px">
+              <span class="t-body-lg c-3" data-m="rise" style="--d: 150ms; font-weight: 600">두 번째 이야기</span>
+              <h2 class="t-display" data-m="rise" style="--d: 260ms">MCP는 어떻게 동작할까</h2>
+            </div>
+          </div>
+          <div class="grid cols-3" style="--gap: 20px; margin-top: 56px">
+            <div class="card row" data-m="rise" style="--d: 420ms; --gap: 20px; padding: 28px 32px"><span class="icon-tile"><i data-icon="workflow"></i></span><div><p class="t-label">요청 흐름</p><p class="t-caption c-3">질문이 도구까지 가는 길</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 500ms; --gap: 20px; padding: 28px 32px"><span class="icon-tile"><i data-icon="braces"></i></span><div><p class="t-label">JSON-RPC</p><p class="t-caption c-3">주고받는 메시지 모양</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 580ms; --gap: 20px; padding: 28px 32px"><span class="icon-tile"><i data-icon="shield-check"></i></span><div><p class="t-label">권한</p><p class="t-caption c-3">무엇을 허락할지</p></div></div>
+          </div>
+          <ol class="chapter-steps push" data-m="fade" style="--d: 700ms; padding-top: 72px">
+            <li class="is-done">개념</li>
+            <li class="is-current">동작 원리</li>
+            <li>설치</li>
+            <li>실습</li>
+            <li>정리</li>
+          </ol>
+        </section>
+      </div>
+    </figure>
+
+    <!-- V3 개념 설명: 왼쪽 요점, 오른쪽 전/후 구조 비교 + 자막 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V3 개념 설명 <span>요점 + 전/후 그림 + 자막</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9 frame--sub" data-frame="v3-concept" data-duration="6500">
+          <div class="row row--stretch grow" style="--gap: 80px">
+            <div class="stack" style="width: 640px; flex: none; --gap: 0">
+              <span class="kicker" data-m="rise">핵심 개념</span>
+              <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">MCP는<br>AI용 <span class="hl">USB-C</span></h2>
+              <p class="t-body-lg c-2" data-m="rise" style="--d: 220ms; margin-top: 24px">앱마다 따로 만들던 연결을<br>표준 하나로 맞춰요</p>
+              <ul class="stack" style="--gap: 20px; margin-top: 48px">
+                <li class="row" data-m="rise" style="--d: 400ms; --gap: 20px"><span class="icon-tile icon-tile--soft"><i data-icon="plug"></i></span><span class="t-body" style="font-weight: 650">규격은 하나</span></li>
+                <li class="row" data-m="rise" style="--d: 480ms; --gap: 20px"><span class="icon-tile"><i data-icon="blocks"></i></span><span class="t-body" style="font-weight: 650">도구는 골라 꽂기</span></li>
+                <li class="row" data-m="rise" style="--d: 560ms; --gap: 20px"><span class="icon-tile"><i data-icon="repeat"></i></span><span class="t-body" style="font-weight: 650">어느 AI 앱에서나</span></li>
+              </ul>
+            </div>
+
+            <div class="grid grow" style="grid-template-columns: 1fr 1fr; --gap: 24px">
+              <div class="card card--muted stack" data-m="fade" style="--d: 300ms; --gap: 0; align-items: center">
+                <div class="row" style="width: 100%"><span class="chip chip--outline">이전</span><span class="t-label c-3" style="margin-left: auto">앱마다 따로</span></div>
+                <div class="rel" style="width: 360px; height: 400px; margin-top: 40px">
+                  <svg width="360" height="400" viewBox="0 0 360 400" style="position: absolute; inset: 0" aria-hidden="true">
+                    <g class="wire" style="stroke-width: 2.5">
+                      <path pathLength="1" data-m="draw" style="--d: 700ms; --dur: 500ms" d="M60 72 L60 328 M60 72 L180 328 M60 72 L300 328"/>
+                      <path pathLength="1" data-m="draw" style="--d: 800ms; --dur: 500ms" d="M180 72 L60 328 M180 72 L180 328 M180 72 L300 328"/>
+                      <path pathLength="1" data-m="draw" style="--d: 900ms; --dur: 500ms" d="M300 72 L60 328 M300 72 L180 328 M300 72 L300 328"/>
+                    </g>
+                  </svg>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 24px; top: 0"><i data-logo="claude"></i></span>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 144px; top: 0"><i data-logo="cursor"></i></span>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 264px; top: 0"><i data-logo="googlegemini"></i></span>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 24px; top: 328px"><i data-logo="github"></i></span>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 144px; top: 328px"><i data-logo="notion"></i></span>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 264px; top: 328px"><i data-logo="figma"></i></span>
+                </div>
+                <div class="stat stat--sm push" style="align-self: flex-start"><span class="stat__value c-2">9<span class="stat__unit">개 연결</span></span></div>
+              </div>
+
+              <div class="card stack" data-m="fade" style="--d: 1300ms; --gap: 0; align-items: center; border-color: var(--accent)">
+                <div class="row" style="width: 100%"><span class="chip chip--soft">MCP</span><span class="t-label c-3" style="margin-left: auto">표준 하나</span></div>
+                <div class="rel" style="width: 360px; height: 400px; margin-top: 40px">
+                  <svg width="360" height="400" viewBox="0 0 360 400" style="position: absolute; inset: 0" aria-hidden="true">
+                    <path class="wire wire--accent" pathLength="1" data-m="draw" style="--d: 1700ms" d="M60 72 V132 H300 M300 72 V132 M180 72 V168"/>
+                    <path class="wire wire--accent" pathLength="1" data-m="draw" style="--d: 2000ms" d="M180 232 V268 H60 V328 M180 268 H300 V328 M180 268 V328"/>
+                  </svg>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 24px; top: 0"><i data-logo="claude"></i></span>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 144px; top: 0"><i data-logo="cursor"></i></span>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 264px; top: 0"><i data-logo="googlegemini"></i></span>
+                  <div class="center" data-m="pop" style="--d: 1550ms; position: absolute; left: 100px; top: 168px; width: 160px; height: 64px; border-radius: 16px; background: var(--inverse); color: var(--on-inverse); font-size: 28px; font-weight: 700">MCP</div>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 24px; top: 328px"><i data-logo="github"></i></span>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 144px; top: 328px"><i data-logo="notion"></i></span>
+                  <span class="icon-tile icon-tile--logo" style="position: absolute; left: 264px; top: 328px"><i data-logo="figma"></i></span>
+                </div>
+                <div class="stat stat--sm push" data-m="fade" style="--d: 2150ms; --dur: 200ms; align-self: flex-start"><span class="stat__value c-accent"><span class="count" data-m="count" style="--n: 6; --d: 2200ms; --dur: 600ms"></span><span class="stat__unit">개 연결</span></span></div>
+              </div>
+            </div>
+          </div>
+          <p class="subtitle" data-m="fade" style="--d: 2600ms">연결이 <em>9개에서 6개</em>로 줄어요</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- V4 흐름도: 요청이 지나가는 길 + 되돌아오는 답 + 실제 요청/결과 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V4 흐름도 <span>단계별 처리 과정</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9 frame--grid" data-frame="v4-flow" data-duration="6800">
+          <span class="kicker" data-m="rise">동작 원리</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 16px">요청 한 번이 처리되는 과정</h2>
+
+          <div class="rel" style="margin-top: 88px">
+            <div class="flow">
+              <div class="node node--col" data-m="pop" style="--d: 400ms; width: 228px; font-size: 32px"><span class="icon-tile"><i data-icon="user-round"></i></span><span>사용자<span class="node__sub">질문하기</span></span></div>
+              <span class="link" data-m="grow-x" style="--d: 650ms; --dur: 300ms"><span class="link__label">질문</span></span>
+              <div class="node node--col" data-m="pop" style="--d: 800ms; width: 228px; font-size: 32px"><span class="icon-tile icon-tile--logo"><i data-logo="claude"></i></span><span>AI 앱<span class="node__sub">도구 고르기</span></span></div>
+              <span class="link" data-m="grow-x" style="--d: 1050ms; --dur: 300ms"><span class="link__label">도구 호출</span></span>
+              <div class="node node--col" data-m="pop" style="--d: 1200ms; width: 228px; font-size: 32px"><span class="icon-tile"><i data-icon="cable"></i></span><span>클라이언트<span class="node__sub">요청 전달</span></span></div>
+              <span class="link link--accent" data-m="grow-x" style="--d: 1450ms; --dur: 300ms"><span class="link__label">JSON-RPC</span></span>
+              <div class="node node--col node--focus" data-m="pop" style="--d: 1600ms; width: 228px; font-size: 32px"><span class="icon-tile icon-tile--accent"><i data-icon="server"></i></span><span>MCP 서버<span class="node__sub">도구 실행</span></span></div>
+              <span class="link" data-m="grow-x" style="--d: 1850ms; --dur: 300ms"><span class="link__label">API 호출</span></span>
+              <div class="node node--col" data-m="pop" style="--d: 2000ms; width: 228px; font-size: 32px"><span class="icon-tile icon-tile--logo"><i data-logo="github"></i></span><span>GitHub<span class="node__sub">데이터</span></span></div>
+            </div>
+            <svg width="1696" height="72" viewBox="0 0 1696 72" style="position: absolute; left: 0; top: 100%" aria-hidden="true">
+              <path class="wire wire--dashed" data-m="fade" style="--d: 2400ms" d="M1582 0 V36 Q1582 52 1566 52 H130 Q114 52 114 36 V10"/>
+              <path class="wire-head" data-m="fade" style="--d: 2400ms" d="M104 20 L114 10 L124 20"/>
+            </svg>
+            <span class="t-label c-3" data-m="fade" style="--d: 2500ms; position: absolute; left: 848px; top: calc(100% + 32px); transform: translateX(-50%); padding: 0 16px; background: var(--canvas)">결과를 정리해 답변</span>
+          </div>
+
+          <div class="grid grow" style="grid-template-columns: 1.15fr 1fr; --gap: 24px; margin-top: 112px">
+            <div class="code code--light" data-m="rise" style="--d: 2800ms; box-shadow: none">
+              <div class="code__bar"><span class="window__dots"><i></i><i></i><i></i></span>request · tools/call</div>
+<pre style="--code-fs: 26px; padding: 24px 32px"><span class="line"><span class="o">{</span></span><span class="line">  <span class="k">"name"</span>: <span class="s">"list_pull_requests"</span>,</span><span class="line">  <span class="k">"arguments"</span>: <span class="o">{</span> <span class="k">"state"</span>: <span class="s">"open"</span> <span class="o">}</span></span><span class="line"><span class="o">}</span></span></pre>
+            </div>
+            <div class="card stack" data-m="rise" style="--d: 3000ms; --gap: 0; padding: 28px 32px">
+              <div class="card__head" style="margin-bottom: 8px"><span class="t-mono">Result</span><span class="t-caption">0.8초</span></div>
+              <ul class="stack" style="--gap: 0">
+                <li class="row" style="--gap: 14px; height: 60px; border-bottom: 2px solid var(--line)"><i data-icon="git-pull-request" class="c-3"></i><span class="t-label grow">결제 페이지 리팩터링</span><span class="chip chip--sm chip--warning">리뷰 대기</span></li>
+                <li class="row" style="--gap: 14px; height: 60px; border-bottom: 2px solid var(--line)"><i data-icon="git-pull-request" class="c-3"></i><span class="t-label grow">검색 API 캐시 추가</span><span class="chip chip--sm chip--warning">리뷰 대기</span></li>
+                <li class="row" style="--gap: 14px; height: 60px"><i data-icon="git-pull-request" class="c-3"></i><span class="t-label grow">로그인 오류 수정</span><span class="chip chip--sm chip--success">승인됨</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- V5 차트: 큰 숫자 + 세로 막대 + 주석 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V5 차트 <span>숫자·추세 뉴스</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="v5-chart" data-duration="5600">
+          <div class="row row--stretch grow" style="--gap: 80px">
+            <div class="stack" style="width: 620px; flex: none; --gap: 0">
+              <span class="kicker" data-m="rise">AI 뉴스</span>
+              <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">AI 코딩 도구를<br>쓰는 개발자</h2>
+              <div class="stat stat--accent" data-m="rise" style="--d: 300ms; margin-top: 56px; --fs-stat: 200px">
+                <span class="stat__value"><span class="count" data-m="count" style="--n: 84; --d: 500ms"></span><span class="stat__unit">%</span></span>
+                <span class="stat__label">2026년 · 예시 데이터</span>
+              </div>
+              <div class="row" data-m="rise" style="--d: 700ms; --gap: 12px; margin-top: 36px">
+                <span class="chip chip--outline"><i data-icon="trending-up"></i>1년 새 +21%p</span>
+                <span class="chip chip--outline">응답 1,200명</span>
+              </div>
+            </div>
+            <div class="card grow stack" data-m="fade" style="--d: 200ms; --gap: 0; padding: 48px 56px 40px">
+              <div class="card__head"><span class="t-mono">Developers using AI tools</span><span class="t-caption">단위 %</span></div>
+              <div class="rel push">
+                <div class="columns" style="--h: 560px; --col-gap: 48px">
+                  <div class="column"><span class="column__value" data-m="fade" style="--d: 900ms">30</span><span class="column__bar" data-m="grow-y" style="--v: 0.30; --d: 400ms"></span><span class="column__label">2023</span></div>
+                  <div class="column"><span class="column__value" data-m="fade" style="--d: 1000ms">44</span><span class="column__bar" data-m="grow-y" style="--v: 0.44; --d: 520ms"></span><span class="column__label">2024</span></div>
+                  <div class="column"><span class="column__value" data-m="fade" style="--d: 1100ms">63</span><span class="column__bar" data-m="grow-y" style="--v: 0.63; --d: 640ms"></span><span class="column__label">2025</span></div>
+                  <div class="column is-focus"><span class="callout callout--down" data-m="pop" style="--d: 1700ms; position: relative; margin-bottom: 10px; --tail-x: calc(50% - 9px)"><i data-icon="trending-up"></i>+21%p</span><span class="column__value" data-m="fade" style="--d: 1200ms">84</span><span class="column__bar" data-m="grow-y" style="--v: 0.84; --d: 760ms"></span><span class="column__label">2026</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- V6 비교표: 기준별 비교 + 초점 열 + 결론 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V6 비교표 <span>기준별 비교</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="v6-table" data-duration="5600">
+          <div class="row row--between" style="align-items: flex-end">
+            <div class="stack" style="--gap: 16px">
+              <span class="kicker" data-m="rise">비교</span>
+              <h2 class="t-h1" data-m="rise" style="--d: 100ms">연결 방식, 뭐가 다를까?</h2>
+            </div>
+            <span class="source" data-m="fade" style="--d: 300ms">MCP 공식 문서 기준 요약</span>
+          </div>
+          <div class="card push" style="padding: 44px 56px">
+            <table class="table" style="font-size: 36px; --cell-y: 28px">
+              <thead>
+                <tr data-m="fade" style="--d: 300ms"><th style="width: 26%">기준</th><th style="width: 37%">API 직접 연결</th><th class="is-focus" style="width: 37%">MCP</th></tr>
+              </thead>
+              <tbody>
+                <tr data-m="rise" style="--d: 500ms"><td>만드는 횟수</td><td class="c-2"><span class="row" style="--gap: 14px"><i data-icon="x" class="no"></i>앱마다 새로</span></td><td class="is-focus"><span class="row" style="--gap: 14px"><i data-icon="check" class="yes"></i>서버 한 번</span></td></tr>
+                <tr data-m="rise" style="--d: 620ms"><td>다른 AI 앱</td><td class="c-2"><span class="row" style="--gap: 14px"><i data-icon="x" class="no"></i>다시 구현</span></td><td class="is-focus"><span class="row" style="--gap: 14px"><i data-icon="check" class="yes"></i>그대로 재사용</span></td></tr>
+                <tr data-m="rise" style="--d: 740ms"><td>도구 설명</td><td class="c-2"><span class="row" style="--gap: 14px"><i data-icon="minus" class="no"></i>문서 따로</span></td><td class="is-focus"><span class="row" style="--gap: 14px"><i data-icon="check" class="yes"></i>스키마에 포함</span></td></tr>
+                <tr data-m="rise" style="--d: 860ms"><td>로그인·권한</td><td class="c-2"><span class="row" style="--gap: 14px"><i data-icon="minus" class="no"></i>직접 구현</span></td><td class="is-focus"><span class="row" style="--gap: 14px"><i data-icon="check" class="yes"></i>OAuth 표준</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row" data-m="rise" style="--d: 1400ms; margin-top: 24px; --gap: 16px">
+            <span class="icon-tile icon-tile--accent icon-tile--sm"><i data-icon="lightbulb"></i></span>
+            <p class="t-body-lg" style="font-weight: 650">여러 AI 앱에서 쓸 도구라면 <span class="hl">MCP</span>로</p>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- V7 화면 따라하기: 창 + 커서 이동·클릭 + 팝업 + 입력 타이핑 + 강조 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V7 화면 따라하기 <span>캡처 소개·클릭 데모</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="v7-screen" data-duration="6400">
+          <span class="kicker" data-m="rise">따라 하기 · 데스크톱 앱</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 16px">앱에서는 커넥터에 <span class="hl">주소만</span> 추가</h2>
+          <div class="row row--stretch grow" style="--gap: 72px; margin-top: 48px">
+            <div class="window" data-m="rise" style="--d: 150ms; width: 1100px; flex: none">
+              <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="lock"></i>app.example.ai/settings</span></div>
+              <div class="window__body" style="display: grid; grid-template-columns: 260px 1fr">
+                <div data-overlay data-m="fade" style="--d: 1900ms; position: absolute; inset: 0; z-index: 4; background: rgba(26, 26, 24, 0.16)"></div>
+                <aside style="background: var(--surface-muted); padding: 32px 20px; display: flex; flex-direction: column; gap: 6px">
+                  <span class="t-caption c-3" style="font-weight: 600; padding: 0 16px 12px">설정</span>
+                  <span class="row t-caption c-2" style="--gap: 12px; height: 52px; padding: 0 16px"><i data-icon="settings"></i>일반</span>
+                  <span class="row t-caption c-2" style="--gap: 12px; height: 52px; padding: 0 16px"><i data-icon="user"></i>계정</span>
+                  <span class="row t-caption" style="--gap: 12px; height: 52px; padding: 0 16px; border-radius: 14px; background: var(--surface); font-weight: 650"><i data-icon="plug" class="c-accent"></i>커넥터</span>
+                  <span class="row t-caption c-2" style="--gap: 12px; height: 52px; padding: 0 16px"><i data-icon="shield-check"></i>개인정보</span>
+                </aside>
+                <div class="rel" style="padding: 36px 48px; display: flex; flex-direction: column; gap: 14px">
+                  <p class="t-h3">커넥터</p>
+                  <p class="t-caption c-3">AI가 쓸 수 있는 외부 도구를 연결해요</p>
+                  <div class="stack" style="--gap: 0; margin-top: 20px; border-top: 2px solid var(--line)">
+                    <div class="row" style="--gap: 18px; height: 84px; border-bottom: 2px solid var(--line)"><span class="icon-tile icon-tile--logo icon-tile--sm"><i data-logo="github"></i></span><span class="t-label grow">GitHub</span><span class="chip chip--sm chip--success">연결됨</span><span class="toggle is-on"></span></div>
+                    <div class="row" style="--gap: 18px; height: 84px; border-bottom: 2px solid var(--line)"><span class="icon-tile icon-tile--logo icon-tile--sm"><i data-logo="notion"></i></span><span class="t-label grow">Notion</span><span class="toggle"></span></div>
+                    <div class="row" style="--gap: 18px; height: 84px; border-bottom: 2px solid var(--line)"><span class="icon-tile icon-tile--logo icon-tile--sm"><i data-logo="figma"></i></span><span class="t-label grow">Figma</span><span class="toggle"></span></div>
+                  </div>
+                  <div class="rel" style="align-self: flex-start; margin-top: 28px">
+                    <span class="btn btn--outline" data-m="press" style="--d: 1650ms"><i data-icon="plus"></i>커넥터 추가</span>
+                    <span data-m="out" style="--d: 2000ms; position: absolute; right: -18px; bottom: -30px; width: 48px; height: 48px">
+                      <span class="cursor" data-m="move" style="--d: 650ms; left: 0; top: 0; --from-x: 360px; --from-y: 160px">
+                        <svg viewBox="0 0 24 24"><path d="M5 3l14 8-6.2 1.6L9.6 19 5 3z" fill="#1A1A18" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                        <span class="cursor__ripple" data-m="click" style="--d: 1650ms"></span>
+                      </span>
+                    </span>
+                  </div>
+
+                  <!-- 팝업 -->
+
+                  <div class="card" data-overlay data-m="pop" style="--d: 2000ms; position: absolute; z-index: 5; left: 90px; right: 90px; top: 110px; padding: 40px; box-shadow: var(--shadow-float)">
+                    <p class="t-h3" style="font-size: 36px">MCP 서버 추가</p>
+                    <p class="t-caption c-3" style="margin-top: 8px">서버 주소를 붙여 넣어 주세요</p>
+                    <div class="rel" style="margin-top: 28px">
+                      <div class="input input--focus"><span class="t-code" data-m="type" style="--d: 2400ms; --steps: 30; --dur: 1100ms">https://mcp.example.com/github</span></div>
+                      <span class="hl-ring" data-m="ring" style="--d: 3700ms; inset: -12px; border-radius: 22px"></span>
+                    </div>
+                    <p class="row t-caption c-2" data-m="rise" style="--d: 3900ms; --gap: 10px; margin-top: 18px; font-weight: 650"><i data-icon="circle-check"></i>주소만 붙여 넣으면 끝</p>
+                    <div class="row" style="--gap: 12px; margin-top: 28px; justify-content: flex-end"><span class="btn btn--outline">취소</span><span class="btn btn--accent">추가</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack grow" style="--gap: 0; justify-content: center; padding-bottom: 24px">
+              <ol class="steps" style="--step-gap: 40px">
+                <li class="step" data-m="rise" style="--d: 450ms"><span class="num">1</span><div><p class="step__title">설정 열기</p><p class="step__desc">왼쪽 아래 프로필</p></div></li>
+                <li class="step" data-m="rise" style="--d: 550ms"><span class="num">2</span><div><p class="step__title">커넥터 추가</p><p class="step__desc">서버 주소 붙여 넣기</p></div></li>
+                <li class="step" data-m="rise" style="--d: 650ms"><span class="num num--line">3</span><div><p class="step__title c-3">대화에서 쓰기</p><p class="step__desc">“PR 정리해 줘”</p></div></li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- V8 대화 데모: 말풍선 + 입력 중 표시 + 도구 호출 + 결과 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V8 대화 데모 <span>AI 대화·말풍선</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="v8-chat" data-duration="6400">
+          <div class="row row--stretch grow" style="--gap: 80px">
+            <div class="stack" style="width: 640px; flex: none; --gap: 0">
+              <span class="kicker" data-m="rise">실습</span>
+              <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 20px">말로 시키면,<br>AI가 <span class="hl">직접 실행</span></h2>
+              <p class="t-body-lg c-2" data-m="rise" style="--d: 200ms; margin-top: 20px">알맞은 도구를 고르고, 결과까지 정리해요</p>
+              <div class="row" data-m="rise" style="--d: 300ms; --gap: 12px; margin-top: 48px">
+                <span class="chip"><i data-icon="message-square"></i>질문</span>
+                <i data-icon="arrow-right" class="c-3" style="font-size: 28px"></i>
+                <span class="chip"><i data-icon="wrench"></i>도구 호출</span>
+                <i data-icon="arrow-right" class="c-3" style="font-size: 28px"></i>
+                <span class="chip chip--soft"><i data-icon="check"></i>정리</span>
+              </div>
+            </div>
+
+            <div class="window grow" data-m="fade" style="--d: 150ms">
+              <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__title">AI 채팅</span><span style="width: 66px"></span></div>
+              <div class="window__body chat" style="padding: 48px 56px; gap: 28px; background: var(--surface)">
+                <div class="msg msg--user" data-m="rise" style="--d: 500ms"><div class="bubble">이번 주 머지 안 된 PR 정리해 줘</div></div>
+
+                <div class="rel">
+                  <div class="msg msg--ai" style="position: absolute; left: 0; top: 0">
+                    <span class="avatar" data-m="pop" style="--d: 1000ms"><i data-icon="sparkles"></i></span>
+                    <div data-m="out" style="--d: 1900ms"><div class="bubble" data-m="fade" style="--d: 1050ms"><span class="typing"><i></i><i></i><i></i></span></div></div>
+                  </div>
+                  <div class="msg msg--ai" style="align-items: flex-start">
+                    <span class="avatar" style="opacity: 0"><i data-icon="sparkles"></i></span>
+                    <div class="stack grow" style="--gap: 16px">
+                      <span class="chip chip--sm chip--outline t-code" data-m="pop" style="--d: 2000ms; align-self: flex-start; font-size: 22px"><i data-logo="github"></i>list_pull_requests</span>
+                      <div class="bubble" data-m="rise" style="--d: 2300ms; max-width: none">
+                        <p style="font-weight: 650">열린 PR 3건이에요</p>
+                        <ul class="stack" style="--gap: 0; margin-top: 16px">
+                          <li class="row" data-m="rise" style="--d: 2600ms; --gap: 16px; height: 68px; border-top: 2px solid var(--line)"><i data-icon="git-pull-request" class="c-3"></i><span class="t-label grow">결제 페이지 리팩터링</span><span class="chip chip--sm chip--warning">리뷰 대기</span></li>
+                          <li class="row" data-m="rise" style="--d: 2750ms; --gap: 16px; height: 68px; border-top: 2px solid var(--line)"><i data-icon="git-pull-request" class="c-3"></i><span class="t-label grow">검색 API 캐시 추가</span><span class="chip chip--sm chip--warning">리뷰 대기</span></li>
+                          <li class="row" data-m="rise" style="--d: 2900ms; --gap: 16px; height: 68px; border-top: 2px solid var(--line)"><i data-icon="git-pull-request" class="c-3"></i><span class="t-label grow">로그인 오류 수정</span><span class="chip chip--sm chip--success">승인됨</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" data-m="rise" style="--d: 3300ms; --gap: 12px; padding-left: 80px">
+                  <span class="t-caption c-3" style="font-weight: 600">이어서</span>
+                  <span class="chip chip--sm chip--outline">리뷰어 지정해 줘</span>
+                  <span class="chip chip--sm chip--outline">슬랙에 공유해 줘</span>
+                </div>
+                <div class="input push" style="height: 76px; border-radius: 20px; padding: 0 12px 0 28px; color: var(--ink-3)"><span class="grow">메시지 입력</span><span class="icon-tile icon-tile--inverse" style="--size: 52px; border-radius: 50%"><i data-icon="arrow-up"></i></span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- V9 코드: 코드 창 + 줄 강조가 옮겨 가며 오른쪽 주석과 짝을 맞춘다 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V9 코드 설명 <span>줄 강조 + 주석</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="v9-code" data-duration="6800">
+          <span class="kicker" data-m="rise">개발 실습</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 16px">MCP 서버, 코드 10줄이면 돼요</h2>
+          <div class="row row--stretch push" style="--gap: 48px; height: 680px">
+            <div class="code" data-m="rise" style="--d: 250ms; width: 1060px; flex: none; --code-fs: 30px; --code-px: 76px">
+              <div class="code__bar"><span class="window__dots"><i></i><i></i><i></i></span>server.py</div>
+              <div data-m="fade" style="--d: 900ms"><div data-m="out" style="--d: 2500ms"><span style="position: absolute; left: 0; right: 0; top: 286px; height: 149px; background: rgba(169, 177, 238, 0.14)"></span></div></div>
+              <div data-m="fade" style="--d: 2600ms"><div data-m="out" style="--d: 4000ms"><span style="position: absolute; left: 0; right: 0; top: 435px; height: 50px; background: rgba(169, 177, 238, 0.14)"></span></div></div>
+              <div data-m="fade" style="--d: 4100ms"><span style="position: absolute; left: 0; right: 0; top: 534px; height: 50px; background: rgba(169, 177, 238, 0.14)"></span></div>
+              <span class="num num--sm num--accent" data-annotation style="position: absolute; left: 20px; top: 293px; width: 36px; height: 36px; font-size: 22px">1</span>
+              <span class="num num--sm num--accent" data-annotation style="position: absolute; left: 20px; top: 442px; width: 36px; height: 36px; font-size: 22px">2</span>
+              <span class="num num--sm num--accent" data-annotation style="position: absolute; left: 20px; top: 541px; width: 36px; height: 36px; font-size: 22px">3</span>
+<pre style="position: relative"><span class="line"><span class="k">from</span> mcp.server.fastmcp <span class="k">import</span> FastMCP</span><span class="line"> </span><span class="line">mcp = <span class="f">FastMCP</span>(<span class="s">"github-helper"</span>)</span><span class="line"> </span><span class="line"><span class="k">@mcp.tool</span>()</span><span class="line"><span class="k">def</span> <span class="f">list_open_prs</span>(repo: <span class="k">str</span>) -> <span class="k">list</span>:</span><span class="line">    <span class="s">"""열린 PR 목록을 가져와요"""</span></span><span class="line">    <span class="k">return</span> fetch_prs(repo)  <span class="c"># GitHub API 호출</span></span><span class="line"> </span><span class="line">mcp.<span class="f">run</span>(transport=<span class="s">"streamable-http"</span>)</span></pre>
+            </div>
+            <div class="stack grow" style="--gap: 18px; padding-top: 200px" data-annotation>
+              <div class="card" data-m="right" style="--d: 1000ms; padding: 24px 30px"><div class="row" style="--gap: 16px"><span class="num num--accent num--sm">1</span><p class="t-label">이름·설명이 곧 도구 설명서</p></div><p class="t-caption c-3" style="margin-top: 8px; padding-left: 60px">AI는 이 글을 읽고 도구를 골라요</p></div>
+              <div class="card" data-m="right" style="--d: 2700ms; padding: 24px 30px"><div class="row" style="--gap: 16px"><span class="num num--accent num--sm">2</span><p class="t-label">실제 일은 평범한 함수</p></div><p class="t-caption c-3" style="margin-top: 8px; padding-left: 60px">fetch_prs 는 GitHub API를 불러요</p></div>
+              <div class="card" data-m="right" style="--d: 4200ms; padding: 24px 30px"><div class="row" style="--gap: 16px"><span class="num num--accent num--sm">3</span><p class="t-label">실행하면 주소가 생겨요</p></div><p class="t-caption c-3" style="margin-top: 8px; padding-left: 60px">localhost:8000/mcp 를 등록해요</p></div>
+            </div>
+          </div>
+</section>
+      </div>
+    </figure>
+
+    <!-- V10 정리: 배운 것 3가지 + 다음 영상 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V10 정리 <span>요약·다음 영상</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="v10-summary" data-duration="5200">
+          <span class="kicker" data-m="rise">정리</span>
+          <h2 class="t-h1" data-m="rise" style="--d: 100ms; margin-top: 16px">오늘 배운 3가지</h2>
+          <div class="row row--stretch push" style="--gap: 32px; height: 680px">
+            <ol class="card grow stack" style="--gap: 0; padding: 16px 48px; justify-content: center">
+              <li class="row" data-m="rise" style="--d: 350ms; --gap: 28px; padding: 32px 0; border-bottom: 2px solid var(--line)"><span class="num num--lg">1</span><div><p class="t-h3">MCP는 AI용 표준 연결 규격</p><p class="t-label c-3" style="margin-top: 6px; font-weight: 500">한 번 만들면 여러 AI 앱에서 써요</p></div></li>
+              <li class="row" data-m="rise" style="--d: 500ms; --gap: 28px; padding: 32px 0; border-bottom: 2px solid var(--line)"><span class="num num--lg">2</span><div><p class="t-h3">서버 등록은 명령 한 줄</p><p class="t-label c-3" style="margin-top: 6px; font-weight: 500">claude mcp add 로 주소를 넣어요</p></div></li>
+              <li class="row" data-m="rise" style="--d: 650ms; --gap: 28px; padding: 32px 0"><span class="num num--lg num--accent">3</span><div><p class="t-h3">말로 시키면 도구를 골라 실행</p><p class="t-label c-3" style="margin-top: 6px; font-weight: 500">결과는 대화 안에서 정리돼요</p></div></li>
+            </ol>
+            <div class="card card--inverse stack" data-m="right" style="--d: 900ms; width: 560px; flex: none; --gap: 0; padding: 48px">
+              <span class="t-mono" style="color: var(--on-inverse-2)">Next · EP.13</span>
+              <span class="icon-tile icon-tile--accent icon-tile--lg" style="margin-top: 40px"><i data-icon="code-xml"></i></span>
+              <p class="t-h2" style="margin-top: 32px">MCP 서버<br>직접 만들기</p>
+              <div class="row push" style="--gap: 12px">
+                <span class="chip chip--sm" style="background: rgba(243, 242, 238, 0.1); color: var(--on-inverse)"><i data-logo="python"></i>Python</span>
+                <span class="chip chip--sm" style="background: rgba(243, 242, 238, 0.1); color: var(--on-inverse)"><i data-icon="timer"></i>15분</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- V11 촬영 화면 위 오버레이: 브랜드·챕터·이름 자막·대사 자막 -->
+    <figure class="cell">
+      <figcaption class="cell__label">V11 촬영 화면 오버레이 <span>로어서드·자막·챕터</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="v11-overlay" data-duration="5000" data-audit-skip="empty-band" style="background: #DCDAD3">
+          <div class="center" style="position: absolute; inset: 0; color: rgba(26, 26, 24, 0.18)">
+            <div class="stack" style="align-items: center; --gap: 16px"><i data-icon="video" style="font-size: 160px"></i><span class="t-h3" style="color: rgba(26, 26, 24, 0.32)">촬영 영상 자리</span></div>
+          </div>
+          <div class="row row--between" data-m="fade" style="position: relative">
+            <span class="row" style="--gap: 14px; padding: 12px 22px 12px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.86)"><span class="brand__mark" style="width: 40px; height: 40px"></span><span class="t-label">Inkstone · EP.12</span></span>
+            <span class="row" style="--gap: 16px; padding: 14px 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.86)"><span class="t-label">02 동작 원리</span><span class="chapters" style="width: 200px"><i class="is-done"></i><i class="is-current"></i><i></i><i></i><i></i></span></span>
+          </div>
+          <div class="lower-third" data-m="left" style="--d: 400ms; bottom: 210px">
+            <span class="avatar"><i data-icon="user-round"></i></span>
+            <div><p class="lower-third__name">제이크</p><p class="lower-third__role">AI 개발 강의</p></div>
+          </div>
+          <p class="subtitle" data-m="fade" style="--d: 900ms">요청이 <em>어떻게 오가는지</em> 볼게요</p>
+        </section>
+      </div>
+    </figure>
+
+    <!-- Y1 유튜브 썸네일: 큰 글자 2줄 + 구조 한 장 (오른쪽 아래 재생 시간 자리는 비운다) -->
+    <figure class="cell">
+      <figcaption class="cell__label">Y1 유튜브 썸네일 <span>짧은 문구 + 구조 그림</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="y1-youtube" style="--safe-l: 96px; --safe-t: 96px">
+          <div class="row row--stretch grow" style="--gap: 48px">
+            <div class="stack" style="--gap: 0; width: 980px; flex: none; justify-content: center">
+              <span class="kicker" style="font-size: 44px; gap: 16px">개발 강의</span>
+              <h2 style="margin-top: 28px; font-size: 176px; font-weight: 750; line-height: 1.06; letter-spacing: -0.05em">MCP 서버<br><span class="hl">5분</span> 연결</h2>
+              <div class="row" style="--gap: 16px; margin-top: 48px">
+                <span class="chip chip--lg chip--inverse"><i data-logo="claude"></i>Claude Code</span>
+                <span class="chip chip--lg chip--outline">입문</span>
+              </div>
+            </div>
+            <div class="rel grow">
+              <div class="node node--inverse node--col" style="position: absolute; left: 150px; top: 40px; width: 420px; height: 400px; border-radius: 48px; gap: 28px">
+                <span class="icon-tile icon-tile--accent" style="--size: 176px"><i data-icon="plug-zap"></i></span>
+                <span style="font-size: 72px; font-weight: 750; letter-spacing: -0.04em; line-height: 1">MCP</span>
+              </div>
+              <svg width="720" height="904" viewBox="0 0 720 904" style="position: absolute; inset: 0" aria-hidden="true">
+                <path class="wire" style="stroke-width: 6" d="M360 440 V520 M140 600 V552 Q140 520 172 520 H548 Q580 520 580 552 V600 M360 520 V600"/>
+              </svg>
+              <span class="icon-tile icon-tile--logo" style="--size: 176px; position: absolute; left: 52px; top: 600px"><i data-logo="github"></i></span>
+              <span class="icon-tile icon-tile--logo" style="--size: 176px; position: absolute; left: 272px; top: 600px"><i data-logo="notion"></i></span>
+              <span class="icon-tile icon-tile--logo" style="--size: 176px; position: absolute; left: 492px; top: 600px"><i data-logo="figma"></i></span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- Y2 유튜브 썸네일: 질문 + 판단 흐름도 -->
+    <figure class="cell">
+      <figcaption class="cell__label">Y2 유튜브 썸네일 <span>질문 + 판단 흐름</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="y2-youtube" style="--safe-l: 96px; --safe-t: 96px">
+          <div class="row row--stretch grow" style="--gap: 72px">
+            <div class="stack" style="--gap: 0; width: 940px; flex: none; justify-content: center">
+              <span class="kicker" style="font-size: 44px; gap: 16px">AI 강의</span>
+              <h2 style="margin-top: 28px; font-size: 148px; font-weight: 750; line-height: 1.1; letter-spacing: -0.05em"><span class="hl">RAG</span>냐<br>파인튜닝이냐</h2>
+            </div>
+            <div class="stack grow" style="--gap: 0; justify-content: center">
+              <div class="node" style="font-size: 56px; padding: 36px 44px; border-radius: 36px; justify-content: center; border-width: 3px"><i data-icon="circle-question-mark" class="c-3"></i>무엇을 바꾸고 싶나요?</div>
+              <div class="row" style="--gap: 0; height: 168px; align-items: stretch">
+                <div class="grow" style="position: relative"><svg width="100%" height="168" viewBox="0 0 400 168" preserveAspectRatio="none" style="position: absolute; inset: 0"><path d="M400 0 V64 Q400 84 380 84 H220 Q200 84 200 104 V168" fill="none" stroke="var(--accent)" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><span class="t-label" style="position: absolute; left: 6%; top: 22px; color: var(--accent); font-size: 36px">지식·최신 정보</span></div>
+                <div class="grow" style="position: relative"><svg width="100%" height="168" viewBox="0 0 400 168" preserveAspectRatio="none" style="position: absolute; inset: 0"><path d="M0 0 V64 Q0 84 20 84 H180 Q200 84 200 104 V168" fill="none" stroke="var(--line-strong)" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><span class="t-label c-3" style="position: absolute; right: 8%; top: 22px; font-size: 36px">말투·형식</span></div>
+              </div>
+              <div class="grid cols-2" style="--gap: 32px">
+                <div class="node node--col node--focus" style="font-size: 60px; padding: 56px 24px; border-radius: 40px; border-width: 4px; gap: 24px"><span class="icon-tile icon-tile--accent" style="--size: 144px"><i data-icon="file-search"></i></span>RAG</div>
+                <div class="node node--col" style="font-size: 60px; padding: 56px 24px; border-radius: 40px; border-width: 3px; gap: 24px"><span class="icon-tile" style="--size: 144px"><i data-icon="brain-circuit"></i></span>파인튜닝</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+  </main>
+</body>
+</html>

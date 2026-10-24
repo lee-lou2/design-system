@@ -1,0 +1,114 @@
+[
+  {
+    "id": "d1-git-branch",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "d2-react-state",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "d3-http",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "d4-container",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "d5-git-cmds",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 0,
+    "skipped": []
+  },
+  {
+    "id": "n1-launch",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "n2-weekly",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "n3-keynote",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "n4-three",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 0,
+    "skipped": []
+  },
+  {
+    "id": "g1-api-key",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "g2-meeting",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "g3-shortcuts",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "g4-phone",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "p1-service",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "x1-long-text",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "x2-dense",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  }
+]
