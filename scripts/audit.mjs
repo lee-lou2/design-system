@@ -14,7 +14,15 @@ export function auditFrame(id) {
     bottom: F.bottom - parseFloat(fcs.paddingBottom),
   };
   const TOL = 1.5;
-  const ACCENT = "rgb(67, 83, 209)";
+  // 강조색은 ds.css 토큰에서 읽는다(팔레트를 바꿔도 검사가 따라간다)
+  const ACCENT = (() => {
+    const probe = document.createElement("i");
+    probe.style.color = "var(--accent)";
+    frame.appendChild(probe);
+    const c = getComputedStyle(probe).color;
+    probe.remove();
+    return c;
+  })();
   const OVERLAY = ".marker, .hl-ring, .callout, .cursor, .zoom, .subtitle, .lower-third, [data-overlay]";
   const errors = [];
   const warnings = [];

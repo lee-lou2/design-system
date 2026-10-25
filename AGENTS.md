@@ -25,7 +25,7 @@
 | `templates/cases.html` | 실전 검증 16장(개발 강의·뉴스·가이드·서비스·극한 테스트) | |
 | `templates/motion.html` | 모션 카탈로그 M01~M17(순차 등장·채우기·플로우차트 그리기·숫자 세기·차트·커서 클릭 타이핑·스트리밍·스포트라이트·확대·전/후 등) | 움직임을 만들 때 여기서 가져온다 |
 | `assets/motion.js` | 타이핑 도우미(`data-type`: 글자마다 등장 + 따라오는 커서) | |
-| `preview.html` | 색·글자·아이콘·부품 시트(C1~C6)·결과물 갤러리 | |
+| `preview.html` | 색·글자·아이콘·팔레트와 부품 시트(C0~C6)·결과물 갤러리 | |
 | `scripts/render.mjs` | HTML → PNG·MP4, `--audit` 배치 검사 | |
 | `scripts/audit.mjs` | 배치 검사 규칙(브라우저 안에서 좌표로 잰다) | 규칙을 바꾸면 모든 템플릿을 다시 검사 |
 | `scripts/check-tokens.mjs` | DESIGN.md ↔ ds.css 값 비교 | |
@@ -94,7 +94,8 @@
 ### B. 시스템(토큰·부품) 고치기
 
 - 토큰 값은 **DESIGN.md YAML과 `assets/ds.css` `:root` 두 곳**을 같이 바꾼다 → `npm run check`(값 비교 + DESIGN.md 공식 린트).
-- 부품 CSS를 바꾸면 `npm run audit`로 모든 템플릿(42장)을 다시 검사하고, 영향 받는 프레임의 PNG를 직접 본다.
+- 색은 `:root` 토큰에만 적는다. 반투명이 필요하면 `color-mix(in srgb, var(--ink) 32%, transparent)`처럼 토큰을 섞어 쓴다(헥스·rgba를 직접 적으면 팔레트를 바꿀 때 따라오지 않는다). 바탕·선·글자는 무채색(R=G=B)으로만.
+- 부품 CSS를 바꾸면 `npm run audit`로 템플릿·모션·부품 시트(66장)를 모두 다시 검사하고, 영향 받는 프레임의 PNG를 직접 본다.
 - 새 부품은 기존 이름 규칙(`.블록`, `.블록__요소`, `.블록--변형`)과 토큰만 쓴다. 새 색·새 글꼴·새 그림자를 만들지 않는다.
 - 부품을 더하면 DESIGN.md **Components**와 `preview.html` 부품 시트에도 올린다.
 
@@ -104,7 +105,7 @@
 
 ## 4. 꼭 지킬 규칙 (요약 — 자세한 건 DESIGN.md)
 
-- **색**: 돌색 바탕(`canvas`)·면(`surface`)·잉크 3단 + 인디고(`accent`) 하나. 초점은 화면당 1~2곳(제목 핵심어는 세지 않음). 상태색(`success·warning·danger`)은 상태에만. 로고는 단색.
+- **색**: 무채색 회색 바탕(`canvas`)·면(`surface`)·잉크 3단 + 인디고(`accent`) 하나. 초점은 화면당 1~2곳(제목 핵심어는 세지 않음). 상태색(`success·warning·danger`)은 상태에만. 로고는 단색.
 - **글꼴**: Pretendard Variable + Geist Mono(영문·숫자 전용). 제목 최대 2줄, 한글 24px 이상(9:16은 28px).
 - **행간·여백은 깎지 않는다.** 넘치면 ① 글을 줄이고 ② `--sm` 변형 ③ 배치 변경 ④ 두 장으로 나눈다.
 - **안쪽 요소는 바깥 상자 안.** 예외는 `data-bleed`(가장자리 밖으로 잘리는 화면)와 표식·주석뿐.

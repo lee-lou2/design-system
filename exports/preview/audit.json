@@ -1,5 +1,12 @@
 [
   {
+    "id": "c0-palette",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
     "id": "c1-basics",
     "errors": [],
     "warnings": [],

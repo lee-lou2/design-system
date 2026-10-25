@@ -14,42 +14,42 @@
     .doc { max-width: 1760px; margin: 0 auto; }
     .doc-sec { margin: 72px 0 0; }
     .doc-sec > h2 { margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
-    .doc-sec > p { margin: 6px 0 24px; font-size: 15px; color: #52514C; }
+    .doc-sec > p { margin: 6px 0 24px; font-size: 15px; color: var(--ink-2); }
     .doc-grid { display: grid; gap: 16px; }
-    .doc-card { background: #fff; border-radius: 14px; box-shadow: inset 0 0 0 1px #E2E0D9; padding: 20px; }
+    .doc-card { background: var(--surface); border-radius: 14px; box-shadow: inset 0 0 0 1px var(--line); padding: 20px; }
     .principles { grid-template-columns: repeat(5, minmax(0, 1fr)); }
     .principles b { display: block; font-size: 17px; letter-spacing: -0.02em; }
-    .principles span { display: block; margin-top: 6px; font-size: 14px; line-height: 1.5; color: #52514C; }
+    .principles span { display: block; margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--ink-2); }
     .principles i { display: block; font-style: normal; font-family: var(--font-mono); font-size: 12px; color: var(--accent); margin-bottom: 10px; }
     .swatches { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-    .sw { border-radius: 14px; overflow: hidden; background: #fff; box-shadow: inset 0 0 0 1px #E2E0D9; }
-    .sw__chip { height: 88px; box-shadow: inset 0 -1px 0 rgba(26, 26, 24, 0.08); }
+    .sw { border-radius: 14px; overflow: hidden; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+    .sw__chip { height: 88px; box-shadow: inset 0 -1px 0 color-mix(in srgb, var(--ink) 8%, transparent); }
     .sw__body { padding: 12px 14px 14px; }
     .sw__name { font: 600 14px var(--font-sans); }
-    .sw__hex { font: 500 12px var(--font-mono); color: #6F6D66; margin-top: 2px; text-transform: uppercase; }
-    .sw__role { font-size: 12.5px; color: #52514C; margin-top: 6px; line-height: 1.45; }
-    .sw-group { font: 600 13px var(--font-sans); color: #6F6D66; margin: 20px 0 10px; }
-    .type-row { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: baseline; gap: 24px; padding: 18px 0; border-top: 1px solid #E2E0D9; }
+    .sw__hex { font: 500 12px var(--font-mono); color: var(--ink-3); margin-top: 2px; text-transform: uppercase; }
+    .sw__role { font-size: 12.5px; color: var(--ink-2); margin-top: 6px; line-height: 1.45; }
+    .sw-group { font: 600 13px var(--font-sans); color: var(--ink-3); margin: 20px 0 10px; }
+    .type-row { display: grid; grid-template-columns: 220px minmax(0, 1fr); align-items: baseline; gap: 24px; padding: 18px 0; border-top: 1px solid var(--line); }
     .type-row:first-child { border-top: 0; }
-    .type-row .meta-col { font-size: 13px; color: #6F6D66; line-height: 1.5; }
-    .type-row .meta-col b { display: block; font-size: 15px; color: #1A1A18; }
+    .type-row .meta-col { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+    .type-row .meta-col b { display: block; font-size: 15px; color: var(--ink); }
     .type-row .spec { zoom: 0.5; color: var(--ink); font-family: var(--font-sans); word-break: keep-all; }
     .icons { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 8px; }
-    .icon-cell { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 16px 6px 12px; border-radius: 12px; background: #fff; box-shadow: inset 0 0 0 1px #E2E0D9; color: #1A1A18; }
+    .icon-cell { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 16px 6px 12px; border-radius: 12px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); color: var(--ink); }
     .icon-cell svg { width: 28px; height: 28px; }
-    .icon-cell span { font: 500 11px var(--font-mono); color: #6F6D66; text-align: center; word-break: break-all; }
+    .icon-cell span { font: 500 11px var(--font-mono); color: var(--ink-3); text-align: center; word-break: break-all; }
     .gallery { display: grid; gap: 16px; }
-    .gallery img, .gallery video { display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 1px 2px rgba(26,26,24,.06), 0 12px 32px -16px rgba(26,26,24,.25); background: #fff; }
+    .gallery img, .gallery video { display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 1px 2px color-mix(in srgb, var(--ink) 6%, transparent), 0 12px 32px -16px color-mix(in srgb, var(--ink) 25%, transparent); background: var(--surface); }
     .gallery figure { margin: 0; }
-    .gallery figcaption { margin-top: 8px; font-size: 13px; color: #52514C; }
-    .gallery figcaption b { color: #1A1A18; margin-right: 6px; }
+    .gallery figcaption { margin-top: 8px; font-size: 13px; color: var(--ink-2); }
+    .gallery figcaption b { color: var(--ink); margin-right: 6px; }
   </style>
 </head>
 <body class="stage" style="--cols: 2">
   <header class="stage__head">
     <div>
       <h1 class="stage__title">Inkstone 디자인 시스템</h1>
-      <p class="stage__desc">썸네일·영상·숏폼용 차분한 인포그래픽 시스템. 돌색 바탕 + 잉크 + 인디고 한 가지. 정본은 DESIGN.md예요.</p>
+      <p class="stage__desc">썸네일·영상·숏폼용 차분한 인포그래픽 시스템. 무채색 흰·회색 바탕 + 잉크 + 인디고 한 가지. 정본은 DESIGN.md예요.</p>
     </div>
     <nav class="stage__nav">
       <a href="preview.html" aria-current="page">시스템</a>
@@ -101,6 +101,35 @@
   </div>
 
   <main class="board" style="margin-top: 8px">
+
+    <!-- C0 색 -->
+    <figure class="cell">
+      <figcaption class="cell__label">C0 색 <span>무채색 8단 · 인디고 하나 · 상태 3색</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="c0-palette">
+          <div class="row" style="justify-content: space-between; align-items: flex-end">
+            <div class="stack" style="--gap: 12px"><span class="kicker">색 팔레트</span><h2 class="t-h2">흰·회색은 무채색, 색은 <span class="hl">인디고 하나</span></h2></div>
+            <span class="t-mono c-3">R = G = B · WCAG AA</span>
+          </div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="card" style="padding: 28px 32px 30px">
+            <div class="card__head"><span class="t-mono">Neutral · 8 steps</span><span class="t-caption">색 기운 없는 흰색 → 잉크</span></div>
+            <div class="row" style="--gap: 0; height: 150px; border-radius: 16px; overflow: hidden; outline: 2px solid color-mix(in srgb, var(--ink) 7%, transparent); outline-offset: -2px"><span class="grow" style="align-self: stretch; background: var(--surface)"></span><span class="grow" style="align-self: stretch; background: var(--canvas)"></span><span class="grow" style="align-self: stretch; background: var(--surface-muted)"></span><span class="grow" style="align-self: stretch; background: var(--line)"></span><span class="grow" style="align-self: stretch; background: var(--line-strong)"></span><span class="grow" style="align-self: stretch; background: var(--ink-3)"></span><span class="grow" style="align-self: stretch; background: var(--ink-2)"></span><span class="grow" style="align-self: stretch; background: var(--ink)"></span></div>
+            <div class="grid" style="grid-template-columns: repeat(8, minmax(0, 1fr)); --gap: 0px; margin-top: 16px"><div class="stack" style="--gap: 4px"><span class="t-caption" style="font-weight: 600">surface</span><span class="t-mono c-3" data-hex="surface"></span></div><div class="stack" style="--gap: 4px"><span class="t-caption" style="font-weight: 600">canvas</span><span class="t-mono c-3" data-hex="canvas"></span></div><div class="stack" style="--gap: 4px"><span class="t-caption" style="font-weight: 600">surface-muted</span><span class="t-mono c-3" data-hex="surface-muted"></span></div><div class="stack" style="--gap: 4px"><span class="t-caption" style="font-weight: 600">line</span><span class="t-mono c-3" data-hex="line"></span></div><div class="stack" style="--gap: 4px"><span class="t-caption" style="font-weight: 600">line-strong</span><span class="t-mono c-3" data-hex="line-strong"></span></div><div class="stack" style="--gap: 4px"><span class="t-caption" style="font-weight: 600">ink-3</span><span class="t-mono c-3" data-hex="ink-3"></span></div><div class="stack" style="--gap: 4px"><span class="t-caption" style="font-weight: 600">ink-2</span><span class="t-mono c-3" data-hex="ink-2"></span></div><div class="stack" style="--gap: 4px"><span class="t-caption" style="font-weight: 600">ink</span><span class="t-mono c-3" data-hex="ink"></span></div></div>
+          </div>
+          <div class="grid" style="grid-template-columns: 1fr 1fr; --gap: 24px; margin-top: 24px">
+            <div class="card" style="padding: 28px 32px 30px">
+              <div class="card__head"><span class="t-mono">Accent</span><span class="t-caption">초점 1~2곳에만</span></div>
+              <div class="grid cols-4" style="--gap: 16px"><div class="stack" style="--gap: 4px"><span style="display: block; height: 104px; border-radius: 14px; background: var(--accent); outline: 2px solid color-mix(in srgb, var(--ink) 7%, transparent); outline-offset: -2px"></span><span class="t-caption" style="font-weight: 600; margin-top: 12px">accent</span><span class="t-mono c-3" data-hex="accent"></span></div><div class="stack" style="--gap: 4px"><span style="display: block; height: 104px; border-radius: 14px; background: var(--accent-strong); outline: 2px solid color-mix(in srgb, var(--ink) 7%, transparent); outline-offset: -2px"></span><span class="t-caption" style="font-weight: 600; margin-top: 12px">accent-strong</span><span class="t-mono c-3" data-hex="accent-strong"></span></div><div class="stack" style="--gap: 4px"><span style="display: block; height: 104px; border-radius: 14px; background: var(--accent-soft); outline: 2px solid color-mix(in srgb, var(--ink) 7%, transparent); outline-offset: -2px"></span><span class="t-caption" style="font-weight: 600; margin-top: 12px">accent-soft</span><span class="t-mono c-3" data-hex="accent-soft"></span></div><div class="stack" style="--gap: 4px"><span style="display: block; height: 104px; border-radius: 14px; background: var(--accent-300); outline: 2px solid color-mix(in srgb, var(--ink) 7%, transparent); outline-offset: -2px"></span><span class="t-caption" style="font-weight: 600; margin-top: 12px">accent-300</span><span class="t-mono c-3" data-hex="accent-300"></span></div></div>
+            </div>
+            <div class="card" style="padding: 28px 32px 30px">
+              <div class="card__head"><span class="t-mono">Status</span><span class="t-caption">뜻이 있을 때만</span></div>
+              <div class="grid cols-3" style="--gap: 16px"><div class="stack" style="--gap: 4px"><span class="row" style="--gap: 0; height: 104px; border-radius: 14px; overflow: hidden; outline: 2px solid color-mix(in srgb, var(--ink) 7%, transparent); outline-offset: -2px"><span class="grow" style="align-self: stretch; background: var(--success)"></span><span class="grow center" style="align-self: stretch; background: var(--success-soft)"><span class="t-label" style="color: var(--success)">완료</span></span></span><span class="t-caption" style="font-weight: 600; margin-top: 12px">success · -soft</span><span class="t-mono c-3" data-hex="success"></span><span class="t-mono c-3" data-hex="success-soft"></span></div><div class="stack" style="--gap: 4px"><span class="row" style="--gap: 0; height: 104px; border-radius: 14px; overflow: hidden; outline: 2px solid color-mix(in srgb, var(--ink) 7%, transparent); outline-offset: -2px"><span class="grow" style="align-self: stretch; background: var(--warning)"></span><span class="grow center" style="align-self: stretch; background: var(--warning-soft)"><span class="t-label" style="color: var(--warning)">대기</span></span></span><span class="t-caption" style="font-weight: 600; margin-top: 12px">warning · -soft</span><span class="t-mono c-3" data-hex="warning"></span><span class="t-mono c-3" data-hex="warning-soft"></span></div><div class="stack" style="--gap: 4px"><span class="row" style="--gap: 0; height: 104px; border-radius: 14px; overflow: hidden; outline: 2px solid color-mix(in srgb, var(--ink) 7%, transparent); outline-offset: -2px"><span class="grow" style="align-self: stretch; background: var(--danger)"></span><span class="grow center" style="align-self: stretch; background: var(--danger-soft)"><span class="t-label" style="color: var(--danger)">오류</span></span></span><span class="t-caption" style="font-weight: 600; margin-top: 12px">danger · -soft</span><span class="t-mono c-3" data-hex="danger"></span><span class="t-mono c-3" data-hex="danger-soft"></span></div></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
 
     <!-- C1 기본 부품 -->
     <figure class="cell">
@@ -331,11 +360,11 @@
     <figure class="cell">
       <figcaption class="cell__label">C5 영상 오버레이 <span>자막·로어서드·챕터</span></figcaption>
       <div class="cell__box">
-        <section class="frame frame--16x9" data-frame="c5-overlays" data-audit-skip="empty-band" style="background: #DCDAD3">
-          <div class="center" style="position: absolute; inset: 0; color: rgba(26, 26, 24, 0.18)"><i data-icon="video" style="font-size: 160px"></i></div>
+        <section class="frame frame--16x9" data-frame="c5-overlays" data-audit-skip="empty-band" style="background: color-mix(in srgb, var(--line), var(--line-strong))">
+          <div class="center" style="position: absolute; inset: 0; color: color-mix(in srgb, var(--ink) 18%, transparent)"><i data-icon="video" style="font-size: 160px"></i></div>
           <div class="row row--between" style="position: relative">
-            <span class="row" style="--gap: 14px; padding: 12px 22px 12px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.86)"><span class="brand__mark" style="width: 40px; height: 40px"></span><span class="t-label">Inkstone · EP.12</span></span>
-            <span class="row" style="--gap: 16px; padding: 14px 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.86)"><span class="t-mono c-3">.chapters</span><span class="chapters" style="width: 220px"><i class="is-done"></i><i class="is-current"></i><i></i><i></i><i></i></span></span>
+            <span class="row" style="--gap: 14px; padding: 12px 22px 12px 12px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 86%, transparent)"><span class="brand__mark" style="width: 40px; height: 40px"></span><span class="t-label">Inkstone · EP.12</span></span>
+            <span class="row" style="--gap: 16px; padding: 14px 24px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 86%, transparent)"><span class="t-mono c-3">.chapters</span><span class="chapters" style="width: 220px"><i class="is-done"></i><i class="is-current"></i><i></i><i></i><i></i></span></span>
           </div>
           <div class="card" style="position: relative; margin-top: 56px; width: 900px; padding: 32px 40px">
             <p class="t-mono c-3">.chapter-steps</p>
@@ -420,24 +449,25 @@
         out += "</div>";
       });
       document.getElementById("swatches").innerHTML = out;
+      document.querySelectorAll("[data-hex]").forEach(function (el) { el.textContent = v(el.getAttribute("data-hex")).toUpperCase(); });
 
       /* 글자 */
       var types = [
-        ["display", "--fs-display / 700 / 1.12", '<span style="font-size: var(--fs-display); font-weight: 700; letter-spacing: -0.04em; line-height: 1.12">MCP 서버 <span class="hl">5분</span> 연결</span>'],
-        ["h1", "--fs-h1 / 700 / 1.16", '<span class="t-h1">AI 에이전트가 일하는 4단계</span>'],
-        ["h2", "--fs-h2 / 700 / 1.22", '<span class="t-h2">요청 한 번이 처리되는 과정</span>'],
-        ["h3", "--fs-h3 / 650 / 1.3", '<span class="t-h3">함수 이름이 곧 도구 설명서</span>'],
-        ["body-lg", "--fs-body-lg / 500 / 1.5", '<span class="t-body-lg">도구를 연결하면 AI가 직접 조회하고 실행해요</span>'],
-        ["body", "--fs-body / 500 / 1.5", '<span class="t-body">앱마다 따로 만들던 연결을 표준 하나로 맞춰요</span>'],
-        ["label", "--fs-label / 600 / 1.35", '<span class="t-label">설정 시간 · 서버 등록 · 결과 확인</span>'],
-        ["caption", "--fs-caption / 500 / 1.4", '<span class="t-caption c-3">출처 · 예시 데이터 · 2026.10</span>'],
-        ["mono", "--fs-mono / Geist Mono 500", '<span class="t-mono c-3">How it works · EP.12</span>'],
-        ["stat", "--fs-stat / 700 / 0.95", '<span class="stat__value" style="font-size: var(--fs-stat); font-weight: 700; letter-spacing: -0.045em">84<span class="stat__unit">%</span></span>'],
-        ["subtitle", "--fs-subtitle / 600 / 1.38", '<span style="display: inline-block; padding: 14px 32px; border-radius: 20px; background: rgba(26,26,24,.88); color: #fff; font-size: var(--fs-subtitle); font-weight: 600; letter-spacing: -0.015em">핵심어 <em style="font-style: normal; color: var(--code-keyword)">한 곳</em>만 강조해요</span>'],
-        ["code", "--fs-code / Geist Mono 400", '<span class="t-code" style="font-size: var(--fs-code)">mcp = FastMCP("github-helper")</span>'],
+        ["display", "700", '<span style="font-size: var(--fs-display); font-weight: 700; letter-spacing: -0.04em; line-height: var(--lh-display)">MCP 서버 <span class="hl">5분</span> 연결</span>'],
+        ["h1", "700", '<span class="t-h1">AI 에이전트가 일하는 4단계</span>'],
+        ["h2", "700", '<span class="t-h2">요청 한 번이 처리되는 과정</span>'],
+        ["h3", "650", '<span class="t-h3">함수 이름이 곧 도구 설명서</span>'],
+        ["body-lg", "500", '<span class="t-body-lg">도구를 연결하면 AI가 직접 조회하고 실행해요</span>'],
+        ["body", "500", '<span class="t-body">앱마다 따로 만들던 연결을 표준 하나로 맞춰요</span>'],
+        ["label", "600", '<span class="t-label">설정 시간 · 서버 등록 · 결과 확인</span>'],
+        ["caption", "500", '<span class="t-caption c-3">출처 · 예시 데이터 · 2026.10</span>'],
+        ["mono", "Geist Mono 500", '<span class="t-mono c-3">How it works · EP.12</span>'],
+        ["stat", "700", '<span class="stat__value" style="font-size: var(--fs-stat); font-weight: 700; letter-spacing: -0.045em">84<span class="stat__unit">%</span></span>'],
+        ["subtitle", "600", '<span style="display: inline-block; padding: 14px 32px; border-radius: 20px; background: color-mix(in srgb, var(--inverse) 88%, transparent); color: var(--on-inverse); font-size: var(--fs-subtitle); font-weight: 600; letter-spacing: -0.015em">핵심어 <em style="font-style: normal; color: var(--code-keyword)">한 곳</em>만 강조해요</span>'],
+        ["code", "Geist Mono 400", '<span class="t-code" style="font-size: var(--fs-code)">mcp = FastMCP("github-helper")</span>'],
       ];
       document.getElementById("type").innerHTML = types.map(function (t) {
-        return '<div class="type-row"><div class="meta-col"><b>' + t[0] + "</b>" + v("fs-" + t[0]) + " · " + t[1].split(" / ").slice(1).join(" / ") + '</div><div class="spec">' + t[2] + "</div></div>";
+        return '<div class="type-row"><div class="meta-col"><b>' + t[0] + "</b>" + v("fs-" + t[0]) + " · " + t[1] + " · 행간 " + v("lh-" + t[0]) + '</div><div class="spec">' + t[2] + "</div></div>";
       }).join("");
 
       /* 아이콘·로고 */

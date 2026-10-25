@@ -84,6 +84,20 @@
     "skipped": []
   },
   {
+    "id": "m13-zoom",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m14-wipe",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
     "id": "m15-checklist",
     "errors": [],
     "warnings": [],
@@ -99,20 +113,6 @@
   },
   {
     "id": "m17-converge",
-    "errors": [],
-    "warnings": [],
-    "accentSpots": 1,
-    "skipped": []
-  },
-  {
-    "id": "m14-wipe",
-    "errors": [],
-    "warnings": [],
-    "accentSpots": 1,
-    "skipped": []
-  },
-  {
-    "id": "m13-zoom",
     "errors": [],
     "warnings": [],
     "accentSpots": 1,

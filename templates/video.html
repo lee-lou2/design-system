@@ -291,7 +291,7 @@
             <div class="window" data-m="rise" style="--d: 150ms; width: 1100px; flex: none">
               <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="lock"></i>app.example.ai/settings</span></div>
               <div class="window__body" style="display: grid; grid-template-columns: 260px 1fr">
-                <div data-overlay data-m="fade" style="--d: 1900ms; position: absolute; inset: 0; z-index: 4; background: rgba(26, 26, 24, 0.16)"></div>
+                <div data-overlay data-m="fade" style="--d: 1900ms; position: absolute; inset: 0; z-index: 4; background: color-mix(in srgb, var(--ink) 16%, transparent)"></div>
                 <aside style="background: var(--surface-muted); padding: 32px 20px; display: flex; flex-direction: column; gap: 6px">
                   <span class="t-caption c-3" style="font-weight: 600; padding: 0 16px 12px">설정</span>
                   <span class="row t-caption c-2" style="--gap: 12px; height: 52px; padding: 0 16px"><i data-icon="settings"></i>일반</span>
@@ -311,7 +311,7 @@
                     <span class="btn btn--outline" data-m="press" style="--d: 1650ms"><i data-icon="plus"></i>커넥터 추가</span>
                     <span data-m="out" style="--d: 2000ms; position: absolute; right: -18px; bottom: -30px; width: 48px; height: 48px">
                       <span class="cursor" data-m="move" style="--d: 650ms; left: 0; top: 0; --from-x: 360px; --from-y: 160px">
-                        <svg viewBox="0 0 24 24"><path d="M5 3l14 8-6.2 1.6L9.6 19 5 3z" fill="#1A1A18" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M5 3l14 8-6.2 1.6L9.6 19 5 3z" style="fill: var(--ink); stroke: var(--surface)" stroke-width="1.6" stroke-linejoin="round"/></svg>
                         <span class="cursor__ripple" data-m="click" style="--d: 1650ms"></span>
                       </span>
                     </span>
@@ -412,9 +412,9 @@
           <div class="row row--stretch push" style="--gap: 48px; height: 680px">
             <div class="code" data-m="rise" style="--d: 250ms; width: 1060px; flex: none; --code-fs: 30px; --code-px: 76px">
               <div class="code__bar"><span class="window__dots"><i></i><i></i><i></i></span>server.py</div>
-              <div data-m="fade" style="--d: 900ms"><div data-m="out" style="--d: 2500ms"><span style="position: absolute; left: 0; right: 0; top: 286px; height: 149px; background: rgba(169, 177, 238, 0.14)"></span></div></div>
-              <div data-m="fade" style="--d: 2600ms"><div data-m="out" style="--d: 4000ms"><span style="position: absolute; left: 0; right: 0; top: 435px; height: 50px; background: rgba(169, 177, 238, 0.14)"></span></div></div>
-              <div data-m="fade" style="--d: 4100ms"><span style="position: absolute; left: 0; right: 0; top: 534px; height: 50px; background: rgba(169, 177, 238, 0.14)"></span></div>
+              <div data-m="fade" style="--d: 900ms"><div data-m="out" style="--d: 2500ms"><span style="position: absolute; left: 0; right: 0; top: 286px; height: 149px; background: color-mix(in srgb, var(--accent-300) 14%, transparent)"></span></div></div>
+              <div data-m="fade" style="--d: 2600ms"><div data-m="out" style="--d: 4000ms"><span style="position: absolute; left: 0; right: 0; top: 435px; height: 50px; background: color-mix(in srgb, var(--accent-300) 14%, transparent)"></span></div></div>
+              <div data-m="fade" style="--d: 4100ms"><span style="position: absolute; left: 0; right: 0; top: 534px; height: 50px; background: color-mix(in srgb, var(--accent-300) 14%, transparent)"></span></div>
               <span class="num num--sm num--accent" data-annotation style="position: absolute; left: 20px; top: 293px; width: 36px; height: 36px; font-size: 22px">1</span>
               <span class="num num--sm num--accent" data-annotation style="position: absolute; left: 20px; top: 442px; width: 36px; height: 36px; font-size: 22px">2</span>
               <span class="num num--sm num--accent" data-annotation style="position: absolute; left: 20px; top: 541px; width: 36px; height: 36px; font-size: 22px">3</span>
@@ -448,8 +448,8 @@
               <span class="icon-tile icon-tile--accent icon-tile--lg" style="margin-top: 40px"><i data-icon="code-xml"></i></span>
               <p class="t-h2" style="margin-top: 32px">MCP 서버<br>직접 만들기</p>
               <div class="row push" style="--gap: 12px">
-                <span class="chip chip--sm" style="background: rgba(243, 242, 238, 0.1); color: var(--on-inverse)"><i data-logo="python"></i>Python</span>
-                <span class="chip chip--sm" style="background: rgba(243, 242, 238, 0.1); color: var(--on-inverse)"><i data-icon="timer"></i>15분</span>
+                <span class="chip chip--sm" style="background: color-mix(in srgb, var(--on-inverse) 10%, transparent); color: var(--on-inverse)"><i data-logo="python"></i>Python</span>
+                <span class="chip chip--sm" style="background: color-mix(in srgb, var(--on-inverse) 10%, transparent); color: var(--on-inverse)"><i data-icon="timer"></i>15분</span>
               </div>
             </div>
           </div>
@@ -461,13 +461,13 @@
     <figure class="cell">
       <figcaption class="cell__label">V11 촬영 화면 오버레이 <span>로어서드·자막·챕터</span></figcaption>
       <div class="cell__box">
-        <section class="frame frame--16x9" data-frame="v11-overlay" data-duration="5000" data-audit-skip="empty-band" style="background: #DCDAD3">
-          <div class="center" style="position: absolute; inset: 0; color: rgba(26, 26, 24, 0.18)">
-            <div class="stack" style="align-items: center; --gap: 16px"><i data-icon="video" style="font-size: 160px"></i><span class="t-h3" style="color: rgba(26, 26, 24, 0.32)">촬영 영상 자리</span></div>
+        <section class="frame frame--16x9" data-frame="v11-overlay" data-duration="5000" data-audit-skip="empty-band" style="background: color-mix(in srgb, var(--line), var(--line-strong))">
+          <div class="center" style="position: absolute; inset: 0; color: color-mix(in srgb, var(--ink) 18%, transparent)">
+            <div class="stack" style="align-items: center; --gap: 16px"><i data-icon="video" style="font-size: 160px"></i><span class="t-h3" style="color: color-mix(in srgb, var(--ink) 32%, transparent)">촬영 영상 자리</span></div>
           </div>
           <div class="row row--between" data-m="fade" style="position: relative">
-            <span class="row" style="--gap: 14px; padding: 12px 22px 12px 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.86)"><span class="brand__mark" style="width: 40px; height: 40px"></span><span class="t-label">Inkstone · EP.12</span></span>
-            <span class="row" style="--gap: 16px; padding: 14px 24px; border-radius: 999px; background: rgba(255, 255, 255, 0.86)"><span class="t-label">02 동작 원리</span><span class="chapters" style="width: 200px"><i class="is-done"></i><i class="is-current"></i><i></i><i></i><i></i></span></span>
+            <span class="row" style="--gap: 14px; padding: 12px 22px 12px 12px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 86%, transparent)"><span class="brand__mark" style="width: 40px; height: 40px"></span><span class="t-label">Inkstone · EP.12</span></span>
+            <span class="row" style="--gap: 16px; padding: 14px 24px; border-radius: 999px; background: color-mix(in srgb, var(--surface) 86%, transparent)"><span class="t-label">02 동작 원리</span><span class="chapters" style="width: 200px"><i class="is-done"></i><i class="is-current"></i><i></i><i></i><i></i></span></span>
           </div>
           <div class="lower-third" data-m="left" style="--d: 400ms; bottom: 210px">
             <span class="avatar"><i data-icon="user-round"></i></span>

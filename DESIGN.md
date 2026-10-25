@@ -3,35 +3,35 @@ version: alpha
 name: Inkstone
 description: >-
   AI·개발 강의, 신규 서비스 소개, AI 뉴스를 1:1 포스트 썸네일·16:9 영상·9:16 숏폼으로 만드는
-  차분한 인포그래픽 디자인 시스템. 따뜻한 돌색 바탕, 잉크 3단, 인디고 한 가지 강조.
+  차분한 인포그래픽 디자인 시스템. 무채색 흰·회색 바탕, 잉크 3단, 인디고 한 가지 강조.
 colors:
-  canvas: "#F3F2EE"
+  canvas: "#F5F5F5"
   surface: "#FFFFFF"
-  surface-muted: "#ECEBE6"
-  line: "#E2E0D9"
-  line-strong: "#CBC8BF"
-  ink: "#1A1A18"
-  ink-2: "#52514C"
-  ink-3: "#6F6D66"
+  surface-muted: "#EDEDED"
+  line: "#E3E3E3"
+  line-strong: "#CCCCCC"
+  ink: "#161616"
+  ink-2: "#505050"
+  ink-3: "#6A6A6A"
   primary: "{colors.accent}"
-  accent: "#4353D1"
-  accent-strong: "#2F3BA6"
-  accent-soft: "#ECEEFB"
-  accent-300: "#A9B1EE"
-  inverse: "#1A1A18"
-  on-inverse: "#F3F2EE"
-  on-inverse-2: "#A8A69F"
+  accent: "#3E51C6"
+  accent-strong: "#2A379C"
+  accent-soft: "#ECF0FF"
+  accent-300: "#A4B1F1"
+  inverse: "#161616"
+  on-inverse: "#F5F5F5"
+  on-inverse-2: "#A9A9A9"
   on-accent: "#FFFFFF"
-  success: "#237A52"
-  success-soft: "#E3F1E9"
-  warning: "#966012"
-  warning-soft: "#F6EDDA"
-  danger: "#B83C33"
-  danger-soft: "#F8E4E1"
-  code-text: "#E8E6E1"
-  code-comment: "#8C8A82"
-  code-keyword: "#A9B1EE"
-  code-string: "#A6D3B8"
+  success: "#157A56"
+  success-soft: "#E4F6ED"
+  warning: "#9B6118"
+  warning-soft: "#FDF0DC"
+  danger: "#BA3538"
+  danger-soft: "#FEEAE8"
+  code-text: "#E6E6E6"
+  code-comment: "#8F8F8F"
+  code-keyword: "#A4B1F1"
+  code-string: "#A5D6BD"
   code-function: "#FFFFFF"
 typography:
   display:
@@ -354,7 +354,7 @@ components:
 
 # Inkstone — 차분한 인포그래픽 디자인 시스템
 
-> 벼루(inkstone)처럼: 돌색 바탕 위에 먹(잉크)으로 쓰고, 꼭 필요한 한 곳에만 색을 찍는다.
+> 벼루(inkstone)처럼: 맑은 바탕 위에 먹(잉크)으로 쓰고, 꼭 필요한 한 곳에만 색을 찍는다.
 
 이 파일이 정본이다. 위 YAML 토큰이 값을 정하고, 아래 글이 쓰는 법을 정한다. 구현은 `assets/ds.css`(클래스·토큰)와 `assets/icons.js`(아이콘), 예시는 `templates/`에 있다. 값을 바꾸면 `ds.css`도 같이 바꾸고 `npm run check`로 확인한다.
 
@@ -395,15 +395,17 @@ components:
 
 ## Colors
 
-**구성** — 돌색 무채색 5단(바탕·면·선) + 잉크 3단(글자) + 인디고 1색(강조) + 상태 3색(의미 있을 때만).
+**구성** — 무채색 5단(바탕·면·선) + 잉크 3단(글자) + 인디고 1색(강조) + 상태 3색(의미 있을 때만).
+
+**팔레트 성격** — 누런 기도, 파란 기도 없는 **순수 무채색**(R=G=B). 차가움과 고급스러움은 색조가 아니라 흰 면(`surface`)과 회색 바탕(`canvas`)의 대비, 또렷한 잉크로 낸다. 색은 인디고 하나와 상태 3색뿐이고, 상태 3색은 밝기를 맞춰(OKLCH L 0.52~0.55) 어느 하나가 튀지 않게, 옅은 면(`-soft`)도 같은 밝기(L 0.95~0.96)로 맞췄다. 회색을 더 만들어야 하면 무채색 안에서만 만든다.
 
 | 역할 | 토큰 | 쓰는 곳 |
 |---|---|---|
-| 바탕 | `canvas` | 모든 프레임 바탕. 순백보다 눈이 편하고, 흰 피드 위에서 구분된다 |
+| 바탕 | `canvas` | 모든 프레임 바탕. 순백보다 한 단 낮아 흰 카드가 떠 보이고, 흰 피드 위에서도 구분된다 |
 | 면 | `surface` | 카드·창·노드. 바탕 위에 한 단 올라온 면 |
 | 낮은 면 | `surface-muted` | 칩·아이콘 타일·비교의 "이전" 쪽 |
 | 선 | `line` / `line-strong` | 카드 테두리 / 화살표·회색 막대·구분선 |
-| 글자 | `ink` / `ink-2` / `ink-3` | 제목·본문 / 보조 / 캡션·꼬리표(바탕 대비 4.6:1) |
+| 글자 | `ink` / `ink-2` / `ink-3` | 제목·본문 / 보조 / 캡션·꼬리표(바탕 대비 5.0:1) |
 | 강조 | `accent` | 제목 핵심어, 초점 노드·막대·번호 — 화면당 1~2곳 |
 | 강조 면 | `accent-soft` + `accent-strong` 글자 | 초점 카드·결론 줄 |
 | 반전 | `inverse` + `on-inverse` | 코드 창·자막·사용자 말풍선·강조 덩어리(화면당 1개) |
@@ -423,8 +425,9 @@ components:
 - 차트 계열은 최대 4개: `series-focus`(accent) → `series-2`(ink) → `series-3`(accent-300) → `series-rest`(line-strong). 보통은 초점 1개 + 회색이면 충분하다.
 - `primary`는 `accent`의 별칭이다(DESIGN.md 도구 호환용). 이름이 "주색"이어도 면적은 강조색 규칙(5% 이하)을 따른다.
 - 순수 검정(#000)·순수 흰 바탕(#FFF 프레임)·그라데이션·네온 글로우 금지. (예외: `.frame--white`는 캡처 화면이 주인공일 때만)
+- 반투명(어둡게 덮기·그림자·코드 강조 줄·반전 면 위 칩)은 새 색을 만들지 말고 토큰을 섞는다: `color-mix(in srgb, var(--ink) 32%, transparent)`. 헥스·rgba를 직접 적으면 팔레트를 바꿀 때 따라오지 않는다.
 
-**대비(WCAG)** — `ink` 15.6:1, `ink-2` 7.1:1, `ink-3` 4.6:1, `accent` 5.5:1(모두 `canvas` 기준), 흰 글자 on `accent` 6.2:1, 상태 글자 on 각 `-soft` 4.5:1 이상.
+**대비(WCAG)** — `ink` 16.6:1, `ink-2` 7.4:1, `ink-3` 5.0:1, `accent` 6.0:1(모두 `canvas` 기준), 흰 글자 on `accent` 6.6:1, `accent-strong` on `accent-soft` 8.7:1, 상태 글자 on 각 `-soft` 4.5:1 이상, 반전 면 위 `on-inverse-2` 7.7:1·`code-comment` 5.6:1.
 
 ## Typography
 
@@ -529,8 +532,8 @@ components:
 | 0 바탕 | `canvas` | 프레임 |
 | 1 면 | `surface` + `line` 2px | 카드·노드·표 |
 | 1′ 낮은 면 | `surface-muted`, 선 없음 | 칩·"이전" 카드 |
-| 2 떠 있는 것 | `shadow-float` (0 28px 56px -24px, 22%) | 창·캡처·코드 창·폰 |
-| 3 주석 | `shadow-pop` (0 12px 32px -12px, 28%) | 말풍선 주석·로어서드·팝업 |
+| 2 떠 있는 것 | `shadow-float` (0 28px 56px -24px, 잉크 20%) | 창·캡처·코드 창·폰 |
+| 3 주석 | `shadow-pop` (0 12px 32px -12px, 잉크 26%) | 말풍선 주석·로어서드·팝업 |
 
 - 강조는 그림자가 아니라 **반전 면**(`inverse`)이나 **초점 면**(`accent-soft` + `accent` 선)으로.
 - 글로우·네온·두꺼운 그림자·유리 효과(블러) 금지.
@@ -553,7 +556,7 @@ components:
 
 ## Components
 
-클래스는 `assets/ds.css`에 있다. 부품 시트는 `preview.html`(C1~C6), 실제 조합은 `templates/`.
+클래스는 `assets/ds.css`에 있다. 팔레트·부품 시트는 `preview.html`(C0~C6), 실제 조합은 `templates/`.
 
 **기본**
 
