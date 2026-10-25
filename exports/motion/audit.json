@@ -1,0 +1,121 @@
+[
+  {
+    "id": "m01-stagger",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m02-fill",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m03-title",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 0,
+    "skipped": []
+  },
+  {
+    "id": "m04-flow",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m05-count",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m06-bars",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m07-line",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m08-ring",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "m09-cursor",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "m10-chat",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 0,
+    "skipped": []
+  },
+  {
+    "id": "m11-terminal",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 2,
+    "skipped": []
+  },
+  {
+    "id": "m12-spotlight",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m15-checklist",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m16-progress",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m17-converge",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m14-wipe",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  },
+  {
+    "id": "m13-zoom",
+    "errors": [],
+    "warnings": [],
+    "accentSpots": 1,
+    "skipped": []
+  }
+]

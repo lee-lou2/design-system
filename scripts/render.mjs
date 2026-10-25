@@ -8,6 +8,7 @@
 //       --width 1280 (정지 화면을 이 폭으로 줄인 사본을 하나 더. 유튜브 썸네일 1280×720 용)
 //       --audit (배치 검사 결과를 함께 출력하고 <폴더>/audit.json 에 저장. 오류가 있으면 종료 코드 1)
 //       --audit-only (이미지 없이 검사만)
+//       --gif 640 (MP4와 함께 이 폭의 GIF도 만든다. README 미리보기용, 15fps)
 // 브라우저: 설치된 Google Chrome 을 쓴다(없으면 Playwright 기본 Chromium). MP4 에는 ffmpeg 가 필요하다.
 import { chromium } from "playwright-core";
 import { auditFrame } from "./audit.mjs";
@@ -36,6 +37,7 @@ const scale = Number(opt("scale", 1));
 const video = flag("video");
 const jpg = flag("jpg");
 const width = Number(opt("width", 0));
+const gif = Number(opt("gif", 0));
 const auditOnly = flag("audit-only");
 const audit = flag("audit") || auditOnly;
 const reports = [];
@@ -143,6 +145,17 @@ for (const id of ids) {
     }
     await enc.end();
     line += `\n  ▶ ${(info.duration / 1000).toFixed(1)}s ${fps}fps → ${mp4}`;
+    if (gif) {
+      const out = join(outDir, `${id}.gif`);
+      await new Promise((ok, fail) => {
+        const ff = spawn("ffmpeg", ["-y", "-loglevel", "error", "-i", mp4, "-vf",
+          `fps=15,scale=${gif}:-2:flags=lanczos,split[a][b];[a]palettegen=max_colors=96:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=5:diff_mode=rectangle`,
+          "-loop", "0", out]);
+        ff.on("error", fail);
+        ff.on("close", (code) => (code === 0 ? ok() : fail(new Error(`ffmpeg 종료 코드 ${code}`))));
+      });
+      line += `\n  ◎ GIF ${gif}px → ${out}`;
+    }
   }
   console.log(line);
 }

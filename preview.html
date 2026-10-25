@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/ds.css">
   <link rel="stylesheet" href="assets/stage.css">
   <script src="assets/icons.js" defer></script>
+  <script src="assets/motion.js" defer></script>
   <script src="assets/stage.js" defer></script>
   <style>
     /* 미리보기 문서용(웹 크기). 시스템 값은 ds.css 변수를 그대로 읽는다 */
@@ -56,6 +57,7 @@
       <a href="templates/video.html">16:9 영상</a>
       <a href="templates/shorts.html">9:16 숏폼</a>
       <a href="templates/cases.html">실전 사례</a>
+      <a href="templates/motion.html">모션</a>
     </nav>
   </header>
 
@@ -389,6 +391,8 @@
       <div class="gallery" style="grid-template-columns: repeat(3, minmax(0, 1fr))" id="g-video"></div>
       <div class="sw-group" style="margin-top: 32px">9:16 숏폼 — templates/shorts.html</div>
       <div class="gallery" style="grid-template-columns: repeat(5, minmax(0, 1fr))" id="g-shorts"></div>
+      <div class="sw-group" style="margin-top: 32px">모션 카탈로그 — templates/motion.html (17종, 자동 재생)</div>
+      <div class="gallery" style="grid-template-columns: repeat(3, minmax(0, 1fr))" id="g-motion"></div>
       <div class="sw-group" style="margin-top: 32px">실전 사례 — templates/cases.html (개발 강의·최신 뉴스·사용 가이드·서비스 소개·극한 테스트)</div>
       <div class="gallery" style="grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start" id="g-cases"></div>
     </section>
@@ -456,6 +460,8 @@
       document.getElementById("g-thumb").innerHTML = thumbs.map(function (n) { return fig("exports/thumbnail/" + n, n); }).join("");
       document.getElementById("g-video").innerHTML = videos.map(function (n) { return fig("exports/video/" + n, n, true); }).join("") + stills.map(function (n) { return fig("exports/video/" + n, n); }).join("");
       document.getElementById("g-shorts").innerHTML = shorts.map(function (n) { return fig("exports/shorts/" + n, n, true); }).join("");
+      var motions = ["m01-stagger", "m02-fill", "m03-title", "m04-flow", "m05-count", "m06-bars", "m07-line", "m08-ring", "m09-cursor", "m10-chat", "m11-terminal", "m12-spotlight", "m13-zoom", "m14-wipe", "m15-checklist", "m16-progress", "m17-converge"];
+      document.getElementById("g-motion").innerHTML = motions.map(function (n) { return fig("exports/motion/" + n, n, true); }).join("");
       var cases = [["d1-git-branch"], ["d2-react-state"], ["d3-http", 1], ["d4-container", 1], ["d5-git-cmds", 1], ["n1-launch"], ["n2-weekly"], ["n3-keynote", 1], ["n4-three", 1], ["g1-api-key"], ["g2-meeting", 1], ["g3-shortcuts"], ["g4-phone", 1], ["p1-service", 1], ["x1-long-text"], ["x2-dense"]];
       document.getElementById("g-cases").innerHTML = cases.map(function (c) { return fig("exports/cases/" + c[0], c[0], !!c[1]); }).join("");
     })();

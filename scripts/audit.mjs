@@ -96,6 +96,9 @@ export function auditFrame(id) {
     const overlay = isOverlay(el);
     const bleed = inBleed(el);
 
+    /* data-bleed(확대·가장자리 밖으로 잘리는 화면) 안의 글자는 잘림·넘침 검사를 하지 않는다 */
+    if (bleed) continue;
+
     /* 1 잘림: 넘침을 자르는 조상 밖으로 나간 글자 */
     const clip = clipper(el);
     const cb = clip.getBoundingClientRect();
@@ -165,7 +168,8 @@ export function auditFrame(id) {
 
   /* 8 글자가 남의 상자에 걸침(조상이 아닌 칠해진 상자).
        글자보다 먼저 그려지는 절대 배치 장식(강조 띠 등, 글자 없음)은 배경이라 뺀다 */
-  const boxes = [...frame.querySelectorAll("*")].filter((e) => painted(e) && visible(e) && !isOverlay(e));
+  // data-bleed 안의 상자는 부모가 잘라 보이지 않는 부분이 있어 겹침·빈 띠 계산에서 뺀다
+  const boxes = [...frame.querySelectorAll("*")].filter((e) => painted(e) && visible(e) && !isOverlay(e) && !e.closest("[data-bleed]"));
   for (const run of runs) {
     if (isOverlay(run.el)) continue;
     scan: for (const box of boxes) {

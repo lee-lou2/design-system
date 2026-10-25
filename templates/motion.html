@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inkstone — 모션 카탈로그</title>
+  <link rel="stylesheet" href="../assets/ds.css">
+  <link rel="stylesheet" href="../assets/stage.css">
+  <script src="../assets/icons.js" defer></script>
+  <script src="../assets/motion.js" defer></script>
+  <script src="../assets/stage.js" defer></script>
+  <style>
+    /* 데모 전용 키프레임: 강조 테두리가 세 곳을 차례로 옮겨 다닌다(M12) */
+    @keyframes m12-hop {
+      0%   { left: 573px; top: 22px; width: 547px; height: 203px; opacity: 0; animation-timing-function: var(--ease-out); }
+      8%   { left: 573px; top: 22px; width: 547px; height: 203px; opacity: 1; }
+      30%  { left: 573px; top: 22px; width: 547px; height: 203px; animation-timing-function: var(--ease-inout); }
+      40%  { left: 22px; top: 450px; width: 1648px; height: 91px; }
+      62%  { left: 22px; top: 450px; width: 1648px; height: 91px; animation-timing-function: var(--ease-inout); }
+      72%  { left: 1123px; top: 22px; width: 547px; height: 203px; }
+      100% { left: 1123px; top: 22px; width: 547px; height: 203px; opacity: 1; }
+    }
+    .m12-ring { animation: m12-hop 4800ms linear 500ms both; }
+    .demo-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+  </style>
+</head>
+<body class="stage" style="--cols: 2">
+  <header class="stage__head">
+    <div>
+      <h1 class="stage__title">모션 카탈로그 · 17종</h1>
+      <p class="stage__desc">인포그래픽·설명 영상에서 자주 쓰는 움직임. 장면을 누르면 다시 재생해요. 모두 CSS 애니메이션이라 그대로 MP4·GIF로 내보낼 수 있어요.</p>
+    </div>
+    <nav class="stage__nav">
+      <a href="../preview.html">시스템</a>
+      <a href="thumbnail.html">1:1 썸네일</a>
+      <a href="video.html">16:9 영상</a>
+      <a href="shorts.html">9:16 숏폼</a>
+      <a href="cases.html">실전 사례</a>
+      <a href="motion.html" aria-current="page">모션</a>
+    </nav>
+  </header>
+
+  <main class="board">
+
+    <!-- M01 순차 등장 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M01 순차 등장 <span>stagger</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m01-stagger" data-duration="3400">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M01</span><h2 class="t-h2">순차 등장 — 목록·카드</h2></div><span class="t-mono c-3">rise · stagger 90ms · 480ms</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="grid cols-3" style="--gap: 24px">
+            <div class="card row" data-m="rise" style="--d: 300ms; --gap: 24px; padding: 32px 36px"><span class="icon-tile"><i data-icon="list-checks"></i></span><div><p class="t-h3">계획</p><p class="t-label c-3" style="font-weight: 500">할 일을 나눠요</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 390ms; --gap: 24px; padding: 32px 36px"><span class="icon-tile"><i data-icon="wrench"></i></span><div><p class="t-h3">도구 호출</p><p class="t-label c-3" style="font-weight: 500">검색·API 실행</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 480ms; --gap: 24px; padding: 32px 36px"><span class="icon-tile"><i data-icon="database"></i></span><div><p class="t-h3">기억</p><p class="t-label c-3" style="font-weight: 500">대화·결과 저장</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 570ms; --gap: 24px; padding: 32px 36px"><span class="icon-tile"><i data-icon="search"></i></span><div><p class="t-h3">검색</p><p class="t-label c-3" style="font-weight: 500">필요한 자료 찾기</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 660ms; --gap: 24px; padding: 32px 36px"><span class="icon-tile"><i data-icon="play"></i></span><div><p class="t-h3">실행</p><p class="t-label c-3" style="font-weight: 500">코드·작업 진행</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 750ms; --gap: 24px; padding: 32px 36px"><span class="icon-tile"><i data-icon="file-text"></i></span><div><p class="t-h3">요약</p><p class="t-label c-3" style="font-weight: 500">결과를 짧게</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 840ms; --gap: 24px; padding: 32px 36px"><span class="icon-tile"><i data-icon="share-2"></i></span><div><p class="t-h3">공유</p><p class="t-label c-3" style="font-weight: 500">팀에 전달</p></div></div>
+            <div class="card row" data-m="rise" style="--d: 930ms; --gap: 24px; padding: 32px 36px"><span class="icon-tile"><i data-icon="repeat"></i></span><div><p class="t-h3">반복</p><p class="t-label c-3" style="font-weight: 500">부족하면 다시</p></div></div>
+            <div class="card card--focus row" data-m="rise" style="--d: 1020ms; --gap: 24px; padding: 32px 36px"><span class="icon-tile icon-tile--accent"><i data-icon="shield-check"></i></span><div><p class="t-h3" style="color: var(--accent-strong)">검증</p><p class="t-label" style="font-weight: 500; color: var(--accent-strong)">맞는지 다시 확인</p></div></div>
+          </div>
+          <div class="row" data-m="fade" style="--d: 1400ms; --gap: 12px; margin-top: 40px"><span class="chip chip--outline">겹치게 시작해 리듬을 만든다</span><span class="chip chip--outline">한 번에 2~3개까지</span></div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M02 한 번에 vs 차례로 채우기 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M02 한 번에 · 차례로 <span>grid fill</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m02-fill" data-duration="3200">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M02</span><h2 class="t-h2">채우기 — 한 번에 vs 물결</h2></div><span class="t-mono c-3">pop · all / (row+col) × 60ms</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="grid cols-2" style="--gap: 32px">
+            <div class="card stack" style="--gap: 28px; align-items: center; padding: 36px">
+              <div class="row row--between" style="width: 100%"><span class="t-h3">한 번에</span><span class="chip chip--sm">같은 무게의 묶음</span></div>
+              <div class="grid" style="grid-template-columns: repeat(4, 104px); --gap: 22px"><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="file-text"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="image"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="video"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="mic"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="table"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="code"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="mail"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="calendar"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="globe"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="database"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="folder"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="chart-line"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="users"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="bell"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="lock"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="sparkles"></i></span></div>
+            </div>
+            <div class="card stack" style="--gap: 28px; align-items: center; padding: 36px">
+              <div class="row row--between" style="width: 100%"><span class="t-h3">물결처럼 차례로</span><span class="chip chip--sm">순서·확산을 보여 줄 때</span></div>
+              <div class="grid" style="grid-template-columns: repeat(4, 104px); --gap: 22px"><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 400ms"><i data-icon="file-text"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 460ms"><i data-icon="image"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 520ms"><i data-icon="video"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 580ms"><i data-icon="mic"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 460ms"><i data-icon="table"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 520ms"><i data-icon="code"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 580ms"><i data-icon="mail"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 640ms"><i data-icon="calendar"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 520ms"><i data-icon="globe"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 580ms"><i data-icon="database"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 640ms"><i data-icon="folder"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 700ms"><i data-icon="chart-line"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 580ms"><i data-icon="users"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 640ms"><i data-icon="bell"></i></span><span class="icon-tile" data-m="pop" style="--size: 104px; --d: 700ms"><i data-icon="lock"></i></span><span class="icon-tile icon-tile--accent" data-m="pop" style="--size: 104px; --d: 760ms"><i data-icon="sparkles"></i></span></div>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M03 마스크 제목 + 핵심어 색 바꾸기 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M03 제목 등장 <span>mask · tint</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m03-title" data-duration="3400">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M03</span><h2 class="t-h2">제목 — 마스크 등장 + 핵심어 색</h2></div><span class="t-mono c-3">mask-up · 140ms · tint</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <p style="font-size: 150px; font-weight: 700; letter-spacing: -0.045em; line-height: 1.2">
+            <span class="mask"><span data-m="mask-up" style="--d: 300ms">도구를 연결하면</span></span>
+            <span class="mask"><span data-m="mask-up" style="--d: 440ms">AI가 <span class="hl" data-m="tint" style="--d: 1300ms">직접</span></span></span>
+            <span class="mask"><span data-m="mask-up" style="--d: 580ms">일해요</span></span>
+          </p>
+          <div data-m="grow-x" style="--d: 1000ms; width: 360px; height: 6px; margin-top: 48px; border-radius: 99px; background: var(--ink); transform-origin: left center"></div>
+          <p class="t-body-lg c-2" data-m="rise" style="--d: 1400ms; margin-top: 32px">제목은 줄마다 올라오고, 핵심어는 마지막에 색만 바뀌어요</p>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M04 플로우차트 그리기 + 흐르는 점 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M04 플로우차트 그리기 <span>pop · draw · travel</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m04-flow" data-duration="5200">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M04</span><h2 class="t-h2">플로우차트 — 노드 → 선 → 흐름</h2></div><span class="t-mono c-3">pop · draw 400ms · travel</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="rel" style="height: 500px">
+            <svg width="1696" height="480" viewBox="0 0 1696 480" style="position: absolute; inset: 0" aria-hidden="true">
+              <defs>
+                <mask id="m04-loop" maskUnits="userSpaceOnUse" x="0" y="0" width="1696" height="480"><path d="M1080 328 V404 Q1080 428 1056 428 H639 Q615 428 615 404 V336" fill="none" stroke="#fff" stroke-width="12" pathLength="1" data-m="draw" style="--d: 2300ms; --dur: 700ms"/></mask>
+              </defs>
+              <path class="wire" pathLength="1" data-m="draw" style="--d: 550ms; --dur: 400ms" d="M308 180 H455"/>
+              <path class="wire" pathLength="1" data-m="draw" style="--d: 1100ms; --dur: 400ms" d="M773 180 H920"/>
+              <path class="wire wire--accent" pathLength="1" data-m="draw" style="--d: 1650ms; --dur: 400ms" d="M1238 180 H1386"/>
+              <path class="wire-head" data-m="fade" style="--d: 900ms; --dur: 160ms" d="M445 170 L455 180 L445 190"/>
+              <path class="wire-head" data-m="fade" style="--d: 1450ms; --dur: 160ms" d="M910 170 L920 180 L910 190"/>
+              <path class="wire-head wire-head--accent" data-m="fade" style="--d: 2000ms; --dur: 160ms" d="M1376 170 L1386 180 L1376 190"/>
+              <path class="wire wire--dashed" mask="url(#m04-loop)" d="M1080 328 V404 Q1080 428 1056 428 H639 Q615 428 615 404 V336"/>
+              <path class="wire-head" data-m="fade" style="--d: 2950ms; --dur: 160ms" d="M605 346 L615 336 L625 346"/>
+            </svg>
+            <span class="t-label c-3" data-m="fade" style="--d: 2700ms; position: absolute; left: 848px; top: 410px; transform: translateX(-50%); padding: 0 14px; background: var(--canvas)">부족하면 다시 계획</span>
+            <div data-m="fade" style="--d: 3100ms; --dur: 200ms; position: absolute; inset: 0; z-index: 1"><div data-m="out" style="--d: 4700ms"><span class="token" data-m="travel" style="--d: 3150ms; --dur: 1500ms; offset-path: path('M150 180 H1546')"></span></div></div>
+            <div class="node node--col" data-m="pop" style="--d: 300ms; position: absolute; z-index: 2; left: 0; top: 40px; width: 300px; height: 280px"><span class="icon-tile icon-tile--lg"><i data-icon="message-square"></i></span><span>질문<span class="node__sub">사용자</span></span></div>
+            <div class="node node--col" data-m="pop" style="--d: 850ms; position: absolute; z-index: 2; left: 465px; top: 40px; width: 300px; height: 280px"><span class="icon-tile icon-tile--lg"><i data-icon="list-checks"></i></span><span>계획<span class="node__sub">AI 에이전트</span></span></div>
+            <div class="node node--col node--focus" data-m="pop" style="--d: 1400ms; position: absolute; z-index: 2; left: 930px; top: 40px; width: 300px; height: 280px"><span class="icon-tile icon-tile--lg icon-tile--accent"><i data-icon="wrench"></i></span><span>도구 실행<span class="node__sub">MCP 서버</span></span></div>
+            <div class="node node--col" data-m="pop" style="--d: 1950ms; position: absolute; z-index: 2; left: 1396px; top: 40px; width: 300px; height: 280px"><span class="icon-tile icon-tile--lg"><i data-icon="sparkles"></i></span><span>답변<span class="node__sub">정리해 전달</span></span></div>
+          </div>
+          <div class="row" data-m="fade" style="--d: 3000ms; --gap: 12px; margin-top: 48px"><span class="chip chip--outline">① 노드가 차례로</span><span class="chip chip--outline">② 선이 이어 그려지고</span><span class="chip chip--outline">③ 흐름이 지나가요</span></div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M05 숫자 세기 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M05 숫자 세기 <span>count · 쉼표 · 소수</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m05-count" data-duration="3400">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M05</span><h2 class="t-h2">숫자 세기 — 함께 끝나게</h2></div><span class="t-mono c-3">count 1400ms · 12,400 · 4.8</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="grid cols-3" style="--gap: 24px">
+            <div class="card stack" style="--gap: 0; padding: 52px 44px">
+              <span class="row t-label c-2" style="--gap: 14px"><span class="icon-tile icon-tile--sm"><i data-icon="users"></i></span>주간 사용자</span>
+              <span class="stat__value" style="margin-top: 32px; font-size: 112px"><span class="count count--comma" data-m="count" style="--n: 12400; --d: 300ms; --dur: 1400ms"></span><span class="stat__unit">명</span></span>
+              <div class="stack" style="--gap: 10px; margin-top: 24px"><span style="height: 10px; border-radius: 99px; background: var(--line)"><span data-m="grow-x" style="--d: 300ms; --dur: 1400ms; display: block; height: 100%; width: calc(0.83 * 100%); border-radius: 99px; background: var(--ink); transform-origin: left"></span></span><span class="t-caption c-3" style="">15,000명 목표의 83%</span></div>
+              <svg width="100%" height="96" viewBox="0 0 360 96" preserveAspectRatio="none" style="margin-top: 20px" aria-hidden="true"><path pathLength="1" data-m="draw" style="--d: 500ms; --dur: 1200ms" d="M0 80 L60 70 L120 74 L180 52 L240 46 L300 30 L360 18" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
+              <span class="chip chip--outline" data-m="pop" style="--d: 1800ms; margin-top: 24px; align-self: flex-start"><i data-icon="trending-up"></i>+1,200 · 지난주보다</span>
+            </div>
+            <div class="card stack" style="--gap: 0; padding: 52px 44px">
+              <span class="row t-label c-2" style="--gap: 14px"><span class="icon-tile icon-tile--sm"><i data-icon="star"></i></span>평균 별점</span>
+              <span class="stat__value" style="margin-top: 32px; font-size: 112px"><span class="count count--1dp" data-m="count" style="--n: 48; --d: 300ms; --dur: 1400ms"></span><span class="stat__unit">점</span></span>
+              <div class="stack" style="--gap: 10px; margin-top: 24px"><span style="height: 10px; border-radius: 99px; background: var(--line)"><span data-m="grow-x" style="--d: 300ms; --dur: 1400ms; display: block; height: 100%; width: calc(0.96 * 100%); border-radius: 99px; background: var(--ink); transform-origin: left"></span></span><span class="t-caption c-3" style="">5점 만점</span></div>
+              <svg width="100%" height="96" viewBox="0 0 360 96" preserveAspectRatio="none" style="margin-top: 20px" aria-hidden="true"><path pathLength="1" data-m="draw" style="--d: 500ms; --dur: 1200ms" d="M0 60 L60 66 L120 50 L180 54 L240 40 L300 36 L360 24" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
+              <span class="chip chip--outline" data-m="pop" style="--d: 1900ms; margin-top: 24px; align-self: flex-start"><i data-icon="trending-up"></i>+0.3 · 지난달보다</span>
+            </div>
+            <div class="card card--focus stack" style="--gap: 0; padding: 52px 44px">
+              <span class="row t-label" style="--gap: 14px; color: var(--accent-strong)"><span class="icon-tile icon-tile--sm icon-tile--accent"><i data-icon="repeat"></i></span>재방문율</span>
+              <span class="stat__value c-accent" style="margin-top: 32px; font-size: 112px"><span class="count" data-m="count" style="--n: 87; --d: 300ms; --dur: 1400ms"></span><span class="stat__unit" style="color: var(--accent-strong)">%</span></span>
+              <div class="stack" style="--gap: 10px; margin-top: 24px"><span style="height: 10px; border-radius: 99px; background: var(--accent-soft)"><span data-m="grow-x" style="--d: 300ms; --dur: 1400ms; display: block; height: 100%; width: calc(0.87 * 100%); border-radius: 99px; background: var(--accent); transform-origin: left"></span></span><span class="t-caption " style="color: var(--accent-strong)">지난달 75%</span></div>
+              <svg width="100%" height="96" viewBox="0 0 360 96" preserveAspectRatio="none" style="margin-top: 20px" aria-hidden="true"><path pathLength="1" data-m="draw" style="--d: 500ms; --dur: 1200ms" d="M0 86 L60 80 L120 66 L180 60 L240 40 L300 30 L360 12" fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
+              <span class="chip chip--soft" data-m="pop" style="--d: 2000ms; margin-top: 24px; align-self: flex-start"><i data-icon="trending-up"></i>+12%p</span>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M06 막대 자라기 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M06 막대 차트 <span>grow · count · tint</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m06-bars" data-duration="3800">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M06</span><h2 class="t-h2">막대 — 자라고, 세고, 초점 하나</h2></div><span class="t-mono c-3">grow-y · stagger 100ms · tint-bg</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="card" style="padding: 40px 56px 32px">
+            <div class="rel">
+              <div class="columns" style="--h: 480px; --col-gap: 56px">
+                <div class="column"><span class="column__value"><span class="count" data-m="count" style="--n: 32; --d: 300ms; --dur: 720ms"></span></span><span class="column__bar" data-m="grow-y" style="--v: 0.32; --d: 300ms"></span><span class="column__label">1월</span></div>
+                <div class="column"><span class="column__value"><span class="count" data-m="count" style="--n: 41; --d: 400ms; --dur: 720ms"></span></span><span class="column__bar" data-m="grow-y" style="--v: 0.41; --d: 400ms"></span><span class="column__label">2월</span></div>
+                <div class="column"><span class="column__value"><span class="count" data-m="count" style="--n: 38; --d: 500ms; --dur: 720ms"></span></span><span class="column__bar" data-m="grow-y" style="--v: 0.38; --d: 500ms"></span><span class="column__label">3월</span></div>
+                <div class="column"><span class="column__value"><span class="count" data-m="count" style="--n: 55; --d: 600ms; --dur: 720ms"></span></span><span class="column__bar" data-m="grow-y" style="--v: 0.55; --d: 600ms"></span><span class="column__label">4월</span></div>
+                <div class="column"><span class="column__value"><span class="count" data-m="count" style="--n: 63; --d: 700ms; --dur: 720ms"></span></span><span class="column__bar" data-m="grow-y" style="--v: 0.63; --d: 700ms"></span><span class="column__label">5월</span></div>
+                <div class="column"><span class="callout callout--down" data-m="pop" style="--d: 1900ms; position: relative; margin-bottom: 10px; --tail-x: calc(50% - 9px)"><i data-icon="trending-up"></i>최고치</span><span class="column__value" data-m="tint" style="--d: 1500ms; --tint-from: var(--ink-2)"><span class="count" data-m="count" style="--n: 78; --d: 800ms; --dur: 720ms"></span></span><span class="column__bar" data-m="grow-y" style="--v: 0.78; --d: 800ms; background: transparent"><span data-m="tint-bg" style="--d: 1500ms; display: block; height: 100%; border-radius: inherit"></span></span><span class="column__label" style="color: var(--ink)">6월</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M07 선 그래프 그리기 + 커서 툴팁 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M07 선 그래프 <span>draw · 점 · 커서 툴팁</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m07-line" data-duration="4800">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M07</span><h2 class="t-h2">선 그래프 — 그리고, 짚어 주기</h2></div><span class="t-mono c-3">draw 1300ms · pop · move · callout</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="card" style="padding: 40px 48px">
+            <div class="rel" style="width: 1500px; height: 520px; margin: 0 auto">
+              <svg width="1500" height="520" viewBox="0 0 1500 520" style="position: absolute; inset: 0" aria-hidden="true">
+                <line class="lc-grid" x1="40" y1="160" x2="1460" y2="160"/><line class="lc-grid" x1="40" y1="310" x2="1460" y2="310"/><line class="lc-axis" x1="40" y1="460" x2="1460" y2="460"/>
+                <path class="lc-area" data-m="fade" style="--d: 1300ms; --dur: 600ms" d="M80 280 L303 232 L527 250 L750 178 L973 148 L1197 166 L1420 76 L1420 460 L80 460 Z"/>
+                <path class="lc-line is-focus" pathLength="1" data-m="draw" style="--d: 300ms; --dur: 1300ms; animation-timing-function: linear" d="M80 280 L303 232 L527 250 L750 178 L973 148 L1197 166 L1420 76"/>
+                <circle class="lc-dot" cx="80" cy="280" r="9" data-m="pop" style="--d: 300ms; transform-box: fill-box; transform-origin: center"/>
+                <circle class="lc-dot" cx="303" cy="232" r="9" data-m="pop" style="--d: 520ms; transform-box: fill-box; transform-origin: center"/>
+                <circle class="lc-dot" cx="527" cy="250" r="9" data-m="pop" style="--d: 730ms; transform-box: fill-box; transform-origin: center"/>
+                <circle class="lc-dot" cx="750" cy="178" r="9" data-m="pop" style="--d: 950ms; transform-box: fill-box; transform-origin: center"/>
+                <circle class="lc-dot" cx="973" cy="148" r="9" data-m="pop" style="--d: 1170ms; transform-box: fill-box; transform-origin: center"/>
+                <circle class="lc-dot" cx="1197" cy="166" r="9" data-m="pop" style="--d: 1380ms; transform-box: fill-box; transform-origin: center"/>
+                <circle class="lc-dot" cx="1420" cy="76" r="9" data-m="pop" style="--d: 1600ms; transform-box: fill-box; transform-origin: center"/>
+                <circle cx="750" cy="178" r="22" fill="none" stroke="var(--accent)" stroke-width="4" data-m="ring" style="--d: 3000ms; transform-box: fill-box; transform-origin: center"/>
+                <g style="font-family: var(--font-sans); font-size: 24px; font-weight: 600; fill: var(--ink-3)"><text x="80" y="500" text-anchor="middle">1월</text><text x="303" y="500" text-anchor="middle">2월</text><text x="527" y="500" text-anchor="middle">3월</text><text x="750" y="500" text-anchor="middle">4월</text><text x="973" y="500" text-anchor="middle">5월</text><text x="1197" y="500" text-anchor="middle">6월</text><text x="1420" y="500" text-anchor="middle" style="fill: var(--accent)">7월</text></g>
+              </svg>
+              <span class="t-h3 c-accent" data-m="fade" style="--d: 1800ms; position: absolute; left: 1360px; top: 6px">64%</span>
+              <span class="callout callout--down" data-m="pop" style="--d: 3150ms; left: 652px; top: 66px; --tail-x: 89px">4월 · 47%</span>
+              <span style="position: absolute; left: 744px; top: 172px; width: 48px; height: 48px">
+                <span class="cursor" data-m="move" style="--d: 2200ms; left: 0; top: 0; --from-x: 420px; --from-y: 240px">
+                  <svg viewBox="0 0 24 24"><path d="M5 3l14 8-6.2 1.6L9.6 19 5 3z" fill="#1A1A18" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                </span>
+              </span>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M08 링·구간 채우기 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M08 링·구간 채우기 <span>fill · segbar</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m08-ring" data-duration="3600">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M08</span><h2 class="t-h2">비율 — 링 채우기 · 구간 나누기</h2></div><span class="t-mono c-3">fill 1000ms · grow-x · sequence</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="grid" style="grid-template-columns: 560px 1fr; --gap: 24px">
+            <div class="card center" style="padding: 56px">
+              <div class="stack" style="--gap: 28px; align-items: center">
+                <div class="ring-wrap" style="--size: 420px; --ring-w: 12">
+                  <svg class="ring" viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="50" pathLength="100"/><circle class="ring__value" data-m="fill" cx="60" cy="60" r="50" pathLength="100" style="--p: 72; --d: 300ms"/></svg>
+                  <span class="ring__label"><span class="count" data-m="count" style="--n: 72; --d: 300ms"></span><small>%</small></span>
+                </div>
+                <p class="t-label c-2" data-m="fade" style="--d: 1300ms">이번 분기 목표 달성률</p>
+              </div>
+            </div>
+            <div class="card stack" style="--gap: 0; padding: 48px 56px">
+              <div class="card__head"><span class="t-mono">Storage · 128GB</span><span class="t-caption">예시</span></div>
+              <div class="segbar push" style="--bar-h: 64px; gap: 8px">
+                <div class="seg is-focus" style="--v: 46"><span class="seg__bar" data-m="grow-x" style="--d: 400ms; --dur: 520ms"></span><span class="seg__label" data-m="fade" style="--d: 700ms">사진<span class="seg__value">46GB</span></span></div>
+                <div class="seg" style="--v: 32"><span class="seg__bar" data-m="grow-x" style="--d: 700ms; --dur: 520ms"></span><span class="seg__label" data-m="fade" style="--d: 1000ms">앱<span class="seg__value">32GB</span></span></div>
+                <div class="seg" style="--v: 22"><span class="seg__bar" data-m="grow-x" style="--d: 1000ms; --dur: 520ms"></span><span class="seg__label" data-m="fade" style="--d: 1300ms">동영상<span class="seg__value">22GB</span></span></div>
+                <div class="seg" style="--v: 12"><span class="seg__bar" data-m="grow-x" style="--d: 1300ms; --dur: 520ms"></span><span class="seg__label" data-m="fade" style="--d: 1600ms">문서<span class="seg__value">12GB</span></span></div>
+                <div class="seg" style="--v: 16"><span class="seg__bar" data-m="grow-x" style="--d: 1600ms; --dur: 520ms; background: var(--surface-muted)"></span><span class="seg__label" data-m="fade" style="--d: 1900ms">남음<span class="seg__value">16GB</span></span></div>
+              </div>
+              <p class="row t-label" data-m="rise" style="--d: 2200ms; --gap: 12px; margin-top: 40px; padding-top: 24px; border-top: 2px solid var(--line)"><i data-icon="lightbulb" class="c-accent"></i><span>사진을 정리하면 <span class="hl">46GB</span>를 돌려받아요</span></p>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M09 커서 이동 · 클릭 · 타이핑 · 완료 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M09 커서·클릭·타이핑 <span>move · click · type · spinner</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m09-cursor" data-duration="6000">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M09</span><h2 class="t-h2">화면 조작 — 이동 · 클릭 · 입력 · 완료</h2></div><span class="t-mono c-3">move · click · type 75ms · swap</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="window" style="width: 1240px; margin: 0 auto; overflow: visible">
+            <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="lock"></i>console.example.ai/keys/new</span></div>
+            <div class="rel" style="padding: 48px 56px; display: flex; flex-direction: column; gap: 28px">
+              <p class="t-h3">API 키 만들기</p>
+              <div class="stack" style="--gap: 12px">
+                <span class="t-label c-2">키 이름</span>
+                <div class="rel">
+                  <div class="input" style="height: 76px; font-size: 32px"><span class="t-code" data-type data-type-delay="1500" data-type-step="75">my-blog-app</span></div>
+                  <span class="hl-ring" data-m="ring" style="--d: 1350ms; inset: -8px; border-radius: 20px"></span>
+                </div>
+              </div>
+              <div class="row" style="--gap: 12px"><span class="t-label c-2" style="width: 120px">권한</span><span class="chip chip--inverse">읽기</span><span class="chip chip--outline">쓰기</span><span class="chip chip--outline">관리</span></div>
+              <div class="row" style="--gap: 12px"><span class="t-label c-2" style="width: 120px">만료</span><span class="chip chip--outline">30일</span><span class="chip chip--inverse">90일</span><span class="chip chip--outline">없음</span></div>
+              <div class="row" style="justify-content: flex-end; --gap: 12px">
+                <span class="btn btn--outline" style="height: 64px; font-size: 26px">취소</span>
+                <span class="btn btn--accent" data-m="press" style="--d: 3500ms; height: 64px; min-width: 160px; font-size: 26px">
+                  <span class="swap">
+                    <span data-m="out" style="--d: 3550ms; --dur: 120ms">만들기</span>
+                    <span data-m="fade" style="--d: 3600ms; --dur: 120ms"><span data-m="out" style="--d: 4300ms; --dur: 120ms"><span class="spinner" style="font-size: 28px; border-color: rgba(255,255,255,.35); border-top-color: #fff"></span></span></span>
+                    <span data-m="pop" style="--d: 4400ms"><i data-icon="check" style="font-size: 30px"></i></span>
+                  </span>
+                </span>
+              </div>
+              <!-- 커서: 바깥 래퍼가 두 번째 이동(입력창 → 버튼), 안쪽이 첫 이동(화면 밖 → 입력창) -->
+              <span style="position: absolute; left: 320px; top: 210px; width: 48px; height: 48px; z-index: 9">
+                <span data-m="move" style="--d: 2600ms; display: block; --from-x: 0px; --from-y: 0px; --to-x: 750px; --to-y: 258px">
+                  <span class="cursor" data-m="move" style="--d: 400ms; left: 0; top: 0; --from-x: 520px; --from-y: 360px">
+                    <svg viewBox="0 0 24 24"><path d="M5 3l14 8-6.2 1.6L9.6 19 5 3z" fill="#1A1A18" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+                    <span class="cursor__ripple" data-m="click" style="--d: 1300ms"></span>
+                    <span class="cursor__ripple" data-m="click" style="--d: 3500ms"></span>
+                  </span>
+                </span>
+              </span>
+            </div>
+            <span class="callout callout--light" data-m="left" style="--d: 4500ms; right: -48px; top: -36px"><span class="chip chip--sm chip--success"><i data-icon="check"></i>완료</span>키를 만들었어요</span>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M10 대화 스트리밍 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M10 대화 스트리밍 <span>type · dots · stream</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m10-chat" data-duration="5600">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M10</span><h2 class="t-h2">AI 대화 — 입력 · 생각 중 · 답이 흘러나옴</h2></div><span class="t-mono c-3">type · dots · stream lines</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="window" style="width: 1400px; margin: 0 auto">
+            <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__title">AI 채팅</span><span style="width: 66px"></span></div>
+            <div class="chat" style="padding: 40px 56px 32px; gap: 24px; height: 600px">
+              <div class="msg msg--user" data-m="rise" style="--d: 1450ms"><div class="bubble">이번 주 회의록 요약해 줘</div></div>
+              <div class="rel">
+                <div class="msg msg--ai" style="position: absolute; left: 0; top: 0">
+                  <span class="avatar" data-m="pop" style="--d: 1800ms"><i data-icon="sparkles"></i></span>
+                  <div data-m="out" style="--d: 2500ms"><div class="bubble" data-m="fade" style="--d: 1850ms"><span class="typing"><i></i><i></i><i></i></span></div></div>
+                </div>
+                <div class="msg msg--ai" style="align-items: flex-start">
+                  <span class="avatar" style="opacity: 0"><i data-icon="sparkles"></i></span>
+                  <div class="stack grow" style="--gap: 14px">
+                    <span class="chip chip--sm chip--outline t-code" data-m="pop" style="--d: 2550ms; align-self: flex-start; font-size: 22px"><i data-logo="notion"></i>search_pages</span>
+                    <div class="bubble" data-m="fade" style="--d: 2700ms; --dur: 200ms; max-width: none; display: flex; flex-direction: column; gap: 8px">
+                      <p data-m="type" style="--d: 2800ms; --steps: 18; --dur: 600ms">회의 3건을 찾았어요. 핵심만 정리할게요.</p>
+                      <p class="row" data-m="type" style="--d: 3450ms; --steps: 16; --dur: 560ms; --gap: 12px"><i data-icon="check"></i><span>배포는 목요일 오전</span></p>
+                      <p class="row" data-m="type" style="--d: 4050ms; --steps: 16; --dur: 560ms; --gap: 12px"><i data-icon="check"></i><span>QA 범위는 결제·로그인</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="input push" style="height: 80px; border-radius: 22px; padding: 0 12px 0 28px; font-size: 30px; color: var(--ink)">
+                <span class="grow"><span data-m="out" style="--d: 1350ms; --dur: 120ms"><span data-type data-type-delay="400" data-type-step="65">이번 주 회의록 요약해 줘</span></span></span>
+                <span class="icon-tile icon-tile--inverse" data-m="press" style="--d: 1300ms; --size: 56px; border-radius: 50%"><i data-icon="arrow-up"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M11 코드 타이핑 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M11 터미널 타이핑 <span>type · 출력 · 줄 강조</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m11-terminal" data-duration="5200">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M11</span><h2 class="t-h2">터미널 — 명령 입력 · 출력 · 다음 할 일</h2></div><span class="t-mono c-3">type 45ms · fade · highlight</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="row row--stretch" style="--gap: 32px">
+            <div class="code grow" style="--code-fs: 34px; height: 620px">
+              <div class="code__bar"><span class="window__dots"><i></i><i></i><i></i></span>zsh — ~/dev</div>
+              <div data-m="fade" style="--d: 3300ms"><span style="position: absolute; left: 0; right: 0; top: 375px; height: 114px; background: rgba(169, 177, 238, 0.14)"></span></div>
+<pre style="position: relative"><span class="line"><span class="p">$</span> <span data-type data-type-delay="400" data-type-step="45">npm create vite@latest my-app</span></span><span class="line o" data-m="fade" style="--d: 1900ms">◇ Select a framework: React</span><span class="line o" data-m="fade" style="--d: 2200ms">◇ Select a variant: TypeScript</span><span class="line s" data-m="fade" style="--d: 2500ms">✓ Done. Now run:</span><span class="line" data-m="fade" style="--d: 2800ms">  cd my-app</span><span class="line" data-m="fade" style="--d: 2950ms">  npm install && npm run dev</span></pre>
+            </div>
+            <div class="stack" style="width: 420px; flex: none; --gap: 20px; justify-content: flex-end; padding-bottom: 100px">
+              <div class="card" data-m="right" style="--d: 3500ms"><div class="row" style="--gap: 14px"><span class="num num--sm num--accent">1</span><p class="t-label">폴더로 들어가서</p></div><p class="t-caption c-3" style="margin-top: 8px; padding-left: 58px">cd my-app</p></div>
+              <div class="card" data-m="right" style="--d: 3700ms"><div class="row" style="--gap: 14px"><span class="num num--sm num--accent">2</span><p class="t-label">설치하고 실행</p></div><p class="t-caption c-3" style="margin-top: 8px; padding-left: 58px">npm run dev → localhost</p></div>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M12 스포트라이트 이동 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M12 스포트라이트 이동 <span>focus hop</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m12-spotlight" data-duration="5600">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M12</span><h2 class="t-h2">스포트라이트 — 볼 곳을 차례로</h2></div><span class="t-mono c-3">spotlight · hop · dim</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="window">
+            <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="lock"></i>dashboard.example.ai</span></div>
+            <div class="window__body" style="height: 600px; padding: 32px">
+              <div class="grid cols-3" style="--gap: 24px">
+                <div class="card" style="padding: 28px 32px"><p class="t-caption c-3">이번 주 방문</p><p class="t-h2" style="margin-top: 4px">48,210</p></div>
+                <div class="card" id="m12-t1" style="padding: 28px 32px"><p class="t-caption c-3">전환율</p><p class="t-h2" style="margin-top: 4px">3.4%</p></div>
+                <div class="card" id="m12-t3" style="padding: 28px 32px"><p class="t-caption c-3">평균 체류</p><p class="t-h2" style="margin-top: 4px">2분 41초</p></div>
+              </div>
+              <table class="table" style="margin-top: 32px; --cell-y: 14px">
+                <thead><tr><th>페이지</th><th>방문</th><th>전환</th><th>체류</th></tr></thead>
+                <tbody>
+                  <tr><td>/home</td><td>18,402</td><td>2.1%</td><td>1분 12초</td></tr>
+                  <tr><td>/pricing</td><td>9,880</td><td>6.8%</td><td>3분 05초</td></tr>
+                  <tr id="m12-t2"><td>/docs/start</td><td>7,315</td><td>4.2%</td><td>5분 40초</td></tr>
+                  <tr><td>/blog/mcp</td><td>5,021</td><td>1.3%</td><td>4분 18초</td></tr>
+                </tbody>
+              </table>
+              <span class="hl-ring hl-ring--spot m12-ring" style="left: 573px; top: 22px; width: 547px; height: 203px; border-radius: 30px"></span>
+              <div data-m="fade" style="--d: 900ms"><div data-m="out" style="--d: 2100ms"><span class="callout callout--up" style="left: 600px; top: 244px; --tail-x: 44px"><span class="num num--accent" style="width: 38px; height: 38px; font-size: 22px">1</span>전환율부터 봐요</span></div></div>
+              <div data-m="fade" style="--d: 2500ms"><div data-m="out" style="--d: 3500ms"><span class="callout callout--down" style="left: 680px; top: 362px; --tail-x: 60px"><span class="num num--accent" style="width: 38px; height: 38px; font-size: 22px">2</span>문서 페이지가 오래 머물러요</span></div></div>
+              <div data-m="fade" style="--d: 4000ms"><span class="callout callout--up" style="right: 60px; top: 244px; --tail-x: 280px"><span class="num num--accent" style="width: 38px; height: 38px; font-size: 22px">3</span>체류 시간은 충분해요</span></div>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M13 확대(카메라) -->
+    <figure class="cell">
+      <figcaption class="cell__label">M13 확대 <span>zoom-in</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m13-zoom" data-duration="4600">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M13</span><h2 class="t-h2">확대 — 작은 부분을 크게</h2></div><span class="t-mono c-3">zoom 1100ms · 2.2x · callout</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="window">
+            <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="lock"></i>app.example.ai/settings/tokens</span></div>
+            <div class="window__body" style="height: 620px">
+              <div data-bleed data-m="zoom" style="--d: 1000ms; --zs: 2.2; --zox: 1121px; --zoy: 171px; position: absolute; inset: 0; display: grid; grid-template-columns: 300px 1fr">
+                <aside style="background: var(--surface-muted); padding: 32px 24px; display: flex; flex-direction: column; gap: 14px"><span class="skeleton skeleton--strong" style="width: 60%"></span><span class="skeleton" style="width: 80%"></span><span class="skeleton" style="width: 70%"></span><span class="skeleton" style="width: 76%"></span></aside>
+                <div style="padding: 40px 48px; display: flex; flex-direction: column; gap: 18px">
+                  <p class="t-h3" style="font-size: 32px">API 토큰</p>
+                  <span class="skeleton" style="width: 58%"></span>
+                  <div class="grid cols-3" style="--gap: 16px; margin-top: 14px">
+                    <div class="card card--sm" style="padding: 20px 22px"><div class="row" style="--gap: 10px"><span class="t-caption grow" style="font-weight: 600">배포용</span><span class="chip chip--sm chip--success">사용 중</span></div><p class="t-code" style="margin-top: 10px; font-size: 22px; color: var(--ink-3)">tok_live_••4f2</p></div>
+                    <div class="card card--sm" style="padding: 20px 22px"><div class="row" style="--gap: 10px"><span class="t-caption grow" style="font-weight: 600">테스트용</span><span class="chip chip--sm chip--warning">만료</span></div><p class="t-code" style="margin-top: 10px; font-size: 22px; color: var(--ink-3)">tok_test_••9a1</p></div>
+                    <div class="card card--sm" style="padding: 20px 22px"><div class="row" style="--gap: 10px"><span class="t-caption grow" style="font-weight: 600">스테이징</span><span class="chip chip--sm chip--success">사용 중</span></div><p class="t-code" style="margin-top: 10px; font-size: 22px; color: var(--ink-3)">tok_stg_••7c8</p></div>
+                  </div>
+                  <span class="skeleton skeleton--strong" style="width: 20%; margin-top: 80px"></span>
+                  <span class="skeleton" style="width: 92%"></span><span class="skeleton" style="width: 86%"></span><span class="skeleton" style="width: 74%"></span>
+                </div>
+              </div>
+              <span class="hl-ring" data-m="ring" style="--d: 2300ms; left: 370px; top: 109px; width: 951px; height: 308px; border-radius: 69px"></span>
+              <span class="callout callout--up" data-m="pop" style="--d: 2600ms; left: 643px; top: 446px; --tail-x: 194px"><i data-icon="refresh-cw"></i>만료된 토큰은 여기서 다시 만들어요</span>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M14 전/후 닦아내기 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M14 전/후 닦아내기 <span>wipe</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m14-wipe" data-duration="4200">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M14</span><h2 class="t-h2">전/후 — 닦아내며 바꾸기</h2></div><span class="t-mono c-3">wipe 1000ms · divider move</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="rel" style="height: 640px; border-radius: 32px">
+            <div class="code code--light" style="position: absolute; inset: 0; box-shadow: inset 0 0 0 2px var(--line); --code-fs: 42px">
+              <div class="code__bar"><span class="window__dots"><i></i><i></i><i></i></span>before.js — callbacks</div>
+<pre><span class="line">getUser(id, (err, user) =&gt; {</span><span class="line">  getPosts(user, (err, posts) =&gt; {</span><span class="line">    getComments(posts[0], (err, c) =&gt; {</span><span class="line">      render(c)</span><span class="line">    })</span><span class="line">  })</span><span class="line">})</span></pre>
+            </div>
+            <div class="code" data-overlay data-m="wipe" style="--d: 1100ms; --dur: 1000ms; position: absolute; inset: 0; --code-fs: 42px">
+              <div class="code__bar"><span class="window__dots"><i></i><i></i><i></i></span>after.js — async/await</div>
+<pre><span class="line"><span class="k">const</span> user = <span class="k">await</span> <span class="f">getUser</span>(id)</span><span class="line"><span class="k">const</span> posts = <span class="k">await</span> <span class="f">getPosts</span>(user)</span><span class="line"><span class="k">const</span> c = <span class="k">await</span> <span class="f">getComments</span>(posts[0])</span><span class="line"><span class="f">render</span>(c)</span></pre>
+            </div>
+            <span data-overlay data-m="move" style="--d: 1100ms; --dur: 1000ms; --from-x: 0px; --to-x: 1696px; position: absolute; left: 0; top: -12px; bottom: -12px; width: 4px; margin-left: -2px; background: var(--accent); border-radius: 99px; animation-timing-function: var(--ease-inout)"><span style="position: absolute; top: 50%; left: 50%; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 28px"><i data-icon="arrow-right-left"></i></span></span>
+            <span class="chip chip--soft" data-overlay data-m="pop" style="--d: 2300ms; position: absolute; right: 32px; bottom: 32px"><i data-icon="check"></i>중첩 3단 → 4줄</span>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M15 체크리스트 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M15 체크리스트 <span>check draw · count</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m15-checklist" data-duration="3800">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M15</span><h2 class="t-h2">체크리스트 — 하나씩 완료</h2></div><span class="t-mono c-3">pop · draw · tint · count</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="grid" style="grid-template-columns: 1fr 520px; --gap: 24px">
+            <ul class="card stack" style="--gap: 0; padding: 16px 48px">
+              <li class="row" style="--gap: 24px; padding: 38px 0; border-bottom: 2px solid var(--line)"><span class="rel" style="width: 48px; height: 48px; flex: none; border-radius: 14px; box-shadow: inset 0 0 0 3px var(--line-strong)"><span data-m="pop" style="--d: 500ms; position: absolute; inset: 0; border-radius: 14px; background: var(--ink)"></span><svg viewBox="0 0 48 48" style="position: absolute; inset: 0"><path d="M13 25 L21 33 L35 17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" data-m="draw" style="--d: 620ms; --dur: 320ms"/></svg></span><span class="t-body-lg" data-m="tint" style="--d: 500ms; --tint-from: var(--ink-3); --tint-to: var(--ink); font-weight: 650">Node.js 설치</span></li>
+              <li class="row" style="--gap: 24px; padding: 38px 0; border-bottom: 2px solid var(--line)"><span class="rel" style="width: 48px; height: 48px; flex: none; border-radius: 14px; box-shadow: inset 0 0 0 3px var(--line-strong)"><span data-m="pop" style="--d: 1100ms; position: absolute; inset: 0; border-radius: 14px; background: var(--ink)"></span><svg viewBox="0 0 48 48" style="position: absolute; inset: 0"><path d="M13 25 L21 33 L35 17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" data-m="draw" style="--d: 1220ms; --dur: 320ms"/></svg></span><span class="t-body-lg" data-m="tint" style="--d: 1100ms; --tint-from: var(--ink-3); --tint-to: var(--ink); font-weight: 650">API 키 만들기</span></li>
+              <li class="row" style="--gap: 24px; padding: 38px 0; border-bottom: 2px solid var(--line)"><span class="rel" style="width: 48px; height: 48px; flex: none; border-radius: 14px; box-shadow: inset 0 0 0 3px var(--line-strong)"><span data-m="pop" style="--d: 1700ms; position: absolute; inset: 0; border-radius: 14px; background: var(--ink)"></span><svg viewBox="0 0 48 48" style="position: absolute; inset: 0"><path d="M13 25 L21 33 L35 17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" data-m="draw" style="--d: 1820ms; --dur: 320ms"/></svg></span><span class="t-body-lg" data-m="tint" style="--d: 1700ms; --tint-from: var(--ink-3); --tint-to: var(--ink); font-weight: 650">서버 등록</span></li>
+              <li class="row" style="--gap: 24px; padding: 38px 0"><span class="rel" style="width: 48px; height: 48px; flex: none; border-radius: 14px; box-shadow: inset 0 0 0 3px var(--line-strong)"><span data-m="pop" style="--d: 2300ms; position: absolute; inset: 0; border-radius: 14px; background: var(--accent)"></span><svg viewBox="0 0 48 48" style="position: absolute; inset: 0"><path d="M13 25 L21 33 L35 17" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" data-m="draw" style="--d: 2420ms; --dur: 320ms"/></svg></span><span class="t-body-lg" data-m="tint" style="--d: 2300ms; --tint-from: var(--ink-3); --tint-to: var(--ink); font-weight: 650">말로 호출해 보기</span></li>
+            </ul>
+            <div class="card stack" style="--gap: 0; padding: 48px; justify-content: center">
+              <span class="t-label c-2">진행</span>
+              <span class="stat__value" style="margin-top: 16px; font-size: 160px"><span class="count" data-m="count" style="--n: 4; --d: 500ms; --dur: 2000ms; animation-timing-function: linear"></span><span class="stat__unit">/ 4</span></span>
+              <div class="row" style="--gap: 8px; margin-top: 32px">
+                <span style="flex: 1; height: 12px; border-radius: 99px; background: var(--line)"><span data-m="grow-x" style="--d: 500ms; --dur: 320ms; display: block; height: 100%; border-radius: 99px; background: var(--ink); transform-origin: left"></span></span>
+                <span style="flex: 1; height: 12px; border-radius: 99px; background: var(--line)"><span data-m="grow-x" style="--d: 1100ms; --dur: 320ms; display: block; height: 100%; border-radius: 99px; background: var(--ink); transform-origin: left"></span></span>
+                <span style="flex: 1; height: 12px; border-radius: 99px; background: var(--line)"><span data-m="grow-x" style="--d: 1700ms; --dur: 320ms; display: block; height: 100%; border-radius: 99px; background: var(--ink); transform-origin: left"></span></span>
+                <span style="flex: 1; height: 12px; border-radius: 99px; background: var(--line)"><span data-m="grow-x" style="--d: 2300ms; --dur: 320ms; display: block; height: 100%; border-radius: 99px; background: var(--accent); transform-origin: left"></span></span>
+              </div>
+            </div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M16 단계 진행 + 값 바뀜 -->
+    <figure class="cell">
+      <figcaption class="cell__label">M16 단계 진행·값 바뀜 <span>stepper · swap</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9" data-frame="m16-progress" data-duration="4600">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M16</span><h2 class="t-h2">진행 — 단계가 차고, 값이 바뀌고</h2></div><span class="t-mono c-3">grow-x · swap-out / swap-in</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="card" style="padding: 72px 72px 64px">
+            <div class="rel" style="height: 150px">
+              <span style="position: absolute; left: 36px; right: 36px; top: 34px; height: 4px; border-radius: 99px; background: var(--line-strong)"></span>
+              <span style="position: absolute; left: 36px; right: 36px; top: 34px; height: 4px; display: flex">
+                <span style="flex: 1"><span data-m="grow-x" style="--d: 500ms; --dur: 500ms; display: block; height: 100%; background: var(--ink); transform-origin: left"></span></span>
+                <span style="flex: 1"><span data-m="grow-x" style="--d: 1200ms; --dur: 500ms; display: block; height: 100%; background: var(--ink); transform-origin: left"></span></span>
+                <span style="flex: 1"><span data-m="grow-x" style="--d: 1900ms; --dur: 500ms; display: block; height: 100%; background: var(--accent); transform-origin: left"></span></span>
+              </span>
+              <div class="row row--between" style="position: relative">
+                <div class="stack" style="--gap: 16px; align-items: center; width: 72px"><span class="swap"><span class="num num--lg" data-m="swap-out" style="--d: 400ms; background: var(--surface); color: var(--ink-2); box-shadow: inset 0 0 0 3px var(--line-strong)">1</span><span class="num num--lg" data-m="swap-in" style="--d: 450ms"><i data-icon="check"></i></span></span><span class="t-label" style="white-space: nowrap">설계</span></div>
+                <div class="stack" style="--gap: 16px; align-items: center; width: 72px"><span class="swap"><span class="num num--lg" data-m="swap-out" style="--d: 1100ms; background: var(--surface); color: var(--ink-2); box-shadow: inset 0 0 0 3px var(--line-strong)">2</span><span class="num num--lg" data-m="swap-in" style="--d: 1150ms"><i data-icon="check"></i></span></span><span class="t-label" style="white-space: nowrap">개발</span></div>
+                <div class="stack" style="--gap: 16px; align-items: center; width: 72px"><span class="swap"><span class="num num--lg" data-m="swap-out" style="--d: 1800ms; background: var(--surface); color: var(--ink-2); box-shadow: inset 0 0 0 3px var(--line-strong)">3</span><span class="num num--lg" data-m="swap-in" style="--d: 1850ms"><i data-icon="check"></i></span></span><span class="t-label" style="white-space: nowrap">테스트</span></div>
+                <div class="stack" style="--gap: 16px; align-items: center; width: 72px"><span class="swap"><span class="num num--lg" data-m="swap-out" style="--d: 2500ms; background: var(--surface); color: var(--ink-2); box-shadow: inset 0 0 0 3px var(--line-strong)">4</span><span class="num num--lg num--accent" data-m="swap-in" style="--d: 2550ms"><i data-icon="rocket"></i></span></span><span class="t-label" style="white-space: nowrap">배포</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="grid cols-2" style="--gap: 24px; margin-top: 24px">
+            <div class="card row row--between" style="padding: 48px 56px"><div><p class="t-label c-2">응답 시간</p><span class="swap swap--clip" style="margin-top: 16px; font-size: 120px; --fs-stat: 120px"><span class="stat__value" data-m="swap-out" style="--d: 2900ms;">1.8<span class="stat__unit">초</span></span><span class="stat__value" data-m="swap-in" style="--d: 2950ms;">0.4<span class="stat__unit">초</span></span></span></div><span class="chip chip--lg chip--soft" data-m="pop" style="--d: 3400ms"><i data-icon="trending-down"></i>−78%</span></div>
+            <div class="card row row--between" style="padding: 48px 56px"><div><p class="t-label c-2">오류율</p><span class="swap swap--clip" style="margin-top: 16px; font-size: 120px; --fs-stat: 120px"><span class="stat__value" data-m="swap-out" style="--d: 3100ms;">2.4<span class="stat__unit">%</span></span><span class="stat__value" data-m="swap-in" style="--d: 3150ms;">0.3<span class="stat__unit">%</span></span></span></div><span class="chip chip--lg chip--outline" data-m="pop" style="--d: 3600ms"><i data-icon="trending-down"></i>−2.1%p</span></div>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+    <!-- M17 모여들기(허브) -->
+    <figure class="cell">
+      <figcaption class="cell__label">M17 모여들기 <span>move · draw · hub</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9 frame--grid" data-frame="m17-converge" data-duration="4200">
+          <div class="demo-head"><div class="stack" style="--gap: 12px"><span class="kicker">모션 M17</span><h2 class="t-h2">모여들기 — 흩어진 것이 하나로</h2></div><span class="t-mono c-3">move in · draw · pop</span></div>
+          <div class="spacer" style="--min: 40px"></div>
+          <div class="rel" style="height: 640px">
+            <svg width="1696" height="640" viewBox="0 0 1696 640" style="position: absolute; inset: 0" aria-hidden="true">
+              <path class="wire" pathLength="1" data-m="draw" style="--d: 1500ms; --dur: 500ms" d="M292 140 H481 Q497 140 497 156 V304 Q497 320 513 320 H738"/>
+              <path class="wire" pathLength="1" data-m="draw" style="--d: 1580ms; --dur: 500ms" d="M292 320 H738"/>
+              <path class="wire" pathLength="1" data-m="draw" style="--d: 1660ms; --dur: 500ms" d="M292 500 H481 Q497 500 497 484 V336 Q497 320 513 320 H738"/>
+              <path class="wire" pathLength="1" data-m="draw" style="--d: 1740ms; --dur: 500ms" d="M1404 140 H1215 Q1199 140 1199 156 V304 Q1199 320 1183 320 H958"/>
+              <path class="wire" pathLength="1" data-m="draw" style="--d: 1820ms; --dur: 500ms" d="M1404 320 H958"/>
+              <path class="wire" pathLength="1" data-m="draw" style="--d: 1900ms; --dur: 500ms" d="M1404 500 H1215 Q1199 500 1199 484 V336 Q1199 320 1183 320 H958"/>
+            </svg>
+            <div class="node node--inverse node--col" data-m="pop" style="--d: 300ms; position: absolute; left: 738px; top: 210px; width: 220px; height: 220px; border-radius: 32px"><span class="icon-tile icon-tile--accent icon-tile--lg"><i data-icon="plug-zap"></i></span><span class="t-h3" style="line-height: 1">MCP</span></div>
+            <span class="icon-tile icon-tile--logo icon-tile--xl" data-m="move" style="--d: 600ms; --dur: 800ms; --from-x: -500px; --from-y: -80px; position: absolute; left: 164px; top: 76px; animation-timing-function: var(--ease-out)"><i data-logo="github"></i></span>
+            <span class="icon-tile icon-tile--logo icon-tile--xl" data-m="move" style="--d: 680ms; --dur: 800ms; --from-x: -560px; --from-y: 0px; position: absolute; left: 164px; top: 256px; animation-timing-function: var(--ease-out)"><i data-logo="notion"></i></span>
+            <span class="icon-tile icon-tile--logo icon-tile--xl" data-m="move" style="--d: 760ms; --dur: 800ms; --from-x: -500px; --from-y: 80px; position: absolute; left: 164px; top: 436px; animation-timing-function: var(--ease-out)"><i data-logo="figma"></i></span>
+            <span class="icon-tile icon-tile--logo icon-tile--xl" data-m="move" style="--d: 640ms; --dur: 800ms; --from-x: 500px; --from-y: -80px; position: absolute; left: 1404px; top: 76px; animation-timing-function: var(--ease-out)"><i data-logo="supabase"></i></span>
+            <span class="icon-tile icon-tile--logo icon-tile--xl" data-m="move" style="--d: 720ms; --dur: 800ms; --from-x: 560px; --from-y: 0px; position: absolute; left: 1404px; top: 256px; animation-timing-function: var(--ease-out)"><i data-logo="linear"></i></span>
+            <span class="icon-tile icon-tile--logo icon-tile--xl" data-m="move" style="--d: 800ms; --dur: 800ms; --from-x: 500px; --from-y: 80px; position: absolute; left: 1404px; top: 436px; animation-timing-function: var(--ease-out)"><i data-logo="postgresql"></i></span>
+            <span class="chip chip--outline" data-m="rise" style="--d: 2400ms; position: absolute; left: 848px; top: 470px; transform: translateX(-50%)">도구 6개가 표준 하나로</span>
+          </div>
+          <div class="spacer" style="--min: 0px"></div>
+        </section>
+      </div>
+    </figure>
+
+  </main>
+</body>
+</html>

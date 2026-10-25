@@ -7,7 +7,7 @@
 ## 1. 먼저 읽을 것
 
 1. `DESIGN.md` — 토큰(YAML 앞머리) + 규칙. 특히 **Layout(계층과 넘침)**, **Infographic Patterns**, **Agent Prompt Guide**.
-2. `templates/*.html` — 실제 조합 예시 42장. 새로 짜지 말고 **가장 가까운 프레임을 복사**해서 시작한다.
+2. `templates/*.html` — 실제 조합 예시 42장과 모션 카탈로그 17종. 새로 짜지 말고 **가장 가까운 프레임을 복사**해서 시작한다.
 3. `assets/ds.css` — 부품 클래스. 이름과 변형은 DESIGN.md **Components** 표에 있다.
 
 ## 2. 저장소 지도
@@ -23,6 +23,8 @@
 | `templates/video.html` | 16:9 장면 V1~V11 + 유튜브 썸네일 Y1·Y2 | |
 | `templates/shorts.html` | 9:16 숏폼 S1~S5 | |
 | `templates/cases.html` | 실전 검증 16장(개발 강의·뉴스·가이드·서비스·극한 테스트) | |
+| `templates/motion.html` | 모션 카탈로그 M01~M17(순차 등장·채우기·플로우차트 그리기·숫자 세기·차트·커서 클릭 타이핑·스트리밍·스포트라이트·확대·전/후 등) | 움직임을 만들 때 여기서 가져온다 |
+| `assets/motion.js` | 타이핑 도우미(`data-type`: 글자마다 등장 + 따라오는 커서) | |
 | `preview.html` | 색·글자·아이콘·부품 시트(C1~C6)·결과물 갤러리 | |
 | `scripts/render.mjs` | HTML → PNG·MP4, `--audit` 배치 검사 | |
 | `scripts/audit.mjs` | 배치 검사 규칙(브라우저 안에서 좌표로 잰다) | 규칙을 바꾸면 모든 템플릿을 다시 검사 |
@@ -55,6 +57,7 @@
 | N가지는? | 목록 | `t8-list` `n2-weekly` `n4-three` `v10-summary` `s5-outro` |
 | 브랜치·버전 흐름 | 그래프 | `d1-git-branch` |
 | 영상 뼈대 | 챕터·촬영 오버레이·훅 | `v2-chapter` `v11-overlay` `s1-hook` |
+| 움직임이 핵심 | 모션 카탈로그 | `m01`~`m17` (DESIGN.md Motion의 카탈로그 표) |
 
 **시작 틀** (`work/` 안에 둘 때의 경로)
 
@@ -67,6 +70,7 @@
   <link rel="stylesheet" href="../assets/ds.css">
   <link rel="stylesheet" href="../assets/stage.css">
   <script src="../assets/icons.js" defer></script>
+  <script src="../assets/motion.js" defer></script>
   <script src="../assets/stage.js" defer></script>
 </head>
 <body class="stage" style="--cols: 2">
@@ -105,7 +109,7 @@
 - **행간·여백은 깎지 않는다.** 넘치면 ① 글을 줄이고 ② `--sm` 변형 ③ 배치 변경 ④ 두 장으로 나눈다.
 - **안쪽 요소는 바깥 상자 안.** 예외는 `data-bleed`(가장자리 밖으로 잘리는 화면)와 표식·주석뿐.
 - 남는 높이는 `.spacer` 또는 `.grow` **하나만**. 문장 속 강조(`.hl`)는 `<span>` 하나로 감싸서 flex 줄에 넣는다.
-- **모션**은 `data-m="rise|pop|draw|…"` + `style="--d: 300ms"`로만 만든다(CSS 애니메이션). JS 타이머로 만들면 렌더러가 프레임을 찍지 못한다. 한 요소에 하나, 퇴장·흐림은 감싼 요소에.
+- **모션**은 `data-m="rise|pop|draw|…"` + `style="--d: 300ms"`로만 만든다(CSS 애니메이션). JS 타이머로 만들면 렌더러가 프레임을 찍지 못한다. 한 요소에 하나, 퇴장·흐림·두 번째 이동은 감싼 요소에. 모션 변수는 상속되지 않으니 요소마다 적는다. 타이핑은 `data-type`(+ `assets/motion.js`).
 - **사실**: 명령·코드는 그대로 실행되는 형태로, 수치는 출처를 적거나 `예시`로 표시한다. 같은 시리즈 안에서 내용이 서로 모순되지 않게 한다.
 
 ## 5. 배치 검사가 잡는 것 (`scripts/audit.mjs`)
@@ -133,6 +137,7 @@
 npm install                                                 # 처음 한 번 (Chrome 필요, MP4는 ffmpeg)
 node scripts/render.mjs work/my-post.html --audit           # PNG + 배치 검사
 node scripts/render.mjs work/my-video.html --video --audit  # + MP4(30fps)
+node scripts/render.mjs work/my-video.html --video --gif 560 # + GIF(README·미리보기용)
 node scripts/render.mjs <파일> --only id1,id2 --scale 2      # 일부만, 2배 크기
 node scripts/render.mjs <파일> --only y1-youtube --width 1280  # 유튜브 1280×720 사본
 npm run audit        # 모든 템플릿 검사(이미지 없이)

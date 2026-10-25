@@ -13,6 +13,15 @@
 /* ── 1. 토큰 ─────────────────────────────────────────────────────────────── */
 
 @property --n { syntax: "<integer>"; inherits: false; initial-value: 0; }
+/* 모션 변수는 상속하지 않는다: 감싼 요소의 시각·이동값이 안쪽 요소로 새어 들어가지 않게 */
+@property --d { syntax: "<time>"; inherits: false; initial-value: 0ms; }
+@property --dur { syntax: "<time>"; inherits: false; initial-value: 480ms; }
+@property --from-x { syntax: "<length-percentage>"; inherits: false; initial-value: 0px; }
+@property --from-y { syntax: "<length-percentage>"; inherits: false; initial-value: 0px; }
+@property --to-x { syntax: "<length-percentage>"; inherits: false; initial-value: 0px; }
+@property --to-y { syntax: "<length-percentage>"; inherits: false; initial-value: 0px; }
+@property --zs { syntax: "<number>"; inherits: false; initial-value: 1.8; }
+@property --steps { syntax: "<integer>"; inherits: false; initial-value: 24; }
 @property --p { syntax: "<number>"; inherits: true; initial-value: 0; }
 
 :root {
@@ -461,7 +470,7 @@ i[data-icon], i[data-logo] { display: inline-flex; font-style: normal; }
 .lc-axis { stroke: var(--line-strong); stroke-width: 2; }
 .lc-line { fill: none; stroke: var(--line-strong); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
 .lc-line.is-focus { stroke: var(--accent); stroke-width: 6; }
-.lc-area { fill: var(--accent); opacity: 0.08; }
+.lc-area { fill: var(--accent); fill-opacity: 0.08; }  /* fill-opacity: 등장(fade) 애니메이션의 opacity 와 겹치지 않게 */
 .lc-dot { fill: var(--surface); stroke: var(--accent); stroke-width: 5; }
 .lc-text { font-family: var(--font-sans); font-size: 24px; font-weight: 600; fill: var(--ink-3); }
 .lc-text.is-focus { fill: var(--accent); font-weight: 700; }
@@ -615,7 +624,7 @@ i[data-icon], i[data-logo] { display: inline-flex; font-style: normal; }
 .window__dots i { width: 16px; height: 16px; border-radius: 50%; background: var(--line-strong); }
 .window__url { display: flex; align-items: center; justify-content: center; gap: 10px; flex: 1; min-width: 0; height: 40px; margin: 0 48px; border-radius: var(--r-full); background: var(--surface-muted); color: var(--ink-3); font-size: 22px; font-weight: 500; }
 .window__title { flex: 1; text-align: center; font-size: 24px; font-weight: 600; color: var(--ink-2); }
-.window__body { position: relative; flex: 1; min-height: 0; overflow: hidden; }
+.window__body { position: relative; flex: 1 1 auto; min-height: 0; overflow: hidden; }  /* auto: 높이를 직접 주면 그 높이, 창 높이가 정해지면 채운다 */
 .window__body > img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
 
 /* 예시 화면용 작은 부품(버튼·입력·스위치) — 실제 캡처가 없을 때 화면을 그리는 데 쓴다 */
@@ -802,14 +811,45 @@ i[data-icon], i[data-logo] { display: inline-flex; font-style: normal; }
 [data-m="travel"] { animation-name: ds-travel; --dur: 1400ms; animation-timing-function: var(--ease-inout); }
 [data-m="flow"]   { animation-name: ds-flow; --dur: 900ms; animation-timing-function: linear; animation-iteration-count: infinite; stroke-dasharray: 12 10; }
 [data-m="blink"]  { animation-name: ds-blink; --dur: 1000ms; animation-timing-function: steps(1); animation-iteration-count: infinite; }
+[data-m="mask-up"] { animation-name: ds-mask-up; --dur: 640ms; }
+[data-m="tint"]   { animation-name: ds-tint; --dur: var(--dur-md); animation-timing-function: var(--ease-inout); }
+[data-m="tint-bg"] { animation-name: ds-tint-bg; --dur: var(--dur-md); animation-timing-function: var(--ease-inout); }
+[data-m="zoom"]   { animation-name: ds-zoom; --dur: 1100ms; animation-timing-function: var(--ease-inout); transform-origin: var(--zox, 50%) var(--zoy, 50%); }
+[data-m="swap-out"] { animation-name: ds-swap-out; --dur: 360ms; animation-timing-function: var(--ease-in); }
+[data-m="swap-in"]  { animation-name: ds-swap-in; --dur: 480ms; }
 
 /* 자라는 요소의 기준점 */
 .link[data-m="grow-x"] { transform-origin: left center; }
 .link--v[data-m="grow-y"] { transform-origin: center top; }
 
-/* 숫자 세기: <span class="count" data-m="count" style="--n: 87"></span> */
+/* 숫자 세기: <span class="count" data-m="count" style="--n: 87"></span>
+   천 단위 쉼표 .count--comma(--n: 12400 → 12,400), 소수 한 자리 .count--1dp(--n: 48 → 4.8) */
+@counter-style ds-pad3 { system: extends decimal; pad: 3 "0"; }
 .count { counter-reset: n var(--n); font-variant-numeric: tabular-nums; }
 .count::after { content: counter(n); }
+.count--comma { counter-reset: k round(down, calc(var(--n) / 1000), 1) r mod(var(--n), 1000); }
+.count--comma::after { content: counter(k) "," counter(r, ds-pad3); }
+.count--1dp { counter-reset: i round(down, calc(var(--n) / 10), 1) f mod(var(--n), 10); }
+.count--1dp::after { content: counter(i) "." counter(f); }
+
+/* 마스크 등장: 글줄이 아래에서 올라온다. <span class="mask"><span data-m="mask-up">한 줄</span></span> */
+.mask { display: block; overflow: hidden; padding-bottom: 0.06em; margin-bottom: -0.06em; }
+.mask > [data-m="mask-up"] { display: block; }
+
+/* 겹쳐 놓기: 같은 자리에서 이전 값이 나가고 새 값이 들어온다(숫자 바뀜·상태 전환) */
+.swap { display: inline-grid; }
+.swap--clip { overflow: hidden; padding: 0.12em 0; margin: -0.12em 0; }  /* 밀려 나가는 값이 밖으로 보이지 않게 */
+.swap > * { grid-area: 1 / 1; }
+
+/* 진행 중 표시 → 완료로 바꿀 때 */
+.spinner { display: inline-block; width: 1em; height: 1em; border: 0.14em solid var(--line-strong); border-top-color: var(--ink); border-radius: 50%; animation: ds-spin 0.9s linear infinite; }
+
+/* 경로를 따라가는 점(데이터가 흐르는 느낌): style="offset-path: path('M0 0 H400')" + data-m="travel" */
+.token { position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 7px rgba(67, 83, 209, 0.18); offset-rotate: 0deg; offset-anchor: center; }
+
+/* 타이핑(글자마다 등장 + 따라오는 커서): <span data-type data-type-delay="1200" data-type-step="60">입력할 글</span>
+   assets/motion.js 가 글자를 쪼개 애니메이션을 단다 */
+[data-type] .tch { display: inline; }
 
 /* 글자 커서 */
 .caret::after { content: ""; display: inline-block; width: 3px; height: 1.05em; margin-left: 4px; vertical-align: -0.15em; background: currentColor; animation: ds-blink 1s steps(1) infinite; }
@@ -836,6 +876,16 @@ i[data-icon], i[data-logo] { display: inline-flex; font-style: normal; }
 @keyframes ds-flow   { to { stroke-dashoffset: -22; } }
 @keyframes ds-blink  { 50% { opacity: 0; } }
 @keyframes ds-dots   { 0%, 60%, 100% { transform: none; opacity: 0.35; } 30% { transform: translateY(-8px); opacity: 1; } }
+@keyframes ds-mask-up { from { transform: translateY(108%); } to { transform: none; } }
+@keyframes ds-tint   { from { color: var(--tint-from, var(--ink)); } to { color: var(--tint-to, var(--accent)); } }
+@keyframes ds-tint-bg { from { background-color: var(--tint-from, var(--line-strong)); } to { background-color: var(--tint-to, var(--accent)); } }
+@keyframes ds-zoom   { from { transform: none; } to { transform: scale(var(--zs, 1.8)); } }
+@keyframes ds-swap-out { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateY(-60%); } }
+@keyframes ds-swap-in  { from { opacity: 0; transform: translateY(60%); } to { opacity: 1; transform: none; } }
+@keyframes ds-spin   { to { transform: rotate(360deg); } }
+@keyframes ds-char   { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ds-caret  { 0% { box-shadow: 0.08em 0 0 currentColor; } 100% { box-shadow: none; } }
+@keyframes ds-caret-blink { 0%, 49% { box-shadow: 0.08em 0 0 currentColor; } 50%, 100% { box-shadow: none; } }
 
 /* 미리보기에서 움직임 줄이기 설정을 존중한다(렌더러는 영향 없음) */
 @media (prefers-reduced-motion: reduce) {
