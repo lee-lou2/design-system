@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inkstone — Component Lab</title>
+  <link rel="stylesheet" href="../assets/ds.css">
+  <link rel="stylesheet" href="../assets/stage.css">
+  <link rel="stylesheet" href="component-lab.css">
+  <script src="../assets/icons.js" defer></script>
+  <script src="../assets/motion.js" defer></script>
+  <script src="../assets/stage.js" defer></script>
+</head>
+<body class="stage" style="--cols: 1">
+  <header class="stage__head">
+    <div><h1 class="stage__title">Component Lab · 컴포넌트 실험실</h1><p class="stage__desc">데이터, 에디토리얼, 다이어그램, 제품 화면의 12가지 사용 예시. 모든 수치와 화면은 예시예요.</p></div>
+    <nav class="stage__nav"><a href="2026-10-29-comparison.html">원본과 비교</a><a href="2026-10-29-refined-concepts.html">리디자인 6장</a><a href="../preview.html">기존 부품 시트</a></nav>
+  </header>
+  <main class="board">
+    <figure class="cell">
+      <figcaption class="cell__label">Lab 01 데이터·에디토리얼 <span>링 · 컬럼 · 비교표 · 인용</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9 lab lab-data" data-frame="lab-01-data">
+          <div class="lab-head"><div><span class="t-mono c-3">Lab 01 / Data & editorial</span><h2>숫자를 문장처럼 읽게</h2></div><span class="t-caption c-3">4 components · 예시 데이터</span></div>
+          <div class="lab-data__grid">
+            <div class="lab-panel lab-panel--dark lab-data__ring">
+              <div class="lab-panel__label"><span class="t-mono">01 / Ratio</span><span class="t-caption c-3">비율 하나</span></div>
+              <div class="lab-data__ring-main"><div class="ring-wrap" style="--size: 280px; --ring-w: 10"><svg class="ring" viewBox="0 0 120 120"><circle class="ring__track" cx="60" cy="60" r="50" pathLength="100"/><circle class="ring__value" cx="60" cy="60" r="50" pathLength="100" style="--p: 84; stroke: var(--accent-300)"/></svg><span class="ring__label">84<small>%</small></span></div><div><p class="t-h2">AI 코딩 도구<br>사용률</p><span class="t-caption c-3">2026년 · 예시 데이터</span></div></div>
+              <div class="lab-data__ring-foot"><span class="t-label">1년 새 +21%p</span><div><i style="height: 30%"></i><i style="height: 44%"></i><i style="height: 63%"></i><i style="height: 84%"></i></div></div>
+            </div>
+            <div class="lab-panel">
+              <div class="lab-panel__label"><span class="t-mono">02 / Columns</span><span class="t-caption c-3">시간 흐름</span></div>
+              <div class="columns" style="--h: 160px; --col-gap: 24px"><div class="column"><span class="column__value">30</span><span class="column__bar" style="--v: 0.30"></span><span class="column__label">2023</span></div><div class="column"><span class="column__value">44</span><span class="column__bar" style="--v: 0.44"></span><span class="column__label">2024</span></div><div class="column"><span class="column__value">63</span><span class="column__bar" style="--v: 0.63"></span><span class="column__label">2025</span></div><div class="column is-focus"><span class="column__value">84</span><span class="column__bar" style="--v: 0.84"></span><span class="column__label">2026</span></div></div>
+            </div>
+            <div class="lab-panel lab-panel--muted">
+              <div class="lab-panel__label"><span class="t-mono">03 / Decision table</span><span class="t-caption c-3">초점 열</span></div>
+              <table class="table lab-data__table"><thead><tr><th>기준</th><th>API</th><th class="is-focus">MCP</th></tr></thead><tbody><tr><td>만드는 횟수</td><td>앱마다</td><td class="is-focus">한 번</td></tr><tr><td>재사용</td><td>다시 구현</td><td class="is-focus">그대로</td></tr><tr><td>권한</td><td>직접 구현</td><td class="is-focus">OAuth</td></tr></tbody></table>
+            </div>
+            <div class="lab-panel lab-data__quote">
+              <div><span class="t-mono c-3">04 / Pull quote</span><p>“사람은 목표만 말하고,<br>실행은 에이전트가 맡아요.”</p><span class="t-caption c-3">가상의 회사 대표 · 기조연설 예시</span></div><div class="lab-data__quote-stat"><strong>1억</strong><span class="t-label">주간 사용자 · 예시</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <figure class="cell">
+      <figcaption class="cell__label">Lab 02 구조·진행 <span>허브 · 타임라인 · 판단 흐름 · 챕터</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9 lab lab-structure" data-frame="lab-02-structure">
+          <div class="lab-head"><div><span class="t-mono c-3">Lab 02 / Structure & progress</span><h2>연결과 순서를 한눈에</h2></div><span class="t-caption c-3">4 components · 구조 예시</span></div>
+          <div class="lab-structure__grid">
+            <div class="lab-panel">
+              <div class="lab-panel__label"><span class="t-mono">05 / Hub</span><span class="t-caption c-3">중심과 연결 대상</span></div>
+              <div class="lab-hub">
+                <svg viewBox="0 0 840 260" aria-hidden="true"><path class="wire" d="M120 52 H280 Q300 52 320 72 L380 122 M720 52 H560 Q540 52 520 72 L460 122 M120 208 H280 Q300 208 320 188 L380 138 M720 208 H560 Q540 208 520 188 L460 138"/></svg>
+                <span class="icon-tile icon-tile--logo lab-hub__a"><i data-logo="claude"></i></span><span class="icon-tile icon-tile--logo lab-hub__b"><i data-logo="github"></i></span><span class="icon-tile icon-tile--logo lab-hub__c"><i data-logo="notion"></i></span><span class="icon-tile icon-tile--logo lab-hub__d"><i data-logo="figma"></i></span>
+                <div class="lab-hub__center"><i data-icon="plug-zap"></i><span>MCP</span></div>
+                <span class="t-caption c-3 lab-hub__label-a">AI 앱</span><span class="t-caption c-3 lab-hub__label-b">문서</span><span class="t-caption c-3 lab-hub__label-c">지식</span><span class="t-caption c-3 lab-hub__label-d">디자인</span>
+              </div>
+            </div>
+            <div class="lab-panel">
+              <div class="lab-panel__label"><span class="t-mono">06 / Timeline</span><span class="t-caption c-3">변화의 순서</span></div>
+              <p class="lab-structure__four">04</p>
+              <div class="timeline lab-timeline"><div class="tl-item"><span class="tl-item__date">2023</span><span class="tl-item__title">공개</span></div><div class="tl-item"><span class="tl-item__date">2024</span><span class="tl-item__title">확산</span></div><div class="tl-item"><span class="tl-item__date">2025</span><span class="tl-item__title">도입</span></div><div class="tl-item is-focus"><span class="tl-item__date">2026</span><span class="tl-item__title">표준</span></div></div>
+              <p class="t-caption c-3 lab-timeline__note">연결 방식이 표준 하나로 모여요</p>
+            </div>
+            <div class="lab-panel">
+              <div class="lab-panel__label"><span class="t-mono">07 / Decision flow</span><span class="t-caption c-3">질문에서 답으로</span></div>
+              <div class="lab-decision"><div><span class="t-mono c-3">Question 01</span><p>최신 지식이 필요한가요?</p></div><span class="link link--accent"></span><span class="node node--focus"><i data-icon="file-search"></i>RAG</span></div>
+              <div class="lab-decision"><div><span class="t-mono c-3">Question 02</span><p>말투·형식을 바꾸고 싶나요?</p></div><span class="link"></span><span class="node"><i data-icon="brain-circuit"></i>F/T</span></div>
+            </div>
+            <div class="lab-panel lab-panel--dark lab-chapter">
+              <div class="lab-panel__label"><span class="t-mono">08 / Chapter</span><span class="t-caption c-3">지금 위치</span></div>
+              <div class="lab-chapter__title"><span>02</span><div><p class="t-caption c-3">두 번째 이야기</p><h3>동작 원리</h3></div></div>
+              <ol class="chapter-steps"><li class="is-done">개념</li><li class="is-current">동작 원리</li><li>설치</li><li>실습</li><li>정리</li></ol>
+              <p class="t-caption c-3">큰 번호와 진행선으로 현재 장을 표시해요</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <figure class="cell">
+      <figcaption class="cell__label">Lab 03 제품·설명 <span>대화 · 코드 · 화면 표식 · 단축키</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9 lab lab-product" data-frame="lab-03-product">
+          <div class="lab-head"><div><span class="t-mono c-3">Lab 03 / Product & explanation</span><h2>화면 위에서 바로 설명</h2></div><span class="t-caption c-3">5 components · 가상 화면</span></div>
+          <div class="lab-product__grid">
+            <div class="lab-panel lab-chat">
+              <div class="lab-panel__label"><span class="t-mono">09 / Chat + tool call</span><span class="t-caption c-3">질문과 실행 결과</span></div>
+              <div class="msg msg--user"><div class="bubble">이번 주 머지 안 된 PR 정리해 줘</div></div>
+              <span class="chip chip--sm chip--outline t-code lab-chat__tool"><i data-logo="github"></i>list_pull_requests</span>
+              <div class="lab-chat__result"><div class="row"><span class="avatar avatar--muted"><i data-icon="sparkles"></i></span><p class="t-label">열린 PR 1건이에요</p></div><div class="lab-chat__pr"><i data-icon="git-pull-request"></i><span>결제 페이지 리팩터링</span><span class="chip chip--sm chip--warning">리뷰 대기</span></div></div>
+            </div>
+            <div class="lab-panel lab-panel--dark lab-code">
+              <div class="lab-panel__label"><span class="t-mono">10 / Code + notes</span><span class="t-caption c-3">줄과 주석 연결</span></div>
+              <pre><span><i>1</i><span class="k">from</span> mcp.server.fastmcp <span class="k">import</span> FastMCP</span><span><i>2</i>mcp = <span class="f">FastMCP</span>(<span class="s">"github-helper"</span>)</span><span><i>3</i><span class="k">@mcp.tool</span>()</span><span class="is-focus"><i>4</i><span class="k">def</span> <span class="f">list_open_prs</span>(repo: <span class="k">str</span>):</span><span><i>5</i>  <span class="k">return</span> fetch_prs(repo)</span><span><i>6</i>mcp.<span class="f">run</span>(transport=<span class="s">"streamable-http"</span>)</span></pre>
+              <div class="lab-code__note"><span class="num num--sm num--accent">4</span><p class="t-caption c-3">함수명이 도구 설명서가 돼요</p></div>
+            </div>
+            <div class="lab-panel lab-screen">
+              <div class="window">
+                <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="lock"></i>app.example.ai/settings</span></div>
+                <div class="window__body"><span class="t-mono c-3">11 / Window + marker</span><h3>MCP 서버 추가</h3><div class="rel lab-screen__input"><div class="input input--focus"><span class="t-code">mcp.example.com/github</span></div><span class="hl-ring" style="inset: -10px"></span><span class="marker" style="right: -20px; top: -22px">1</span></div><span class="callout callout--light callout--up" style="right: 0; top: 44px">주소만 붙여 넣으면 끝</span><span class="skeleton" style="width: 64%; margin-top: 100px"></span></div>
+              </div>
+            </div>
+            <div class="lab-panel lab-shortcuts">
+              <div class="lab-panel__label"><span class="t-mono">12 / Keys + lower third</span><span class="t-caption c-3">손과 사람</span></div>
+              <div class="lab-shortcuts__keys"><div><span class="t-caption">파일 찾기</span><span class="row" style="--gap: 8px"><span class="kbd">⌘</span><span class="kbd">P</span></span></div><div><span class="t-caption">명령 팔레트</span><span class="row" style="--gap: 8px"><span class="kbd">⇧</span><span class="kbd">⌘</span><span class="kbd">P</span></span></div><div><span class="t-caption">같은 단어 선택</span><span class="row" style="--gap: 8px"><span class="kbd">⌘</span><span class="kbd">D</span></span></div></div>
+              <div class="lower-third"><span class="avatar"><i data-icon="user-round"></i></span><div><p class="lower-third__name">제이크</p><p class="lower-third__role">AI 개발 강의</p></div></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+  </main>
+</body>
+</html>
