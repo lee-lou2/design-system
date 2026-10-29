@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inkstone — Refined Concepts</title>
+  <link rel="stylesheet" href="../assets/ds.css">
+  <link rel="stylesheet" href="../assets/stage.css">
+  <link rel="stylesheet" href="refined-concepts.css">
+  <script src="../assets/icons.js" defer></script>
+  <script src="../assets/motion.js" defer></script>
+  <script src="../assets/stage.js" defer></script>
+</head>
+<body class="stage" style="--cols: 2">
+  <header class="stage__head">
+    <div>
+      <h1 class="stage__title">Refined Concepts · 2차 리디자인 6장</h1>
+      <p class="stage__desc">다크 에디토리얼, 분할 화면, 초대형 숫자, 제품 데모. 원본 템플릿은 바꾸지 않은 로컬 시안이며 문구·수치·화면은 예시예요.</p>
+    </div>
+    <nav class="stage__nav">
+      <a href="2026-10-29-comparison.html">원본과 비교</a>
+      <a href="component-lab.html">컴포넌트 실험실</a>
+      <a href="../preview.html">시스템</a>
+    </nav>
+  </header>
+
+  <main class="board">
+    <figure class="cell">
+      <figcaption class="cell__label">R1 MCP 소개 <span>다크 터미널 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1 concept concept--dark concept-mcp" data-frame="r1-mcp">
+          <div class="concept-meta"><span class="concept-series">개발 강의</span><span class="t-mono">EP.12 / CLAUDE CODE</span></div>
+          <div class="concept-mcp__hero">
+            <h2 class="t-h1">AI에 도구를 꽂는<br><span class="hl">MCP 서버</span></h2>
+            <div class="concept-mcp__time"><span class="t-mono c-3">Setup time</span><p>5<span>분</span></p><span class="t-caption c-3">한 번 등록하면 끝</span></div>
+          </div>
+          <div class="concept-mcp__main">
+            <div class="concept-mcp__map">
+              <span class="t-mono c-3">Connection map</span>
+              <div class="concept-mcp__nodes">
+                <div class="concept-mcp__node"><span class="icon-tile"><i data-logo="claude"></i></span><div><p class="t-h3">Claude Code</p><span class="t-caption c-3">AI 앱</span></div><span class="t-mono c-3">01</span></div>
+                <div class="concept-mcp__connector"></div>
+                <div class="concept-mcp__node is-focus"><span class="icon-tile icon-tile--accent"><i data-icon="plug-zap"></i></span><div><p class="t-h3">MCP 서버</p><span class="t-caption c-3">표준 연결</span></div><span class="t-mono c-3">02</span></div>
+                <div class="concept-mcp__connector"></div>
+                <div class="concept-mcp__node"><span class="icon-tile"><i data-icon="blocks"></i></span><div><p class="t-h3">외부 도구</p><span class="t-caption c-3">조회·실행</span></div><span class="t-mono c-3">03</span></div>
+              </div>
+              <div class="concept-mcp__ready"><span class="t-caption c-3">연결 가능한 도구</span><div><i data-logo="github"></i><i data-logo="notion"></i><i data-logo="figma"></i></div></div>
+            </div>
+            <div class="code concept-mcp__terminal">
+              <div class="code__bar"><span class="window__dots"><i></i><i></i><i></i></span>setup.sh</div>
+              <pre><span class="line"><span class="p">$</span> claude mcp add \</span><span class="line">    --transport http \</span><span class="line">    github $MCP_URL</span><span class="line"> </span><span class="line o">Registering MCP server…</span><span class="line s">✓ Added github</span></pre>
+              <div class="concept-mcp__terminal-foot"><span class="chip chip--sm" style="background: color-mix(in srgb, var(--code-string) 16%, transparent); color: var(--code-string)"><i data-icon="check"></i>연결 준비 완료</span><span class="t-mono c-3">00:05:00</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <figure class="cell">
+      <figcaption class="cell__label">R2 RAG 비교 <span>라이트/다크 분할 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1 concept concept-rag" data-frame="r2-rag">
+          <div class="concept-rag__side">
+            <div class="concept-meta"><span class="t-mono">01 / Retrieve</span><span class="t-caption c-3">최신 지식</span></div>
+            <p class="concept-rag__letter">RAG</p>
+            <p class="concept-rag__desc">문서를 찾아서 답해요</p>
+            <ul class="checks concept-rag__checks"><li><i data-icon="check"></i>최신 문서 반영</li><li><i data-icon="check"></i>출처를 보여 줌</li><li><i data-icon="check"></i>근거 문서만 교체</li><li class="is-no"><i data-icon="x"></i>말투는 그대로</li></ul>
+            <span class="t-mono concept-rag__foot">Knowledge changes</span>
+          </div>
+          <div class="concept-rag__side concept-rag__side--dark">
+            <div class="concept-meta"><span class="t-mono">02 / Train</span><span class="t-caption c-3">말투·형식</span></div>
+            <p class="concept-rag__letter">F/T</p>
+            <p class="concept-rag__desc">예시로 익혀서 답해요</p>
+            <ul class="checks concept-rag__checks"><li><i data-icon="check"></i>말투·형식 학습</li><li><i data-icon="check"></i>짧은 프롬프트</li><li><i data-icon="check"></i>답이 짧고 빨라요</li><li class="is-no"><i data-icon="x"></i>새 정보는 재학습</li></ul>
+            <span class="t-mono concept-rag__foot">Style stays</span>
+          </div>
+          <div class="concept-rag__answer"><span class="t-mono">The short answer</span><p>지식은 RAG · 말투는 파인튜닝</p><i data-icon="arrow-down-right"></i></div>
+        </section>
+      </div>
+    </figure>
+
+    <figure class="cell">
+      <figcaption class="cell__label">R3 모델 격차 <span>초대형 데이터 포스터 · 1:1</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--1x1 concept concept-gap" data-frame="r3-gap">
+          <div class="concept-meta"><span class="concept-series">AI 뉴스 · 데이터 브리프</span><span class="t-caption c-3"><span class="t-mono">2026.10.24</span> · 예시</span></div>
+          <div class="concept-gap__main">
+            <div class="concept-gap__lead">
+              <span class="t-mono c-3">The gap now</span>
+              <p class="concept-gap__number">3<span>%p</span></p>
+              <h2 class="concept-gap__title">오픈 모델 격차,<br>3년 새 <span class="hl">1/6</span>로</h2>
+              <p class="t-body c-2 concept-gap__caption">2023년 18%p에서<br>2026년 3%p로 축소 · 예시</p>
+              <span class="source concept-gap__source">출처 자리 · 2026.10<br>레이아웃 검증용 예시 데이터</span>
+            </div>
+            <div class="concept-gap__plot">
+              <div class="row row--between"><span class="t-mono">Benchmark score</span><span class="t-caption c-3">2023—2026</span></div>
+              <svg viewBox="0 0 586 580" role="img" aria-label="최고 모델과 오픈 모델 격차가 18에서 3퍼센트포인트로 감소한 추세">
+                <line class="lc-grid" x1="36" y1="100" x2="530" y2="100"/><line class="lc-grid" x1="36" y1="230" x2="530" y2="230"/><line class="lc-grid" x1="36" y1="360" x2="530" y2="360"/><line class="lc-axis" x1="36" y1="480" x2="530" y2="480"/>
+                <path class="lc-line" d="M64 190 L208 148 L352 108 L496 64"/>
+                <path class="lc-area" d="M64 480 L208 318 L352 194 L496 84 L496 480 Z"/>
+                <path class="lc-line is-focus" d="M64 480 L208 318 L352 194 L496 84"/>
+                <line x1="64" y1="202" x2="64" y2="468" stroke="var(--line-strong)" stroke-width="3" stroke-dasharray="6 6"/>
+                <text class="lc-text" x="82" y="346">18%p</text>
+                <line x1="520" y1="64" x2="520" y2="84" stroke="var(--accent)" stroke-width="3" stroke-dasharray="4 4"/>
+                <text x="474" y="52" style="font: 700 34px var(--font-sans); fill: var(--accent); letter-spacing: -0.03em">3%p</text>
+                <circle cx="496" cy="64" r="7" fill="var(--line-strong)"/><circle class="lc-dot" cx="496" cy="84" r="8"/>
+                <text class="lc-text" x="84" y="154">최고 모델</text><text class="lc-text is-focus" x="342" y="252" style="font-size: 26px">오픈 모델</text>
+                <text class="lc-text" x="64" y="534" text-anchor="middle" style="font-family: var(--font-mono); font-size: 22px">2023</text><text class="lc-text" x="208" y="534" text-anchor="middle" style="font-family: var(--font-mono); font-size: 22px">2024</text><text class="lc-text" x="352" y="534" text-anchor="middle" style="font-family: var(--font-mono); font-size: 22px">2025</text><text class="lc-text is-focus" x="496" y="534" text-anchor="middle" style="font-family: var(--font-mono); font-size: 22px">2026</text>
+              </svg>
+            </div>
+          </div>
+          <div class="concept-gap__facts"><div><strong>−15%p</strong><span class="t-caption c-3">좁아진 격차</span></div><div><strong>비용 1/10</strong><span class="t-caption c-3">최고 모델 대비 · 예시</span></div><div><span class="t-mono">Open models</span><span class="t-caption c-3">성능은 추격, 비용은 우위</span></div></div>
+        </section>
+      </div>
+    </figure>
+
+    <figure class="cell">
+      <figcaption class="cell__label">R4 URL 요청 과정 <span>다크 프로세스 로그 · 16:9</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9 concept concept--dark concept-http" data-frame="r4-http">
+          <div class="concept-meta"><span class="concept-series">개발 강의 · 네트워크</span><span class="t-mono">Anatomy of a request / 04</span></div>
+          <div class="concept-http__main">
+            <div class="concept-http__lead">
+              <span class="t-caption c-3"><span class="t-mono">First paint</span> · 예시</span>
+              <p class="concept-http__number">320<span>ms</span></p>
+              <h2 class="t-h1">URL 하나가<br><span class="hl">화면</span>이 되기까지</h2>
+              <p class="t-body-lg c-3">다섯 단계를 합친 시간<br>서버 처리가 가장 오래 걸려요</p>
+              <div class="concept-http__total-bar"><span style="--v: 0.375"></span></div>
+              <span class="t-mono c-3">Server = 37.5% of total</span>
+            </div>
+            <div class="concept-http__log">
+              <div class="concept-http__row"><span class="t-mono c-3">01</span><div><h3>DNS 조회</h3><p>이름 → IP</p></div><span class="t-code concept-http__time">20 ms</span><div class="concept-http__bar"><span style="--v: 0.167"></span></div><i data-icon="globe"></i></div>
+              <div class="concept-http__row"><span class="t-mono c-3">02</span><div><h3>TCP·TLS 연결</h3><p>암호화 약속</p></div><span class="t-code concept-http__time">60 ms</span><div class="concept-http__bar"><span style="--v: 0.5"></span></div><i data-icon="lock"></i></div>
+              <div class="concept-http__row"><span class="t-mono c-3">03</span><div><h3>HTTP 요청</h3><p>GET /</p></div><span class="t-code concept-http__time">30 ms</span><div class="concept-http__bar"><span style="--v: 0.25"></span></div><i data-icon="send"></i></div>
+              <div class="concept-http__row is-focus"><span class="t-mono">04</span><div><h3>서버 처리</h3><p>데이터 준비</p></div><span class="t-code concept-http__time">120 ms</span><div class="concept-http__bar"><span style="--v: 1"></span></div><i data-icon="server"></i></div>
+              <div class="concept-http__row"><span class="t-mono c-3">05</span><div><h3>화면 그리기</h3><p>HTML·CSS·JS</p></div><span class="t-code concept-http__time">90 ms</span><div class="concept-http__bar"><span style="--v: 0.75"></span></div><i data-icon="monitor"></i></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <figure class="cell">
+      <figcaption class="cell__label">R5 회의 메모 정리 <span>출력 중심 제품 데모 · 16:9</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--16x9 concept concept-meeting" data-frame="r5-meeting">
+          <div class="concept-meta"><span class="concept-series">사용 가이드 · AI 활용</span><span class="t-mono">Prompt to document / 05</span></div>
+          <div class="concept-meeting__main">
+            <div class="concept-meeting__brief">
+              <span class="t-mono c-3">Time to organize</span>
+              <p class="concept-meeting__number">03:00</p>
+              <h2>흩어진 메모,<br>정리된 회의록</h2>
+              <div class="concept-meeting__raw"><span class="t-mono c-3">Raw notes</span><p>- 다음 주 배포? 금요일은 X</p><p>- 로그인 버그 → 민지 확인</p><p>- 온볼딩 문서 누가?</p><span class="skeleton" style="width: 72%"></span></div>
+              <div class="concept-meeting__prompt"><span class="avatar avatar--accent"><i data-icon="sparkles"></i></span><p>이 메모를 결정 사항과 할 일로 정리해 줘</p></div>
+              <span class="t-caption c-3">예시 화면 · 결과는 검토 후 공유하세요</span>
+            </div>
+            <div class="window concept-meeting__output">
+              <div class="window__bar"><span class="window__dots"><i></i><i></i><i></i></span><span class="window__url"><i data-icon="file-text"></i>notes.example.ai / meeting-024</span></div>
+              <div class="window__body concept-meeting__document">
+                <div class="concept-meeting__doc-head"><div><span class="t-mono c-3">Meeting 024 · 2026.10.29</span><h2>제품 주간 회의</h2></div><span class="chip chip--soft"><i data-icon="sparkles"></i>AI 정리 완료</span></div>
+                <div class="concept-meeting__decisions"><span class="t-caption c-3"><span class="t-mono">01</span> / 결정 사항</span><ul class="checks"><li><i data-icon="check"></i><span><strong>배포는 다음 주 목요일</strong><small>금요일 배포는 하지 않아요</small></span></li><li><i data-icon="check"></i><span><strong>예산은 다음 회의에서</strong><small>이번 주는 범위를 먼저 확정해요</small></span></li></ul><div class="concept-meeting__next"><i data-icon="calendar"></i><div><span class="t-caption c-3">다음 회의</span><p class="t-label">10월 31일 · 14:00</p></div></div></div>
+                <div class="concept-meeting__tasks"><span class="t-caption c-3"><span class="t-mono">02</span> / 할 일</span><div class="concept-meeting__task"><span class="avatar avatar--muted">민</span><div><p>로그인 버그 확인</p><span>재현 경로와 원인 공유</span></div><span class="chip chip--sm">금</span></div><div class="concept-meeting__task"><span class="avatar avatar--muted">준</span><div><p>디자인 리뷰 회의실 잡기</p><span>참석자 6명 기준</span></div><span class="chip chip--sm">목</span></div><div class="concept-meeting__task"><span class="avatar avatar--muted">서</span><div><p>온볼딩 문서 초안</p><span>설치부터 첫 실행까지</span></div><span class="chip chip--sm">다음 주</span></div></div>
+                <div class="concept-meeting__doc-foot"><span class="t-caption c-3">결정 2개 · 할 일 3개</span><span class="btn btn--accent"><i data-icon="send"></i>참석자에게 공유</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </figure>
+
+    <figure class="cell">
+      <figcaption class="cell__label">R6 AI 뉴스 3줄 <span>다크 뉴스 인덱스 · 9:16</span></figcaption>
+      <div class="cell__box">
+        <section class="frame frame--9x16 frame--sub concept concept--dark concept-news" data-frame="r6-news">
+          <div class="concept-meta concept-news__meta"><span class="concept-series" style="font-size: 32px">AI 뉴스 1분</span><span class="t-mono c-3">10.24 / DAILY</span></div>
+          <div class="concept-news__hero"><h2 class="t-h1">오늘 알아야 할<br>AI 뉴스 <span class="hl">3줄</span></h2><p>3</p></div>
+          <div class="concept-news__list">
+            <div class="concept-news__item"><span class="concept-news__number">01</span><div class="concept-news__copy"><span class="t-mono c-3">Model</span><h3>추론 모델 새 버전</h3><p>수학·코딩 점수 상승</p></div><span class="icon-tile"><i data-icon="brain"></i></span></div>
+            <div class="concept-news__item"><span class="concept-news__number">02</span><div class="concept-news__copy"><span class="t-mono c-3">Tools</span><h3>코딩 에이전트 출시</h3><p>터미널에서 PR까지</p></div><span class="icon-tile"><i data-icon="code-xml"></i></span></div>
+            <div class="concept-news__item"><span class="concept-news__number">03</span><div class="concept-news__copy"><span class="t-mono c-3">Pricing</span><h3>이미지 API 반값</h3><p>장당 비용 절반</p></div><span class="icon-tile"><i data-icon="coins"></i></span></div>
+          </div>
+          <div class="concept-news__foot"><span class="source" style="font-size: 28px">가상 뉴스 · 예시</span><span class="t-mono c-3">3 stories. 60 seconds.</span></div>
+          <p class="subtitle">하나씩 <em>짧게</em> 볼게요</p>
+        </section>
+      </div>
+    </figure>
+  </main>
+</body>
+</html>
